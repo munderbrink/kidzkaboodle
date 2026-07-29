@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Max Your Value — Kidz Kaboodle | Tacoma, WA</title>
+  <meta name="description" content="Get the most money for your kids' stuff at Kidz Kaboodle. Learn what sells best, how to prep your items, and when to come in for the best trade results.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --accent: #FFE66D;
+      --dark: #2C3E50;
+      --bg: #FFFFFF;
+      --bg2: #F8F9FA;
+      --text: #2C3E50;
+      --text-light: #636E72;
+      --radius-btn: 50px;
+      --radius-card: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; }
+
+    /* ─── TOP BAR ─── */
+    .top-bar {
+      background: var(--dark);
+      color: #fff;
+      font-size: 0.8rem;
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      padding: 8px 20px;
+      letter-spacing: 0.3px;
+    }
+    .top-bar a { color: var(--accent); text-decoration: none; }
+
+    /* ─── HEADER / NAV ─── */
+    header {
+      background: var(--bg);
+      padding: 0 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo-wrap { display: flex; flex-direction: column; }
+    .logo-name {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.75rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      line-height: 1;
+    }
+    .logo-name span:nth-child(1) { color: var(--primary); }
+    .logo-name span:nth-child(2) { color: var(--secondary); }
+    .logo-name span:nth-child(3) { color: var(--dark); }
+    .logo-tagline {
+      font-size: 0.7rem;
+      color: var(--text-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+    nav { display: flex; align-items: center; gap: 6px; }
+    nav a {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--text);
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: var(--radius-btn);
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--primary); color: #fff; }
+    nav a.nav-cta {
+      background: var(--primary);
+      color: #fff;
+      padding: 9px 20px;
+    }
+    nav a.nav-cta:hover { background: #e85555; }
+    nav a.nav-active {
+      background: rgba(255,107,107,0.12);
+      color: var(--primary);
+    }
+
+    /* ─── NAV SOCIAL ICONS ─── */
+    .nav-social { display: flex; align-items: center; gap: 2px; margin: 0 4px; }
+    .nav-social-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-social-icon:hover { background: var(--primary); color: #fff; }
+    .nav-social-icon svg { width: 17px; height: 17px; display: block; }
+
+    /* ─── PAGE HERO ─── */
+    .page-hero {
+      background: linear-gradient(135deg, #fff5d6 0%, #fff9e8 50%, #fffde7 100%);
+      padding: 64px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.15;
+      top: -80px; right: -80px;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: var(--primary);
+      opacity: 0.1;
+      bottom: -60px; left: -40px;
+    }
+    .page-hero-eyebrow {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--dark);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 16px;
+      border-radius: var(--radius-btn);
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero h1 {
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 900;
+      color: var(--dark);
+      margin-bottom: 14px;
+      line-height: 1.2;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero h1 em { color: var(--primary); font-style: normal; }
+    .page-hero p {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      max-width: 580px;
+      margin: 0 auto 28px;
+      line-height: 1.7;
+      position: relative;
+      z-index: 1;
+    }
+    .page-hero-btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    .btn-primary {
+      background: var(--primary);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 13px 28px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(255,107,107,0.3);
+      display: inline-block;
+    }
+    .btn-primary:hover { transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+      border: 2px solid rgba(44,62,80,0.25);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 11px 28px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      transition: background 0.15s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: rgba(44,62,80,0.07); }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 64px 40px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-title { font-size: 1.8rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
+    .section-sub { color: var(--text-light); font-size: 1rem; margin-bottom: 36px; }
+    .section-title-accent {
+      display: inline-block;
+      width: 50px;
+      height: 5px;
+      background: var(--primary);
+      border-radius: 10px;
+      margin-bottom: 14px;
+    }
+
+    /* ─── CREDIT CALLOUT ─── */
+    .credit-callout {
+      background: linear-gradient(135deg, #f0fffb, #e0fafa);
+      border: 2px solid var(--secondary);
+      border-radius: var(--radius-card);
+      padding: 36px 40px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .credit-callout-icon { font-size: 3.5rem; }
+    .credit-callout h3 { font-size: 1.3rem; font-weight: 900; color: var(--dark); margin-bottom: 10px; }
+    .credit-callout p { color: var(--text-light); font-size: 0.95rem; line-height: 1.7; }
+    .credit-highlight {
+      display: inline-block;
+      background: var(--secondary);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-top: 12px;
+    }
+
+    /* ─── TOP DOLLAR GRID ─── */
+    .dollar-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .dollar-card {
+      background: var(--bg);
+      border-radius: var(--radius-card);
+      padding: 24px 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+    .dollar-card .dollar-emoji { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+    .dollar-card h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 8px; }
+    .dollar-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.55; }
+    .brand-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    .brand-pill {
+      display: inline-block;
+      background: rgba(78,205,196,0.12);
+      color: var(--secondary);
+      font-family: 'Nunito', sans-serif;
+      font-weight: 700;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+
+    /* ─── PREP STEPS ─── */
+    .prep-steps {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .prep-card {
+      background: var(--bg2);
+      border-radius: var(--radius-card);
+      padding: 24px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .prep-num {
+      width: 36px;
+      height: 36px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .prep-content h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 5px; }
+    .prep-content p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
+
+    /* ─── TIMING ─── */
+    .timing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .timing-card {
+      border-radius: var(--radius-card);
+      padding: 24px 20px;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .timing-card.best {
+      background: linear-gradient(135deg, #f0fffb, #e0fafa);
+      border: 2px solid var(--secondary);
+    }
+    .timing-card.good { background: var(--bg2); border: 2px solid #e0e0e0; }
+    .timing-card.avoid {
+      background: linear-gradient(135deg, #fff5f5, #fff0f0);
+      border: 2px solid #f5c6c6;
+    }
+    .timing-label {
+      display: inline-block;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .timing-card.best .timing-label { background: var(--secondary); color: #fff; }
+    .timing-card.good .timing-label { background: #999; color: #fff; }
+    .timing-card.avoid .timing-label { background: var(--primary); color: #fff; }
+    .timing-card h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 6px; }
+    .timing-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.55; }
+
+    /* ─── AVOID LIST ─── */
+    .avoid-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .avoid-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg2);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .avoid-icon { font-size: 1.4rem; flex-shrink: 0; }
+    .avoid-item h4 { font-weight: 800; font-size: 0.9rem; color: var(--dark); margin-bottom: 3px; }
+    .avoid-item p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
+
+    /* ─── PRO TIPS ─── */
+    .pro-tips {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .pro-tip {
+      background: var(--bg);
+      border-radius: var(--radius-card);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--primary);
+      position: relative;
+    }
+    .pro-tip:nth-child(2) { border-left-color: var(--secondary); }
+    .pro-tip:nth-child(3) { border-left-color: var(--accent); }
+    .pro-tip:nth-child(4) { border-left-color: var(--primary); }
+    .pro-tip .tip-num {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: rgba(44,62,80,0.08);
+      position: absolute;
+      top: 12px;
+      right: 18px;
+      line-height: 1;
+    }
+    .pro-tip h4 { font-weight: 800; font-size: 1rem; color: var(--dark); margin-bottom: 8px; }
+    .pro-tip p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--dark);
+      color: #fff;
+      padding: 56px 40px 28px;
+    }
+    .footer-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .logo-name { font-size: 1.5rem; margin-bottom: 10px; }
+    .footer-brand p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; }
+    .footer-fb {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #1877F2;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 7px 16px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .footer-fb:hover { opacity: 0.88; }
+    .footer-ig {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      padding: 7px 16px;
+      border-radius: var(--radius-btn);
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .footer-ig:hover { opacity: 0.88; }
+    .footer-fb svg, .footer-ig svg { width: 14px; height: 14px; flex-shrink: 0; }
+    footer h4 {
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    footer ul li { font-size: 0.88rem; opacity: 0.8; line-height: 1.5; }
+    footer ul li a { color: #fff; text-decoration: none; opacity: 0.8; }
+    footer ul li a:hover { opacity: 1; }
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      opacity: 0.55;
+    }
+
+    /* ─── CTA ─── */
+    .cta-strip {
+      background: var(--primary);
+      padding: 56px 40px;
+      text-align: center;
+      color: #fff;
+    }
+    .cta-strip h2 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; }
+    .cta-strip p { font-size: 1rem; opacity: 0.9; margin-bottom: 28px; max-width: 520px; margin-left: auto; margin-right: auto; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      .dollar-grid, .timing-grid { grid-template-columns: 1fr 1fr; }
+      .prep-steps { grid-template-columns: 1fr; }
+      .avoid-grid { grid-template-columns: 1fr; }
+      .pro-tips { grid-template-columns: 1fr; }
+      .credit-callout { grid-template-columns: 1fr; text-align: center; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 48px 20px; }
+      .page-hero { padding: 48px 20px; }
+      .cta-strip { padding: 48px 20px; }
+      .dollar-grid, .timing-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    📍 6409 6th Ave #10, Tacoma &nbsp;·&nbsp; Mon–Sat 10am–6pm · Sun 11am–5pm &nbsp;·&nbsp;
+    <a href="tel:2535655439">(253) 565-KIDZ</a>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <a href="index.html" style="text-decoration:none;">
+      <div class="logo-wrap">
+        <div class="logo-name">
+          <span>KIDZ&nbsp;</span><span>KABOODLE</span>
+        </div>
+        <div class="logo-tagline">Baby &bull; Kids &bull; Maternity Resale</div>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html#categories">Shop</a>
+      <a href="trade.html">Sell / Trade</a>
+      <a href="value.html" class="nav-active">Max Your Value</a>
+      <a href="index.html#promos">Sales &amp; Deals</a>
+      <a href="#">About</a>
+      <div class="nav-social">
+        <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+      <a href="index.html#footer" class="nav-cta">Visit Us</a>
+    </nav>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="page-hero-eyebrow">💡 Smart Selling Tips</div>
+    <h1>Get the <em>Most Value</em> for Your Stuff</h1>
+    <p>A little prep before you come in makes a big difference. Here's exactly what to do — and what to skip — to walk out with the most money.</p>
+    <div class="page-hero-btns">
+      <a href="#store-credit" class="btn-primary">💳 Why Choose Store Credit</a>
+      <a href="trade.html" class="btn-outline">📦 How Trading Works</a>
+    </div>
+  </div>
+
+  <!-- WHY STORE CREDIT -->
+  <section id="store-credit" style="background: var(--bg); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Why Store Credit Beats Cash</h2>
+      <p class="section-sub">Both are paid on the spot — but store credit stretches further every time.</p>
+      <div class="credit-callout">
+        <div class="credit-callout-icon">💳</div>
+        <div>
+          <h3>Store Credit = More Bang for Your Trade</h3>
+          <p>When you choose store credit instead of cash, we give you a <strong>bonus on top of your offer</strong>. That means the same bag of clothes is worth more to you as store credit than as cash in hand. And because Kidz Kaboodle prices are already steep discounts off retail, your credit goes even further.</p>
+          <p style="margin-top:10px;">Think of it as a trade loop: kids outgrow stuff → you trade it in → credit goes toward the next size up. It's the most cost-effective way to keep up with growing kids.</p>
+          <span class="credit-highlight">✅ Best value for families who shop and trade regularly</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT GETS TOP DOLLAR -->
+  <section id="top-dollar" style="background: var(--bg2); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">What Items Get Top Dollar</h2>
+      <p class="section-sub">Not everything is equal — here's what consistently earns the strongest offers.</p>
+      <div class="dollar-grid">
+        <div class="dollar-card">
+          <span class="dollar-emoji">🏅</span>
+          <h4>Name Brands</h4>
+          <p>Recognizable labels in great condition earn the best offers. We look for brands families trust.</p>
+          <div class="brand-pills">
+            <span class="brand-pill">Patagonia</span>
+            <span class="brand-pill">North Face</span>
+            <span class="brand-pill">Nike</span>
+            <span class="brand-pill">Gap</span>
+            <span class="brand-pill">Carter's</span>
+            <span class="brand-pill">Columbia</span>
+            <span class="brand-pill">Old Navy</span>
+          </div>
+        </div>
+        <div class="dollar-card">
+          <span class="dollar-emoji">✨</span>
+          <h4>Excellent Condition</h4>
+          <p>Items that look nearly new — no fading, no pilling, no stains, no snags. "Gently used" means it looks like it wasn't used much.</p>
+        </div>
+        <div class="dollar-card">
+          <span class="dollar-emoji">🌞</span>
+          <h4>Right-Season Items</h4>
+          <p>Bring swimsuits in summer, rain gear in fall, and coats in early winter. Seasonal relevance matters — we can always place what's needed now.</p>
+        </div>
+        <div class="dollar-card">
+          <span class="dollar-emoji">🛒</span>
+          <h4>Complete Gear Sets</h4>
+          <p>Strollers with all components, high chairs with all parts, play kitchens with accessories — complete is always worth more than incomplete.</p>
+        </div>
+        <div class="dollar-card">
+          <span class="dollar-emoji">🧸</span>
+          <h4>Wooden &amp; Educational Toys</h4>
+          <p>Quality wooden toys, puzzles with all pieces, and learning toys hold their value well and move quickly from our shelves.</p>
+        </div>
+        <div class="dollar-card">
+          <span class="dollar-emoji">👟</span>
+          <h4>Lightly Worn Shoes</h4>
+          <p>Kids' shoes with clean soles and minimal wear — especially name brands in smaller sizes — are always in demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW TO PREP YOUR ITEMS -->
+  <section id="prep" style="background: var(--bg); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">How to Prep Your Items</h2>
+      <p class="section-sub">A little prep work before you arrive makes a real difference in what we can accept — and what we offer.</p>
+      <div class="prep-steps">
+        <div class="prep-card">
+          <div class="prep-num">1</div>
+          <div class="prep-content">
+            <h4>Wash Everything</h4>
+            <p>Freshly laundered clothing makes a much better impression. Give it all a clean wash and make sure it smells fresh — no musty storage smells.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <div class="prep-num">2</div>
+          <div class="prep-content">
+            <h4>Group and Sort by Size</h4>
+            <p>Put all 2T items together, all 3T together, and so on. Sorting makes our review faster, which is better for everyone — and it shows you're organized and serious.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <div class="prep-num">3</div>
+          <div class="prep-content">
+            <h4>Wipe Down Gear</h4>
+            <p>A clean stroller or high chair looks far more appealing than one with crumbs and grime. Give gear a good wipe-down before you bring it in.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <div class="prep-num">4</div>
+          <div class="prep-content">
+            <h4>Gather All Accessories</h4>
+            <p>Bring all straps, covers, adapters, and extra parts. Gear with everything included is almost always accepted at a higher value than incomplete sets.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <div class="prep-num">5</div>
+          <div class="prep-content">
+            <h4>Do a Final Sniff Test</h4>
+            <p>Items with smoke, pet, or mildew odors are automatically passed on — even if they look great. Give everything a final smell check before you pack up.</p>
+          </div>
+        </div>
+        <div class="prep-card">
+          <div class="prep-num">6</div>
+          <div class="prep-content">
+            <h4>Check for Missing Buttons &amp; Zippers</h4>
+            <p>A quick once-over for broken snaps, missing buttons, or stuck zippers can save you the disappointment of a pass. Fix what you can; skip what you can't.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST TIMES TO COME IN -->
+  <section id="timing" style="background: var(--bg2); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Best Times to Come In</h2>
+      <p class="section-sub">Timing matters — here's when you're most likely to get the best results.</p>
+      <div class="timing-grid">
+        <div class="timing-card best">
+          <span class="timing-label">Best</span>
+          <h4>Early in Trade Hours</h4>
+          <p>The first hour of trade (10–11am) is when our team is freshest and most energetic. You'll get thorough attention and the best shot at having items accepted.</p>
+        </div>
+        <div class="timing-card good">
+          <span class="timing-label">Good</span>
+          <h4>Mid-Morning</h4>
+          <p>11am–1pm is still a solid window. Plenty of time to get through your items before the 2pm cutoff. Bring a smaller, curated load for a quicker turnaround.</p>
+        </div>
+        <div class="timing-card avoid">
+          <span class="timing-label">Avoid</span>
+          <h4>Last 30 Minutes</h4>
+          <p>Arriving after 1:30pm can be stressful. Trade drop-offs close at 2pm, and if you have a large load, we may not be able to get through everything in time.</p>
+        </div>
+      </div>
+      <div style="background: var(--bg); border-radius: var(--radius-card); padding: 24px 28px; margin-top: 24px; border-left: 4px solid var(--accent);">
+        <p style="font-size: 0.92rem; color: var(--text-light); line-height: 1.7;"><strong style="color: var(--dark);">💡 Tip:</strong> Trade days are Monday, Tuesday, and Thursday. If one day is particularly busy, try a different trade day — stock needs also shift day to day, so what we're looking for Tuesday might differ from Monday.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT NOT TO BRING -->
+  <section id="avoid" style="background: var(--bg); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">What NOT to Bring</h2>
+      <p class="section-sub">Save yourself a trip — these items are almost always a pass.</p>
+      <div class="avoid-grid">
+        <div class="avoid-item">
+          <div class="avoid-icon">🚫</div>
+          <div>
+            <h4>Heavily Stained or Worn Clothing</h4>
+            <p>If it has visible stains, fading, pilling, or worn-through knees, it's a pass. These items aren't sellable in our store.</p>
+          </div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-icon">🧩</div>
+          <div>
+            <h4>Incomplete Toys or Gear</h4>
+            <p>Missing puzzle pieces, broken parts, no straps, dead batteries — incomplete is a hard pass for gear and toys.</p>
+          </div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-icon">❄️</div>
+          <div>
+            <h4>Off-Season Items in Peak Season</h4>
+            <p>Heavy winter coats in July or swimsuits in January are tough to place. Bring items when they're seasonally relevant.</p>
+          </div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-icon">⏰</div>
+          <div>
+            <h4>Expired Car Seats</h4>
+            <p>Safety is non-negotiable. Car seats and boosters past their manufacturer expiration date are never accepted — check the date stamped on the seat.</p>
+          </div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-icon">🚨</div>
+          <div>
+            <h4>Recalled Products</h4>
+            <p>We check the CPSC recall database. If an item is recalled, it won't be accepted — safety for our customers always comes first.</p>
+          </div>
+        </div>
+        <div class="avoid-item">
+          <div class="avoid-icon">💨</div>
+          <div>
+            <h4>Items with Strong Odors</h4>
+            <p>Smoke smell, pet odors, or mildew — no amount of Febreze fixes it for us. These go straight back to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRO TIPS -->
+  <section id="pro-tips" style="background: var(--bg2); padding: 64px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Pro Tips from Regular Traders</h2>
+      <p class="section-sub">Families who trade with us regularly have figured these out — now you know too.</p>
+      <div class="pro-tips">
+        <div class="pro-tip">
+          <span class="tip-num">1</span>
+          <h4>Check the Buying List First</h4>
+          <p>Before you load up the car, check our Facebook page or the <a href="index.html#buying" style="color:var(--primary);">buying list on our homepage</a> to see what we're actively looking for this week. It changes weekly based on stock levels — don't bring a full load of what we're already full on.</p>
+        </div>
+        <div class="pro-tip">
+          <span class="tip-num">2</span>
+          <h4>Go for Store Credit — Every Time</h4>
+          <p>Regular traders almost always choose store credit. The bonus value adds up fast, especially on bigger trades. If you shop here anyway (and you should — prices are incredible), the credit is basically free money toward your next haul.</p>
+        </div>
+        <div class="pro-tip">
+          <span class="tip-num">3</span>
+          <h4>Trade Small and Often</h4>
+          <p>Instead of one giant seasonal purge, successful traders come in regularly with smaller, curated loads. Fewer items = faster review = better attention per item. Plus you stay on top of stock needs as they shift week to week.</p>
+        </div>
+        <div class="pro-tip">
+          <span class="tip-num">4</span>
+          <h4>Curate Before You Come</h4>
+          <p>Pre-edit at home. If you have any doubt about an item — if it's worn, if the brand is unknown, if it's missing a piece — leave it home. Bringing a smaller, high-quality load almost always results in a higher acceptance rate than a giant mixed bag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Ready to make the most of your trade?</h2>
+    <p>Come in prepped and confident — trade hours are Mon, Tue &amp; Thu · 10am–2pm. No appointment needed.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="trade.html" style="background:#fff; color:var(--primary); font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; padding:13px 28px; border-radius:50px; text-decoration:none; display:inline-block;">📦 How Trading Works</a>
+      <a href="index.html#footer" style="background:rgba(255,255,255,0.18); color:#fff; border:2px solid rgba(255,255,255,0.5); font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; padding:11px 28px; border-radius:50px; text-decoration:none; display:inline-block;">📍 Get Directions</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name">
+          <span>KIDZ&nbsp;</span><span>KABOODLE</span>
+        </div>
+        <p style="margin-top:8px;">Tacoma's largest selection of secondhand baby, kids &amp; maternity clothing. Nearly 20 years serving the Pacific Northwest.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/kidz.kaboodle/" class="footer-ig" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Sat: 10am–6pm</li>
+          <li>Sunday: 11am–5pm</li>
+          <li>&nbsp;</li>
+          <li><strong style="color:var(--accent)">Trade Hours:</strong></li>
+          <li>Mon, Tue, Thu · 10am–2pm</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul>
+          <li>6409 6th Ave #10</li>
+          <li>Tacoma, WA 98406</li>
+          <li style="margin-top:8px;"><a href="tel:2535655439">(253) 565-KIDZ</a></li>
+          <li><a href="mailto:info@kidzkaboodle.com">info@kidzkaboodle.com</a></li>
+          <li style="margin-top:8px;"><a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kidz Kaboodle · Tacoma, WA</span>
+      <span>Baby &bull; Kids &bull; Maternity Resale</span>
+    </div>
+  </footer>
+
+</body>
+</html>
