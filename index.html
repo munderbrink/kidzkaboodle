@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kidz Kaboodle — Baby • Kids • Maternity Resale | Tacoma, WA</title>
-  <meta name="description" content="Tacoma's favorite kids resale store. Baby, kids & maternity clothing, gear, toys and more — nearly 20 years serving the Pacific Northwest.">
+  <meta name="description" content="Baby, kids &amp; maternity clothing, gear, toys and more — Kidz Kaboodle has been serving Tacoma families for nearly 20 years. Stop in and see what's new!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -245,6 +245,62 @@
       margin-bottom: 16px;
     }
 
+    /* ─── TRADE HOURS BAR (inside buying section) ─── */
+    .trade-hours-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .trade-hours-card {
+      background: var(--bg2);
+      border-radius: var(--radius-card);
+      padding: 16px 20px;
+      border-left: 4px solid var(--secondary);
+      font-size: 0.88rem;
+      color: var(--text);
+      line-height: 1.65;
+    }
+    .trade-hours-card strong { color: var(--secondary); font-family: 'Nunito', sans-serif; }
+
+    /* ─── PAYOUT BAR (inside buying section) ─── */
+    .payout-bar {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      padding: 14px 20px;
+      background: linear-gradient(135deg, #f0fff9, #e0fafa);
+      border-radius: var(--radius-card);
+      border-left: 4px solid #27ae60;
+    }
+    .payout-item { display: flex; flex-direction: column; gap: 3px; }
+    .payout-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .payout-rate {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--dark);
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* ─── NOT BUYING NOTE ─── */
+    .buying-not-note {
+      font-size: 0.82rem;
+      color: var(--text-light);
+      padding: 10px 16px;
+      background: #fff8f8;
+      border-left: 3px solid var(--primary);
+      border-radius: 6px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
     /* ─── PROMOTIONS ─── */
     .promos { background: var(--bg2); }
     .promo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
@@ -276,29 +332,25 @@
       margin-bottom: 10px;
     }
 
-    /* ─── CATEGORIES ─── */
+    /* ─── WHAT WE CARRY ─── */
     .cats { background: var(--bg); }
-    .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .cat-card {
       background: linear-gradient(135deg, #fff5f5, #e0fafa);
       border-radius: var(--radius-card);
-      padding: 32px 20px;
+      padding: 28px 16px;
       text-align: center;
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: default;
       box-shadow: var(--shadow);
-      text-decoration: none;
-      color: inherit;
-      display: block;
     }
-    .cat-card:nth-child(2) { background: linear-gradient(135deg, #e0fafa, #fffde7); }
-    .cat-card:nth-child(3) { background: linear-gradient(135deg, #fffde7, #fff5f5); }
-    .cat-card:nth-child(4) { background: linear-gradient(135deg, #f0f4ff, #e0fafa); }
-    .cat-card:nth-child(5) { background: linear-gradient(135deg, #fff5f5, #f0f4ff); }
-    .cat-card:nth-child(6) { background: linear-gradient(135deg, #e0fafa, #fff5f5); }
-    .cat-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(0,0,0,0.14); }
-    .cat-emoji { font-size: 2.8rem; margin-bottom: 12px; }
-    .cat-card h3 { font-weight: 800; font-size: 1.05rem; color: var(--dark); }
+    .cat-card:nth-child(6n+2) { background: linear-gradient(135deg, #e0fafa, #fffde7); }
+    .cat-card:nth-child(6n+3) { background: linear-gradient(135deg, #fffde7, #fff5f5); }
+    .cat-card:nth-child(6n+4) { background: linear-gradient(135deg, #f0f4ff, #e0fafa); }
+    .cat-card:nth-child(6n+5) { background: linear-gradient(135deg, #fff5f5, #f0f4ff); }
+    .cat-card:nth-child(6n)   { background: linear-gradient(135deg, #e0fafa, #fff5f5); }
+    .cat-emoji { font-size: 2.4rem; margin-bottom: 10px; }
+    .cat-card h3 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
+    .cat-card p { font-size: 0.78rem; color: var(--text-light); line-height: 1.4; }
 
     /* ─── SELL CALLOUT ─── */
     .sell-callout {
@@ -332,7 +384,7 @@
     .sell-steps { display: flex; flex-direction: column; gap: 16px; }
     .sell-step {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
       background: rgba(255,255,255,0.15);
       border-radius: var(--radius-card);
@@ -352,8 +404,9 @@
       font-weight: 900;
       font-size: 1.1rem;
       flex-shrink: 0;
+      margin-top: 3px;
     }
-    .sell-step p { font-size: 0.95rem; font-weight: 600; margin: 0; }
+    .sell-step p { font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.65; }
 
     /* ─── RECENT INVENTORY ─── */
     .recent { background: var(--bg2); }
@@ -421,12 +474,12 @@
       box-shadow: var(--shadow);
     }
     .buying-box h2 { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
-    .buying-box .buying-sub { color: var(--text-light); margin-bottom: 30px; font-size: 0.9rem; }
+    .buying-box .buying-sub { color: var(--text-light); margin-bottom: 24px; font-size: 0.9rem; }
     .buying-cols {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .buying-col h4 {
       font-size: 1rem;
@@ -555,19 +608,24 @@
     @media (max-width: 900px) {
       header { padding: 0 20px; }
       nav { display: none; }
-      .usp-grid, .promo-grid, .cat-grid { grid-template-columns: 1fr 1fr; }
+      .usp-grid, .promo-grid { grid-template-columns: 1fr 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
       .inv-grid { grid-template-columns: 1fr 1fr; }
       .sell-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .trade-hours-bar { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       section { padding: 48px 20px; }
       .hero { padding: 48px 20px; }
       .usp-strip { padding: 40px 20px; }
       .sell-callout { padding: 48px 20px; }
-      .usp-grid, .promo-grid, .cat-grid, .inv-grid { grid-template-columns: 1fr; }
+      .usp-grid, .promo-grid { grid-template-columns: 1fr; }
+      .cat-grid { grid-template-columns: repeat(2, 1fr); }
+      .inv-grid { grid-template-columns: 1fr 1fr; }
       .buying-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .payout-bar { flex-direction: column; gap: 14px; }
     }
   </style>
 </head>
@@ -576,7 +634,7 @@
   <!-- TOP BAR -->
   <div class="top-bar">
     📍 6409 6th Ave #10, Tacoma &nbsp;·&nbsp; Mon–Sat 10am–6pm · Sun 11am–5pm &nbsp;·&nbsp;
-    <a href="tel:2535655439">(253) 565-KIDZ</a>
+    <a href="tel:2535760491">(253) 576-0491</a>
   </div>
 
   <!-- HEADER / NAV -->
@@ -621,8 +679,8 @@
       <div class="hero-emoji he5">🎈</div>
     </div>
     <div class="hero-content">
-      <div class="hero-eyebrow">🎉 Tacoma's Favorite Kids Store — Nearly 20 Years!</div>
-      <h1>The Pacific Northwest's <em>Favorite</em> Kids Resale Store</h1>
+      <div class="hero-eyebrow">⭐ Serving Tacoma Families for Nearly 20 Years</div>
+      <h1>Great Finds for <em>Growing Families</em></h1>
       <p>Baby, kids &amp; maternity clothing, gear, toys and more — at prices that make sense.</p>
       <div class="hero-btns">
         <a href="#categories" class="btn-primary">🛍️ SHOP WITH US</a>
@@ -642,7 +700,7 @@
       <div class="usp-item">
         <span class="usp-icon">🏆</span>
         <h3>Nearly 20 Years</h3>
-        <p>Tacoma's most trusted kids resale shop, loved by generations of families.</p>
+        <p>A Tacoma institution loved by generations of local families. Come see why we've been around so long.</p>
       </div>
       <div class="usp-item">
         <span class="usp-icon">✨</span>
@@ -651,6 +709,78 @@
       </div>
     </div>
   </div>
+
+  <!-- WHAT WE'RE BUYING THIS WEEK (shown prominently up top) -->
+  <section class="buying">
+    <div class="section-inner">
+      <div class="buying-box">
+        <h2>📋 Accepting This Week</h2>
+        <p class="buying-sub">Updated weekly based on current stock levels. Last updated: <span id="buying-updated">checking…</span></p>
+
+        <!-- Trade hours -->
+        <div class="trade-hours-bar">
+          <div class="trade-hours-card">
+            ⏰ <strong>Mon · Tue · Thu — 11am–2pm</strong><br>
+            Check in by <strong>1:30pm</strong> for a same-day offer — no exceptions. You must remain in store while items are reviewed (typically 15–45 min).
+          </div>
+          <div class="trade-hours-card">
+            📦 <strong>Sunday — 11am–1pm</strong><br>
+            Drop-off only. No same-day offers on Sundays. No equipment on Sundays. One store-provided 18-gallon bin per trade day.
+          </div>
+        </div>
+
+        <!-- Want / Full columns -->
+        <div class="buying-cols">
+          <div class="buying-col">
+            <h4 class="want-head">✅ We WANT</h4>
+            <ul id="buying-want-list">
+              <li>✅ Car seats &amp; boosters</li>
+              <li>✅ Strollers &amp; travel systems</li>
+              <li>✅ High chairs</li>
+              <li>✅ Wooden toys &amp; puzzles</li>
+              <li>✅ Swimsuits &amp; summer gear</li>
+            </ul>
+          </div>
+          <div class="buying-col">
+            <h4 class="full-head">❌ Currently FULL</h4>
+            <ul id="buying-full-list">
+              <li>❌ Pack n' plays</li>
+              <li>❌ Bouncers &amp; swings</li>
+              <li>❌ Bottle warmers</li>
+              <li>❌ Jumpers &amp; activity centers</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Payout rates -->
+        <div class="payout-bar">
+          <div class="payout-item">
+            <span class="payout-label">💰 Equipment payout</span>
+            <span class="payout-rate">30% cash &nbsp;·&nbsp; 50% store credit</span>
+          </div>
+          <div class="payout-item">
+            <span class="payout-label">💰 Clothing, toys &amp; gear</span>
+            <span class="payout-rate">20% cash &nbsp;·&nbsp; 40% store credit</span>
+          </div>
+        </div>
+
+        <!-- Not purchasing note -->
+        <p class="buying-not-note">⚠️ <strong>We do not purchase:</strong> recalled equipment, cribs, baths, baby food, baby loungers (Dock-A-Tot style), breast pumps, or battery-operated ride-on toys. Some may be accepted as donations — recalled equipment cannot be accepted under any circumstances.</p>
+
+        <div class="buying-fb">
+          <span>Check back weekly — or follow us on social for daily updates</span>
+          <a href="https://www.facebook.com/kidzkaboodle" class="fb-link" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/kidz.kaboodle/" class="ig-link" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CURRENT PROMOTIONS -->
   <section id="promos" class="promos">
@@ -675,43 +805,79 @@
           <div class="promo-tag">Mon · Tue · Thu</div>
           <div class="promo-icon">📦</div>
           <h3>Accepting Trades</h3>
-          <p>Bring your kids' gently-used items <strong>Monday, Tuesday &amp; Thursday · 10am–2pm</strong>. Cash or store credit paid on the spot.</p>
+          <p>Bring your kids' gently-used items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong>. Check in by <strong>1:30pm</strong> for a same-day offer. Cash or store credit paid on the spot.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SHOP BY CATEGORY -->
+  <!-- WHAT WE CARRY -->
   <section id="categories" class="cats">
     <div class="section-inner">
       <div class="section-title-accent"></div>
-      <h2 class="section-title">Shop by Category</h2>
-      <p class="section-sub">Tacoma's largest selection of secondhand baby, kids &amp; maternity clothing.</p>
+      <h2 class="section-title">What We Carry</h2>
+      <p class="section-sub">From newborn to size 16 — gently-used clothing, gear, toys, and everything in between.</p>
       <div class="cat-grid">
-        <a href="#" class="cat-card">
+        <div class="cat-card">
           <div class="cat-emoji">👶</div>
-          <h3>Baby (NB–24m)</h3>
-        </a>
-        <a href="#" class="cat-card">
+          <h3>Baby Clothing</h3>
+          <p>Newborn–24 months</p>
+        </div>
+        <div class="cat-card">
           <div class="cat-emoji">👕</div>
-          <h3>Kids Clothing (2T–Size 16)</h3>
-        </a>
-        <a href="#" class="cat-card">
+          <h3>Kids Clothing</h3>
+          <p>2T–Size 16</p>
+        </div>
+        <div class="cat-card">
           <div class="cat-emoji">🤰</div>
           <h3>Maternity</h3>
-        </a>
-        <a href="#" class="cat-card">
+          <p>Tops, pants, dresses &amp; more</p>
+        </div>
+        <div class="cat-card">
           <div class="cat-emoji">👟</div>
-          <h3>Shoes</h3>
-        </a>
-        <a href="#" class="cat-card">
+          <h3>Shoes &amp; Boots</h3>
+          <p>All sizes, all seasons</p>
+        </div>
+        <div class="cat-card">
           <div class="cat-emoji">🧸</div>
-          <h3>Toys &amp; Books</h3>
-        </a>
-        <a href="#" class="cat-card">
+          <h3>Toys, Games &amp; Books</h3>
+          <p>Clean, complete &amp; ready to play</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🛺</div>
+          <h3>Strollers</h3>
+          <p>Singles, doubles &amp; travel systems</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🎠</div>
+          <h3>Activity Centers &amp; Swings</h3>
+          <p>Bouncers, jumpers &amp; rockers</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🍼</div>
+          <h3>Feeding</h3>
+          <p>High chairs, bibs &amp; accessories</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🧷</div>
+          <h3>Diapers &amp; Changing</h3>
+          <p>Cloth diapers, bags &amp; pads</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🌊</div>
+          <h3>Swim &amp; Seasonal</h3>
+          <p>Swimwear, snow gear &amp; outerwear</p>
+        </div>
+        <div class="cat-card">
           <div class="cat-emoji">🛒</div>
           <h3>Gear &amp; Equipment</h3>
-        </a>
+          <p>Pack n' plays, bassinets &amp; more</p>
+        </div>
+        <div class="cat-card">
+          <div class="cat-emoji">🤱</div>
+          <h3>Carriers &amp; Baby Wearing</h3>
+          <p>Wraps, slings &amp; structured carriers</p>
+        </div>
       </div>
     </div>
   </section>
@@ -727,15 +893,15 @@
       <div class="sell-steps">
         <div class="sell-step">
           <div class="sell-step-num">1</div>
-          <p>📦 <strong>Bring It In</strong> — Drop off your clean, gently-used kids items Mon, Tue &amp; Thu · 10am–2pm</p>
+          <p>📦 <strong>Bring It In</strong> — One store-provided 18-gallon bin of clean, gently-used kids items. Trade hours: Mon, Tue &amp; Thu · 11am–2pm. <strong>Check in by 1:30pm</strong> for a same-day offer.</p>
         </div>
         <div class="sell-step">
           <div class="sell-step-num">2</div>
-          <p>🔍 <strong>We Review</strong> — Our team evaluates each item for quality and current demand</p>
+          <p>🔍 <strong>We Review</strong> — Wait in store while we process (typically 15–45 min). First-timers: we recommend selecting "approval required" so you can review the offer before accepting.</p>
         </div>
         <div class="sell-step">
           <div class="sell-step-num">3</div>
-          <p>💸 <strong>Get Paid</strong> — Choose cash or store credit. Done! No waiting, no consignment.</p>
+          <p>💸 <strong>Get Paid</strong> — Equipment: 30% cash or 50% store credit. Clothing, toys &amp; gear: 20% cash or 40% store credit. Paid on the spot — no consignment waiting!</p>
         </div>
       </div>
     </div>
@@ -754,48 +920,6 @@
     </div>
   </section>
 
-  <!-- WHAT WE'RE BUYING THIS WEEK -->
-  <section class="buying">
-    <div class="section-inner">
-      <div class="buying-box">
-        <h2>📋 Accepting This Week:</h2>
-        <p class="buying-sub">Updated weekly based on current stock levels. Last updated: <span id="buying-updated">checking…</span></p>
-        <div class="buying-cols">
-          <div class="buying-col">
-            <h4 class="want-head">✅ We WANT</h4>
-            <ul id="buying-want-list">
-              <li>✅ Car seats &amp; boosters</li>
-              <li>✅ Strollers &amp; travel systems</li>
-              <li>✅ High chairs</li>
-              <li>✅ Wooden toys &amp; puzzles</li>
-              <li>✅ Swimsuits &amp; summer gear</li>
-            </ul>
-          </div>
-          <div class="buying-col">
-            <h4 class="full-head">❌ Currently FULL</h4>
-            <ul id="buying-full-list">
-              <li>❌ Pack n' plays</li>
-              <li>❌ Bouncers &amp; swings</li>
-              <li>❌ Bottle warmers</li>
-              <li>❌ Jumpers &amp; activity centers</li>
-            </ul>
-          </div>
-        </div>
-        <div class="buying-fb">
-          <span>Check back weekly — or follow us on social for daily updates</span>
-          <a href="https://www.facebook.com/kidzkaboodle" class="fb-link" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Facebook
-          </a>
-          <a href="https://www.instagram.com/kidz.kaboodle/" class="ig-link" target="_blank" rel="noopener">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            Instagram
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- FOOTER -->
   <footer id="footer">
     <div class="footer-grid">
@@ -803,7 +927,7 @@
         <div class="logo-name">
           <span>KIDZ&nbsp;</span><span>KABOODLE</span>
         </div>
-        <p style="margin-top:8px;">Tacoma's largest selection of secondhand baby, kids &amp; maternity clothing. Nearly 20 years serving the Pacific Northwest.</p>
+        <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for nearly 20 years.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -822,7 +946,10 @@
           <li>Sunday: 11am–5pm</li>
           <li>&nbsp;</li>
           <li><strong style="color:var(--accent)">Trade Hours:</strong></li>
-          <li>Mon, Tue, Thu · 10am–2pm</li>
+          <li>Mon, Tue, Thu · 11am–2pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Check in by 1:30pm for same-day offer</li>
+          <li style="margin-top:4px;">Sunday · 11am–1pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Drop-off only · No equipment</li>
         </ul>
       </div>
       <div>
@@ -830,7 +957,7 @@
         <ul>
           <li>6409 6th Ave #10</li>
           <li>Tacoma, WA 98406</li>
-          <li style="margin-top:8px;"><a href="tel:2535655439">(253) 565-KIDZ</a></li>
+          <li style="margin-top:8px;"><a href="tel:2535760491">(253) 576-0491</a></li>
           <li><a href="mailto:info@kidzkaboodle.com">info@kidzkaboodle.com</a></li>
           <li style="margin-top:8px;"><a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a></li>
