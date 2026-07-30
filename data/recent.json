@@ -1,7 +1,17 @@
 {
   "_comment": "Managed by sync-inventory cron job. Discord items expire after 7 days. Facebook album items have no expiry (null).",
-  "updated": "2026-07-29",
+  "updated": "2026-07-30",
   "items": [
+    {
+      "source": "discord",
+      "discordMessageId": "1532251926635221012",
+      "title": "Mini Crib Brand unknown",
+      "desc": "(this is a test, but this was actually in the store)",
+      "badge": "New In",
+      "image": "images/inventory/discord-1532251926635221012.jpg",
+      "added": "2026-07-30",
+      "expires": "2026-08-06"
+    },
     {
       "title": "Mini Crib — White",
       "desc": "White mini crib in good condition. Includes mesh breathable liner and mattress pad. Great for small spaces. Come in to check it out!",
