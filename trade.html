@@ -186,8 +186,8 @@
     .info-box ul li .bullet { flex-shrink: 0; margin-top: 2px; }
 
     /* ─── CASH VS CREDIT ─── */
-    .credit-vs-cash { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
-    .credit-card { border-radius: var(--radius-card); padding: 28px; box-shadow: var(--shadow); }
+    .credit-vs-cash { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .credit-card { border-radius: var(--radius-card); padding: 28px; box-shadow: var(--shadow); display: flex; flex-direction: column; }
     .credit-card.winner { background: linear-gradient(135deg, #f0fffb, #e0fafa); border: 2px solid var(--secondary); }
     .credit-card.other { background: var(--bg2); border: 2px solid #e0e0e0; }
     .credit-card .badge {
@@ -198,15 +198,19 @@
     .credit-card.winner .badge { background: var(--secondary); }
     .credit-card.other .badge { background: #999; }
     .credit-card h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
-    .credit-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+    .credit-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; flex: 1; margin-bottom: 0; }
     .credit-big { font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 900; color: var(--secondary); display: block; margin-bottom: 4px; }
-    .payout-detail {
-      background: var(--bg2); border-radius: var(--radius-card);
-      padding: 18px 24px; display: flex; gap: 40px; flex-wrap: wrap;
+    .card-rates {
+      margin-top: 20px; padding-top: 16px;
+      border-top: 2px solid rgba(78,205,196,0.3);
+      display: flex; flex-direction: column; gap: 10px;
     }
-    .payout-detail-item { display: flex; flex-direction: column; gap: 3px; }
-    .payout-detail-label { font-size: 0.72rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
-    .payout-detail-rate { font-size: 0.95rem; font-weight: 800; color: var(--dark); font-family: 'Nunito', sans-serif; }
+    .credit-card.other .card-rates { border-top-color: #e0e0e0; }
+    .card-rate-row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-size: 0.87rem; }
+    .card-rate-label { color: var(--text-light); }
+    .card-rate-val { font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 0.95rem; white-space: nowrap; }
+    .credit-card.winner .card-rate-val { color: var(--secondary); }
+    .credit-card.other .card-rate-val { color: var(--text-light); }
 
     /* ─── ACCEPTING THIS WEEK ─── */
     .accepting-box {
@@ -386,7 +390,7 @@
       <div class="hours-grid">
         <div class="hours-card">
           <h3>⏰ Mon · Tue · Thu — 11am–2pm</h3>
-          <p><strong>Same-day trades &amp; equipment trades.</strong> Our team evaluates your items and makes an offer the same day. You must be checked in by 1:30pm — no exceptions. You must remain in the store to receive your offer.</p>
+          <p><strong>Trades &amp; drop-offs welcome.</strong> Walk in any time to drop off items. For a <strong>same-day offer or equipment trade</strong>, check in by 1:30pm and plan to stay while we review.</p>
         </div>
         <div class="hours-card sunday">
           <h3>📦 Sunday — 11am–1pm</h3>
@@ -396,7 +400,7 @@
 
       <div class="cutoff-warning">
         <div class="cutoff-icon">⚠️</div>
-        <p><strong>Hard cutoff: 1:30pm on Mon, Tue &amp; Thu</strong> — Check in by 1:30pm for a same-day offer or equipment trade. No exceptions. Arrive early if you have a large bin or equipment.</p>
+        <p><strong>Hard cutoff: 1:30pm on Mon, Tue &amp; Thu</strong> — Must be checked in by 1:30pm for a same-day offer or equipment trade. No exceptions.</p>
       </div>
 
       <div class="closure-notice">
@@ -417,7 +421,7 @@
           <div class="step-num">1</div>
           <div class="step-content">
             <h4>📦 Bring It In</h4>
-            <p>Bring one store-provided 18-gallon bin of clean, gently-used kids items during trade hours. For equipment trades, have items fully assembled outside the store before we can review them. Same-day offers and equipment trades are only available Mon, Tue &amp; Thu — check in by 1:30pm.</p>
+            <p>Drop-offs are welcome any trade day. For a same-day offer or equipment trade (Mon, Tue &amp; Thu only), check in by 1:30pm and plan to stay while we review. Bring one store-provided 18-gallon bin. Equipment must be fully assembled outside before we take a look.</p>
           </div>
         </div>
         <div class="step">
@@ -457,30 +461,20 @@
           <span class="credit-big">Store Credit</span>
           <h3>More value, spend it anytime</h3>
           <p>Opt for store credit and you'll receive a <strong>bonus on top of your trade offer</strong>. Use it on anything in the store — which is already priced to save you money. The easiest way to cycle out what they've outgrown and refresh what they need next.</p>
+          <div class="card-rates">
+            <div class="card-rate-row"><span class="card-rate-label">Clothing, toys &amp; gear</span><span class="card-rate-val">40% of resale</span></div>
+            <div class="card-rate-row"><span class="card-rate-label">Equipment</span><span class="card-rate-val">50% of resale</span></div>
+          </div>
         </div>
         <div class="credit-card other">
           <span class="badge">Quick Payout</span>
           <span class="credit-big" style="color:var(--text-light);">Cash</span>
           <h3>On the spot, no strings</h3>
           <p>Prefer cash? No problem — we pay you on the spot, same day. Great if you don't have anything to buy today or just want to pocket the money and go. No waiting, no consignment, ever.</p>
-        </div>
-      </div>
-      <div class="payout-detail">
-        <div class="payout-detail-item">
-          <span class="payout-detail-label">💰 Equipment — cash payout</span>
-          <span class="payout-detail-rate">30% of our resale price</span>
-        </div>
-        <div class="payout-detail-item">
-          <span class="payout-detail-label">⭐ Equipment — store credit</span>
-          <span class="payout-detail-rate">50% of our resale price</span>
-        </div>
-        <div class="payout-detail-item">
-          <span class="payout-detail-label">💰 Clothing, toys &amp; gear — cash</span>
-          <span class="payout-detail-rate">20% of our resale price</span>
-        </div>
-        <div class="payout-detail-item">
-          <span class="payout-detail-label">⭐ Clothing, toys &amp; gear — store credit</span>
-          <span class="payout-detail-rate">40% of our resale price</span>
+          <div class="card-rates">
+            <div class="card-rate-row"><span class="card-rate-label">Clothing, toys &amp; gear</span><span class="card-rate-val">20% of resale</span></div>
+            <div class="card-rate-row"><span class="card-rate-label">Equipment</span><span class="card-rate-val">30% of resale</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -655,7 +649,7 @@
       <div class="faq-list">
         <div class="faq-item">
           <h4>❓ Do I need an appointment?</h4>
-          <p>Nope! Walk in during trade hours — Mon, Tue &amp; Thu from 11am–2pm for same-day offers, or drop off on Sundays 11am–1pm. No scheduling, no waiting list.</p>
+          <p>Nope! Drop-offs are welcome any trade day — Mon, Tue &amp; Thu 11am–2pm and Sundays 11am–1pm. For a same-day offer or equipment trade (Mon/Tue/Thu only), check in by 1:30pm and plan to stay while we review.</p>
         </div>
         <div class="faq-item">
           <h4>❓ What is the 1:30pm cutoff?</h4>
