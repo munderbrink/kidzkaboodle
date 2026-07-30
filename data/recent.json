@@ -1,9 +1,5 @@
 {
-  "updated": "July 29, 2026",
-  "items": [
-    {"emoji": "🎀", "badge": "New In", "title": "Girls Size 4T Bundle", "desc": "Multiple pieces, great condition"},
-    {"emoji": "🍳", "badge": "New In", "title": "Little Tikes Play Kitchen", "desc": "All accessories included"},
-    {"emoji": "🤱", "badge": "New In", "title": "Ergo Baby Carrier", "desc": "Excellent condition, all straps"},
-    {"emoji": "🌧️", "badge": "New In", "title": "Rain Jacket Size 6", "desc": "Perfect for PNW weather!"}
-  ]
+  "_comment": "Managed by sync-inventory cron job. Discord items expire after 7 days. Facebook album items have no expiry (null).",
+  "updated": "2026-07-29",
+  "items": []
 }

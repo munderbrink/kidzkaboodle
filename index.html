@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kidz Kaboodle — Baby • Kids • Maternity Resale | Tacoma, WA</title>
-  <meta name="description" content="Baby, kids &amp; maternity clothing, gear, toys and more — Kidz Kaboodle has been serving Tacoma families for nearly 20 years. Stop in and see what's new!">
+  <meta name="description" content="Baby, kids &amp; maternity clothing, gear, toys and more — Kidz Kaboodle has been serving Tacoma families for over 20 years. Stop in and see what's new!">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -32,7 +32,6 @@
       background: var(--dark);
       color: #fff;
       font-size: 0.8rem;
-      font-family: 'Open Sans', sans-serif;
       text-align: center;
       padding: 8px 20px;
       letter-spacing: 0.3px;
@@ -62,7 +61,6 @@
     }
     .logo-name span:nth-child(1) { color: var(--primary); }
     .logo-name span:nth-child(2) { color: var(--secondary); }
-    .logo-name span:nth-child(3) { color: var(--dark); }
     .logo-tagline {
       font-size: 0.7rem;
       color: var(--text-light);
@@ -82,29 +80,30 @@
       transition: background 0.2s, color 0.2s;
     }
     nav a:hover { background: var(--primary); color: #fff; }
-    nav a.nav-cta {
-      background: var(--primary);
-      color: #fff;
-      padding: 9px 20px;
-    }
+    nav a.nav-cta { background: var(--primary); color: #fff; padding: 9px 20px; }
     nav a.nav-cta:hover { background: #e85555; }
-    nav a.nav-active {
-      background: rgba(255,107,107,0.12);
-      color: var(--primary);
-    }
-
-    /* ─── NAV SOCIAL ICONS ─── */
-    .nav-social { display: flex; align-items: center; gap: 2px; margin: 0 4px; }
-    .nav-social-icon {
+    .nav-fb-btn {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      color: var(--text-light);
+      gap: 7px;
+      background: #1877F2;
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-weight: 800;
+      font-size: 0.85rem;
+      padding: 9px 16px;
+      border-radius: var(--radius-btn);
       text-decoration: none;
-      transition: background 0.2s, color 0.2s;
+      transition: opacity 0.2s;
+      white-space: nowrap;
+    }
+    .nav-fb-btn:hover { opacity: 0.88; }
+    .nav-fb-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .nav-social { display: flex; align-items: center; gap: 2px; margin: 0 4px; }
+    .nav-social-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%; color: var(--text-light);
+      text-decoration: none; transition: background 0.2s, color 0.2s;
     }
     .nav-social-icon:hover { background: var(--primary); color: #fff; }
     .nav-social-icon svg { width: 17px; height: 17px; display: block; }
@@ -112,119 +111,68 @@
     /* ─── HERO ─── */
     .hero {
       position: relative;
-      min-height: 560px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding: 60px 40px;
+      min-height: 520px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden; padding: 60px 40px;
       background: linear-gradient(135deg, #fff5f5 0%, #e0fafa 50%, #fffde7 100%);
     }
-    .hero-bg-pattern {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    .hero-bubble {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0.18;
-    }
+    .hero-bg-pattern { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+    .hero-bubble { position: absolute; border-radius: 50%; opacity: 0.18; }
     .hb1 { width: 320px; height: 320px; background: var(--primary); top: -80px; left: -80px; }
     .hb2 { width: 220px; height: 220px; background: var(--secondary); bottom: -60px; right: 80px; }
     .hb3 { width: 140px; height: 140px; background: var(--accent); top: 40px; right: 200px; }
     .hb4 { width: 80px; height: 80px; background: var(--primary); bottom: 80px; left: 220px; }
-    .hero-emoji {
-      position: absolute;
-      font-size: 2.5rem;
-      opacity: 0.22;
-      user-select: none;
-    }
+    .hero-emoji { position: absolute; font-size: 2.5rem; opacity: 0.22; user-select: none; }
     .he1 { top: 12%; left: 6%; font-size: 3rem; }
     .he2 { top: 18%; right: 8%; font-size: 2.5rem; }
     .he3 { bottom: 20%; left: 12%; font-size: 2rem; }
     .he4 { bottom: 15%; right: 15%; font-size: 2.8rem; }
-    .he5 { top: 55%; left: 40%; font-size: 2rem; }
-    .hero-content {
-      position: relative;
-      text-align: center;
-      max-width: 720px;
-      z-index: 2;
-    }
+    .hero-content { position: relative; text-align: center; max-width: 720px; z-index: 2; }
     .hero-eyebrow {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--dark);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.78rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 6px 18px;
-      border-radius: var(--radius-btn);
-      margin-bottom: 20px;
+      display: inline-block; background: var(--accent); color: var(--dark);
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.78rem;
+      letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px;
+      border-radius: var(--radius-btn); margin-bottom: 20px;
     }
     .hero h1 {
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 900;
-      color: var(--dark);
-      line-height: 1.15;
-      margin-bottom: 18px;
+      font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 900; color: var(--dark);
+      line-height: 1.15; margin-bottom: 18px;
     }
     .hero h1 em { color: var(--primary); font-style: normal; }
     .hero p {
-      font-size: 1.1rem;
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: 36px;
-      max-width: 580px;
-      margin-left: auto;
-      margin-right: auto;
+      font-size: 1.1rem; color: var(--text-light); line-height: 1.7;
+      margin-bottom: 32px; max-width: 580px; margin-left: auto; margin-right: auto;
     }
-    .hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .btn-primary {
-      background: var(--primary);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 14px 34px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 4px 16px rgba(255,107,107,0.35);
-      display: inline-block;
+      background: var(--primary); color: #fff; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 14px 34px; border-radius: var(--radius-btn);
+      text-decoration: none; letter-spacing: 0.5px; transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(255,107,107,0.35); display: inline-block;
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(255,107,107,0.4); }
     .btn-secondary {
-      background: var(--secondary);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 14px 34px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      letter-spacing: 0.5px;
-      transition: transform 0.15s, box-shadow 0.15s;
-      box-shadow: 0 4px 16px rgba(78,205,196,0.35);
-      display: inline-block;
+      background: var(--secondary); color: #fff; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 14px 34px; border-radius: var(--radius-btn);
+      text-decoration: none; letter-spacing: 0.5px; transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(78,205,196,0.35); display: inline-block;
     }
     .btn-secondary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(78,205,196,0.4); }
+    .hero-fb-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #1877F2; color: #fff; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 14px 28px; border-radius: var(--radius-btn);
+      text-decoration: none; transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 16px rgba(24,119,242,0.4); letter-spacing: 0.3px;
+    }
+    .hero-fb-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(24,119,242,0.5); }
+    .hero-fb-cta svg { width: 18px; height: 18px; flex-shrink: 0; }
 
     /* ─── USP STRIP ─── */
-    .usp-strip {
-      background: var(--primary);
-      padding: 48px 40px;
-    }
+    .usp-strip { background: var(--primary); padding: 48px 40px; }
     .usp-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
     }
     .usp-item { text-align: center; color: #fff; }
     .usp-icon { font-size: 2.6rem; margin-bottom: 12px; display: block; }
@@ -237,80 +185,66 @@
     .section-title { font-size: 2rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
     .section-sub { color: var(--text-light); font-size: 1rem; margin-bottom: 40px; }
     .section-title-accent {
-      display: inline-block;
-      width: 50px;
-      height: 5px;
-      background: var(--primary);
-      border-radius: 10px;
-      margin-bottom: 16px;
+      display: inline-block; width: 50px; height: 5px;
+      background: var(--primary); border-radius: 10px; margin-bottom: 16px;
     }
 
-    /* ─── TRADE HOURS BAR (inside buying section) ─── */
-    .trade-hours-bar {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-bottom: 24px;
+    /* ─── TRADE HOURS / BUYING BOX ─── */
+    .buying { background: var(--bg); }
+    .buying-box {
+      background: linear-gradient(135deg, #fff9f9, #f0fafa);
+      border-radius: 20px; padding: 40px; border: 2px solid #f0f0f0; box-shadow: var(--shadow);
     }
+    .buying-box h2 { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .buying-box .buying-sub { color: var(--text-light); margin-bottom: 24px; font-size: 0.9rem; }
+    .trade-hours-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
     .trade-hours-card {
-      background: var(--bg2);
-      border-radius: var(--radius-card);
-      padding: 16px 20px;
-      border-left: 4px solid var(--secondary);
-      font-size: 0.88rem;
-      color: var(--text);
-      line-height: 1.65;
+      background: var(--bg2); border-radius: var(--radius-card);
+      padding: 16px 20px; border-left: 4px solid var(--secondary);
+      font-size: 0.88rem; color: var(--text); line-height: 1.65;
     }
     .trade-hours-card strong { color: var(--secondary); font-family: 'Nunito', sans-serif; }
-
-    /* ─── PAYOUT BAR (inside buying section) ─── */
+    .buying-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; }
+    .buying-col h4 { font-size: 1rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .want-head { color: #27ae60; }
+    .full-head { color: #e74c3c; }
+    .buying-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .buying-col li { font-size: 0.9rem; color: var(--text); display: flex; align-items: center; gap: 8px; }
     .payout-bar {
-      display: flex;
-      gap: 32px;
-      flex-wrap: wrap;
-      margin-bottom: 16px;
-      padding: 14px 20px;
-      background: linear-gradient(135deg, #f0fff9, #e0fafa);
-      border-radius: var(--radius-card);
-      border-left: 4px solid #27ae60;
+      display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 16px;
+      padding: 14px 20px; background: linear-gradient(135deg, #f0fff9, #e0fafa);
+      border-radius: var(--radius-card); border-left: 4px solid #27ae60;
     }
     .payout-item { display: flex; flex-direction: column; gap: 3px; }
-    .payout-label {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: var(--text-light);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .payout-rate {
-      font-size: 0.95rem;
-      font-weight: 800;
-      color: var(--dark);
-      font-family: 'Nunito', sans-serif;
-    }
-
-    /* ─── NOT BUYING NOTE ─── */
+    .payout-label { font-size: 0.72rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+    .payout-rate { font-size: 0.95rem; font-weight: 800; color: var(--dark); font-family: 'Nunito', sans-serif; }
     .buying-not-note {
-      font-size: 0.82rem;
-      color: var(--text-light);
-      padding: 10px 16px;
-      background: #fff8f8;
-      border-left: 3px solid var(--primary);
-      border-radius: 6px;
-      margin-bottom: 20px;
-      line-height: 1.6;
+      font-size: 0.82rem; color: var(--text-light); padding: 10px 16px;
+      background: #fff8f8; border-left: 3px solid var(--primary);
+      border-radius: 6px; margin-bottom: 20px; line-height: 1.6;
     }
+    .buying-fb { display: flex; align-items: center; gap: 10px; font-size: 0.85rem; color: var(--text-light); flex-wrap: wrap; }
+    .fb-link {
+      display: inline-flex; align-items: center; gap: 6px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.82rem;
+      padding: 6px 14px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .fb-link:hover { opacity: 0.88; }
+    .ig-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.82rem;
+      padding: 6px 14px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .ig-link:hover { opacity: 0.88; }
+    .ig-link svg, .fb-link svg { width: 14px; height: 14px; flex-shrink: 0; }
 
     /* ─── PROMOTIONS ─── */
     .promos { background: var(--bg2); }
     .promo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
     .promo-card {
-      background: var(--bg);
-      border-radius: var(--radius-card);
-      padding: 28px;
-      box-shadow: var(--shadow);
-      border-top: 5px solid var(--primary);
-      transition: transform 0.2s;
+      background: var(--bg); border-radius: var(--radius-card); padding: 28px;
+      box-shadow: var(--shadow); border-top: 5px solid var(--primary); transition: transform 0.2s;
     }
     .promo-card:nth-child(2) { border-top-color: var(--secondary); }
     .promo-card:nth-child(3) { border-top-color: var(--accent); }
@@ -319,28 +253,76 @@
     .promo-card h3 { font-size: 1.15rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
     .promo-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
     .promo-tag {
-      display: inline-block;
-      background: var(--accent);
-      color: var(--dark);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.72rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-bottom: 10px;
+      display: inline-block; background: var(--accent); color: var(--dark);
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.72rem;
+      letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px;
+      border-radius: 20px; margin-bottom: 10px;
     }
+
+    /* ─── INVENTORY CAROUSEL ─── */
+    .recent { background: var(--bg2); }
+    .recent-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 28px; flex-wrap: wrap; gap: 16px;
+    }
+    .recent-header .section-sub { margin-bottom: 0; }
+    .carousel-outer {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    }
+    .carousel-btn {
+      width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--primary);
+      background: #fff; color: var(--primary); font-size: 1.7rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+      transition: background 0.2s, color 0.2s; line-height: 1; user-select: none;
+    }
+    .carousel-btn:hover { background: var(--primary); color: #fff; }
+    .carousel-viewport { overflow: hidden; flex: 1; }
+    .inv-track {
+      display: flex; gap: 20px; transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    }
+    .inv-card {
+      flex-shrink: 0;
+      background: var(--bg); border-radius: var(--radius-card);
+      box-shadow: var(--shadow); overflow: hidden; transition: transform 0.2s;
+    }
+    .inv-card:hover { transform: translateY(-4px); }
+    .inv-img {
+      height: 180px; background: linear-gradient(135deg, #fff5f5, #e0fafa);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative; overflow: hidden;
+    }
+    .inv-img.has-photo { font-size: 0; }
+    .inv-img.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .inv-badge {
+      position: absolute; top: 10px; left: 10px; background: var(--primary); color: #fff;
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.65rem;
+      letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    }
+    .inv-body { padding: 14px 16px; }
+    .inv-body h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
+    .inv-body p { font-size: 0.8rem; color: var(--text-light); }
+    .carousel-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 20px; }
+    .carousel-dot {
+      width: 9px; height: 9px; border-radius: 50%; background: #ddd;
+      cursor: pointer; border: none; padding: 0; transition: background 0.2s, transform 0.2s;
+    }
+    .carousel-dot.active { background: var(--primary); transform: scale(1.3); }
+    .inv-see-all {
+      text-align: center; padding-top: 4px; font-size: 0.9rem;
+    }
+    .inv-see-all a {
+      color: var(--primary); font-family: 'Nunito', sans-serif; font-weight: 800;
+      text-decoration: none;
+    }
+    .inv-see-all a:hover { text-decoration: underline; }
+    .inv-loading { min-width: 100%; text-align: center; padding: 48px 20px; color: var(--text-light); }
 
     /* ─── WHAT WE CARRY ─── */
     .cats { background: var(--bg); }
     .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
     .cat-card {
       background: linear-gradient(135deg, #fff5f5, #e0fafa);
-      border-radius: var(--radius-card);
-      padding: 28px 16px;
-      text-align: center;
-      cursor: default;
+      border-radius: var(--radius-card); padding: 26px 16px; text-align: center;
       box-shadow: var(--shadow);
     }
     .cat-card:nth-child(6n+2) { background: linear-gradient(135deg, #e0fafa, #fffde7); }
@@ -348,260 +330,75 @@
     .cat-card:nth-child(6n+4) { background: linear-gradient(135deg, #f0f4ff, #e0fafa); }
     .cat-card:nth-child(6n+5) { background: linear-gradient(135deg, #fff5f5, #f0f4ff); }
     .cat-card:nth-child(6n)   { background: linear-gradient(135deg, #e0fafa, #fff5f5); }
-    .cat-emoji { font-size: 2.4rem; margin-bottom: 10px; }
-    .cat-card h3 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
-    .cat-card p { font-size: 0.78rem; color: var(--text-light); line-height: 1.4; }
+    .cat-emoji { font-size: 2.2rem; margin-bottom: 10px; }
+    .cat-card h3 { font-weight: 800; font-size: 0.92rem; color: var(--dark); margin-bottom: 4px; }
+    .cat-card p { font-size: 0.76rem; color: var(--text-light); line-height: 1.4; }
 
     /* ─── SELL CALLOUT ─── */
-    .sell-callout {
-      background: linear-gradient(135deg, var(--secondary) 0%, #38b5ad 100%);
-      padding: 70px 40px;
-    }
+    .sell-callout { background: linear-gradient(135deg, var(--secondary) 0%, #38b5ad 100%); padding: 70px 40px; }
     .sell-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
     }
     .sell-text { color: #fff; }
     .sell-text h2 { font-size: 2.2rem; font-weight: 900; margin-bottom: 14px; }
     .sell-text p { font-size: 1.05rem; opacity: 0.92; line-height: 1.7; margin-bottom: 28px; }
     .btn-white {
-      background: #fff;
-      color: var(--secondary);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 14px 32px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: transform 0.15s;
-      display: inline-block;
+      background: #fff; color: var(--secondary); font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 14px 32px; border-radius: var(--radius-btn);
+      text-decoration: none; transition: transform 0.15s; display: inline-block;
     }
     .btn-white:hover { transform: translateY(-2px); }
     .sell-steps { display: flex; flex-direction: column; gap: 16px; }
     .sell-step {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-      background: rgba(255,255,255,0.15);
-      border-radius: var(--radius-card);
-      padding: 16px 20px;
-      color: #fff;
+      display: flex; align-items: flex-start; gap: 16px;
+      background: rgba(255,255,255,0.15); border-radius: var(--radius-card);
+      padding: 16px 20px; color: #fff;
     }
     .sell-step-num {
-      width: 40px;
-      height: 40px;
-      background: #fff;
-      color: var(--secondary);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      margin-top: 3px;
+      width: 40px; height: 40px; background: #fff; color: var(--secondary);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem;
+      flex-shrink: 0; margin-top: 3px;
     }
     .sell-step p { font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.65; }
 
-    /* ─── RECENT INVENTORY ─── */
-    .recent { background: var(--bg2); }
-    .inv-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-bottom: 16px;
-    }
-    .inv-card {
-      background: var(--bg);
-      border-radius: var(--radius-card);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      transition: transform 0.2s;
-    }
-    .inv-card:hover { transform: translateY(-4px); }
-    .inv-img {
-      height: 160px;
-      background: linear-gradient(135deg, #fff5f5, #e0fafa);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      position: relative;
-    }
-    .inv-badge {
-      position: absolute;
-      top: 10px;
-      left: 10px;
-      background: var(--primary);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.65rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-    }
-    .inv-body { padding: 14px 16px; }
-    .inv-body h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
-    .inv-body p { font-size: 0.8rem; color: var(--text-light); }
-    .inv-note {
-      text-align: center;
-      color: var(--text-light);
-      font-size: 0.85rem;
-      font-style: italic;
-    }
-    .inv-loading {
-      grid-column: 1 / -1;
-      text-align: center;
-      padding: 48px 20px;
-      color: var(--text-light);
-      font-size: 0.95rem;
-    }
-
-    /* ─── BUYING BOX ─── */
-    .buying { background: var(--bg); }
-    .buying-box {
-      background: linear-gradient(135deg, #fff9f9, #f0fafa);
-      border-radius: 20px;
-      padding: 40px;
-      border: 2px solid #f0f0f0;
-      box-shadow: var(--shadow);
-    }
-    .buying-box h2 { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
-    .buying-box .buying-sub { color: var(--text-light); margin-bottom: 24px; font-size: 0.9rem; }
-    .buying-cols {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      margin-bottom: 20px;
-    }
-    .buying-col h4 {
-      font-size: 1rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .want-head { color: #27ae60; }
-    .full-head { color: #e74c3c; }
-    .buying-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-    .buying-col li { font-size: 0.9rem; color: var(--text); display: flex; align-items: center; gap: 8px; }
-    .buying-fb {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.85rem;
-      color: var(--text-light);
-      flex-wrap: wrap;
-    }
-    .fb-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #1877F2;
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 6px 14px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .fb-link:hover { opacity: 0.88; }
-    .ig-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 6px 14px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .ig-link:hover { opacity: 0.88; }
-    .ig-link svg, .fb-link svg { width: 14px; height: 14px; flex-shrink: 0; }
-
     /* ─── FOOTER ─── */
-    footer {
-      background: var(--dark);
-      color: #fff;
-      padding: 56px 40px 28px;
-    }
+    footer { background: var(--dark); color: #fff; padding: 56px 40px 28px; }
     .footer-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 40px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px;
     }
     .footer-brand .logo-name { font-size: 1.5rem; margin-bottom: 10px; }
     .footer-brand p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; margin-bottom: 16px; }
     .footer-social { display: flex; flex-wrap: wrap; gap: 8px; }
     .footer-fb {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #1877F2;
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 7px 16px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
+      display: inline-flex; align-items: center; gap: 6px; background: #1877F2;
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
     }
     .footer-fb:hover { opacity: 0.88; }
     .footer-ig {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-flex; align-items: center; gap: 6px;
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 7px 16px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
     }
     .footer-ig:hover { opacity: 0.88; }
     .footer-fb svg, .footer-ig svg { width: 14px; height: 14px; flex-shrink: 0; }
     footer h4 {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
     }
     footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     footer ul li { font-size: 0.88rem; opacity: 0.8; line-height: 1.5; }
     footer ul li a { color: #fff; text-decoration: none; opacity: 0.8; }
     footer ul li a:hover { opacity: 1; }
     .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding-top: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      opacity: 0.55;
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem; opacity: 0.55;
     }
 
     /* ─── RESPONSIVE ─── */
@@ -610,22 +407,21 @@
       nav { display: none; }
       .usp-grid, .promo-grid { grid-template-columns: 1fr 1fr; }
       .cat-grid { grid-template-columns: repeat(2, 1fr); }
-      .inv-grid { grid-template-columns: 1fr 1fr; }
       .sell-inner { grid-template-columns: 1fr; gap: 32px; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
       .trade-hours-bar { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       section { padding: 48px 20px; }
-      .hero { padding: 48px 20px; }
+      .hero { padding: 48px 20px; min-height: unset; }
       .usp-strip { padding: 40px 20px; }
       .sell-callout { padding: 48px 20px; }
       .usp-grid, .promo-grid { grid-template-columns: 1fr; }
       .cat-grid { grid-template-columns: repeat(2, 1fr); }
-      .inv-grid { grid-template-columns: 1fr 1fr; }
       .buying-cols { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       .payout-bar { flex-direction: column; gap: 14px; }
+      .recent-header { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -653,10 +449,12 @@
       <a href="value.html">Max Your Value</a>
       <a href="#promos">Sales &amp; Deals</a>
       <a href="#">About</a>
+      <!-- Facebook as a prominent nav button -->
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
       <div class="nav-social">
-        <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
         <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Instagram">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
         </a>
@@ -676,15 +474,18 @@
       <div class="hero-emoji he2">🌟</div>
       <div class="hero-emoji he3">💫</div>
       <div class="hero-emoji he4">✨</div>
-      <div class="hero-emoji he5">🎈</div>
     </div>
     <div class="hero-content">
-      <div class="hero-eyebrow">⭐ Serving Tacoma Families for Nearly 20 Years</div>
+      <div class="hero-eyebrow">⭐ Serving Tacoma Families for Over 20 Years</div>
       <h1>Great Finds for <em>Growing Families</em></h1>
       <p>Baby, kids &amp; maternity clothing, gear, toys and more — at prices that make sense.</p>
       <div class="hero-btns">
-        <a href="#categories" class="btn-primary">🛍️ SHOP WITH US</a>
-        <a href="trade.html" class="btn-secondary">💰 SELL YOUR STUFF</a>
+        <a href="#categories" class="btn-primary">🛍️ Shop With Us</a>
+        <a href="trade.html" class="btn-secondary">💰 Sell Your Stuff</a>
+        <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="hero-fb-cta">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Follow on Facebook
+        </a>
       </div>
     </div>
   </section>
@@ -699,7 +500,7 @@
       </div>
       <div class="usp-item">
         <span class="usp-icon">🏆</span>
-        <h3>Nearly 20 Years</h3>
+        <h3>Over 20 Years</h3>
         <p>A Tacoma institution loved by generations of local families. Come see why we've been around so long.</p>
       </div>
       <div class="usp-item">
@@ -710,26 +511,24 @@
     </div>
   </div>
 
-  <!-- WHAT WE'RE BUYING THIS WEEK (shown prominently up top) -->
+  <!-- WHAT WE'RE BUYING THIS WEEK -->
   <section class="buying">
     <div class="section-inner">
       <div class="buying-box">
         <h2>📋 Accepting This Week</h2>
-        <p class="buying-sub">Updated weekly based on current stock levels. Last updated: <span id="buying-updated">checking…</span></p>
+        <p class="buying-sub">Updated weekly based on current stock levels. Last updated: <span id="buying-updated">see our Facebook for latest</span></p>
 
-        <!-- Trade hours -->
         <div class="trade-hours-bar">
           <div class="trade-hours-card">
             ⏰ <strong>Mon · Tue · Thu — 11am–2pm</strong><br>
             Check in by <strong>1:30pm</strong> for a same-day offer — no exceptions. You must remain in store while items are reviewed (typically 15–45 min).
           </div>
           <div class="trade-hours-card">
-            📦 <strong>Sunday — 11am–1pm</strong><br>
-            Drop-off only. No same-day offers on Sundays. No equipment on Sundays. One store-provided 18-gallon bin per trade day.
+            📦 <strong>Sunday — 11am–1pm (Drop-off Only)</strong><br>
+            No same-day offers on Sundays. No equipment on Sundays. One store-provided 18-gallon bin per trade day.
           </div>
         </div>
 
-        <!-- Want / Full columns -->
         <div class="buying-cols">
           <div class="buying-col">
             <h4 class="want-head">✅ We WANT</h4>
@@ -752,7 +551,6 @@
           </div>
         </div>
 
-        <!-- Payout rates -->
         <div class="payout-bar">
           <div class="payout-item">
             <span class="payout-label">💰 Equipment payout</span>
@@ -764,7 +562,6 @@
           </div>
         </div>
 
-        <!-- Not purchasing note -->
         <p class="buying-not-note">⚠️ <strong>We do not purchase:</strong> recalled equipment, cribs, baths, baby food, baby loungers (Dock-A-Tot style), breast pumps, or battery-operated ride-on toys. Some may be accepted as donations — recalled equipment cannot be accepted under any circumstances.</p>
 
         <div class="buying-fb">
@@ -805,9 +602,34 @@
           <div class="promo-tag">Mon · Tue · Thu</div>
           <div class="promo-icon">📦</div>
           <h3>Accepting Trades</h3>
-          <p>Bring your kids' gently-used items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong>. Check in by <strong>1:30pm</strong> for a same-day offer. Cash or store credit paid on the spot.</p>
+          <p>Bring your kids' gently-used items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong>. Check in by <strong>1:30pm</strong> for a same-day offer.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- JUST IN THIS WEEK (Carousel) -->
+  <section class="recent">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <div class="recent-header">
+        <div>
+          <h2 class="section-title">Just In This Week</h2>
+          <p class="section-sub">Fresh finds landing on our shelves — come in before they're gone!</p>
+        </div>
+        <a href="inventory.html" class="btn-primary" style="font-size:0.88rem;padding:11px 24px;white-space:nowrap;">View All Inventory →</a>
+      </div>
+      <div class="carousel-outer">
+        <button class="carousel-btn" id="inv-prev" aria-label="Previous">&#8249;</button>
+        <div class="carousel-viewport">
+          <div id="inv-track" class="inv-track">
+            <div class="inv-loading">⏳ Loading latest arrivals…</div>
+          </div>
+        </div>
+        <button class="carousel-btn" id="inv-next" aria-label="Next">&#8250;</button>
+      </div>
+      <div class="carousel-dots" id="carousel-dots"></div>
+      <div class="inv-see-all"><a href="inventory.html">See everything we have in stock →</a></div>
     </div>
   </section>
 
@@ -818,66 +640,18 @@
       <h2 class="section-title">What We Carry</h2>
       <p class="section-sub">From newborn to size 16 — gently-used clothing, gear, toys, and everything in between.</p>
       <div class="cat-grid">
-        <div class="cat-card">
-          <div class="cat-emoji">👶</div>
-          <h3>Baby Clothing</h3>
-          <p>Newborn–24 months</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">👕</div>
-          <h3>Kids Clothing</h3>
-          <p>2T–Size 16</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🤰</div>
-          <h3>Maternity</h3>
-          <p>Tops, pants, dresses &amp; more</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">👟</div>
-          <h3>Shoes &amp; Boots</h3>
-          <p>All sizes, all seasons</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🧸</div>
-          <h3>Toys, Games &amp; Books</h3>
-          <p>Clean, complete &amp; ready to play</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🛺</div>
-          <h3>Strollers</h3>
-          <p>Singles, doubles &amp; travel systems</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🎠</div>
-          <h3>Activity Centers &amp; Swings</h3>
-          <p>Bouncers, jumpers &amp; rockers</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🍼</div>
-          <h3>Feeding</h3>
-          <p>High chairs, bibs &amp; accessories</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🧷</div>
-          <h3>Diapers &amp; Changing</h3>
-          <p>Cloth diapers, bags &amp; pads</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🌊</div>
-          <h3>Swim &amp; Seasonal</h3>
-          <p>Swimwear, snow gear &amp; outerwear</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🛒</div>
-          <h3>Gear &amp; Equipment</h3>
-          <p>Pack n' plays, bassinets &amp; more</p>
-        </div>
-        <div class="cat-card">
-          <div class="cat-emoji">🤱</div>
-          <h3>Carriers &amp; Baby Wearing</h3>
-          <p>Wraps, slings &amp; structured carriers</p>
-        </div>
+        <div class="cat-card"><div class="cat-emoji">👶</div><h3>Baby Clothing</h3><p>Newborn–24 months</p></div>
+        <div class="cat-card"><div class="cat-emoji">👕</div><h3>Kids Clothing</h3><p>2T–Size 16</p></div>
+        <div class="cat-card"><div class="cat-emoji">🤰</div><h3>Maternity</h3><p>Tops, pants, dresses &amp; more</p></div>
+        <div class="cat-card"><div class="cat-emoji">👟</div><h3>Shoes &amp; Boots</h3><p>All sizes, all seasons</p></div>
+        <div class="cat-card"><div class="cat-emoji">🧸</div><h3>Toys, Games &amp; Books</h3><p>Clean, complete &amp; ready to play</p></div>
+        <div class="cat-card"><div class="cat-emoji">🛺</div><h3>Strollers</h3><p>Singles, doubles &amp; travel systems</p></div>
+        <div class="cat-card"><div class="cat-emoji">🎠</div><h3>Activity Centers &amp; Swings</h3><p>Bouncers, jumpers &amp; rockers</p></div>
+        <div class="cat-card"><div class="cat-emoji">🍼</div><h3>Feeding</h3><p>High chairs, bibs &amp; accessories</p></div>
+        <div class="cat-card"><div class="cat-emoji">🧷</div><h3>Diapers &amp; Changing</h3><p>Cloth diapers, bags &amp; pads</p></div>
+        <div class="cat-card"><div class="cat-emoji">🌊</div><h3>Swim &amp; Seasonal</h3><p>Swimwear, snow gear &amp; outerwear</p></div>
+        <div class="cat-card"><div class="cat-emoji">🛒</div><h3>Gear &amp; Equipment</h3><p>Pack n' plays, bassinets &amp; more</p></div>
+        <div class="cat-card"><div class="cat-emoji">🤱</div><h3>Carriers &amp; Wraps</h3><p>Structured, slings &amp; wraps</p></div>
       </div>
     </div>
   </section>
@@ -897,26 +671,13 @@
         </div>
         <div class="sell-step">
           <div class="sell-step-num">2</div>
-          <p>🔍 <strong>We Review</strong> — Wait in store while we process (typically 15–45 min). First-timers: we recommend selecting "approval required" so you can review the offer before accepting.</p>
+          <p>🔍 <strong>We Review</strong> — Wait in store while we process (typically 15–45 min). First-timers: we recommend selecting "approval required" so you can review the offer before it's finalized.</p>
         </div>
         <div class="sell-step">
           <div class="sell-step-num">3</div>
-          <p>💸 <strong>Get Paid</strong> — Equipment: 30% cash or 50% store credit. Clothing, toys &amp; gear: 20% cash or 40% store credit. Paid on the spot — no consignment waiting!</p>
+          <p>💸 <strong>Get Paid</strong> — Equipment: 30% cash or 50% store credit. Clothing, toys &amp; gear: 20% cash or 40% store credit. Paid on the spot!</p>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- RECENT INVENTORY -->
-  <section class="recent">
-    <div class="section-inner">
-      <div class="section-title-accent"></div>
-      <h2 class="section-title">Just In This Week</h2>
-      <p class="section-sub">Fresh finds landing on our shelves — come in before they're gone!</p>
-      <div id="recent-grid" class="inv-grid">
-        <div class="inv-loading">⏳ Loading latest arrivals…</div>
-      </div>
-      <p class="inv-note">✦ Inventory updates weekly — new items added throughout the week</p>
     </div>
   </section>
 
@@ -927,7 +688,7 @@
         <div class="logo-name">
           <span>KIDZ&nbsp;</span><span>KABOODLE</span>
         </div>
-        <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for nearly 20 years.</p>
+        <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for over 20 years.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -970,64 +731,125 @@
     </div>
   </footer>
 
-  <!-- ─── DYNAMIC DATA SCRIPTS ─── -->
+  <!-- ─── SCRIPTS ─── -->
   <script>
-    // ── Recent Inventory ──────────────────────────────────────────────
-    (async function loadRecentItems() {
-      const grid = document.getElementById('recent-grid');
-      const FALLBACK = [
-        { emoji: '🎀', badge: 'New In', title: 'Girls Size 4T Bundle',      desc: 'Multiple pieces, great condition' },
-        { emoji: '🍳', badge: 'New In', title: 'Little Tikes Play Kitchen', desc: 'All accessories included' },
-        { emoji: '🤱', badge: 'New In', title: 'Ergo Baby Carrier',          desc: 'Excellent condition, all straps' },
-        { emoji: '🌧️', badge: 'New In', title: 'Rain Jacket Size 6',         desc: 'Perfect for PNW weather!' }
-      ];
-
-      function renderItems(items) {
-        grid.innerHTML = items.map(item => `
-          <div class="inv-card">
-            <div class="inv-img">
-              <span class="inv-badge">${item.badge}</span>
-              ${item.emoji}
-            </div>
-            <div class="inv-body">
-              <h4>${item.title}</h4>
-              <p>${item.desc}</p>
-            </div>
-          </div>
-        `).join('');
-      }
-
-      try {
-        const resp = await fetch('data/recent.json');
-        if (!resp.ok) throw new Error('Fetch failed');
-        const data = await resp.json();
-        renderItems(data.items && data.items.length ? data.items : FALLBACK);
-      } catch (_) {
-        renderItems(FALLBACK);
-      }
-    })();
-
-    // ── Buying List ───────────────────────────────────────────────────
+    // ── Buying List ────────────────────────────────────────────────────
     (async function loadBuyingList() {
       const wantList    = document.getElementById('buying-want-list');
       const fullList    = document.getElementById('buying-full-list');
       const updatedSpan = document.getElementById('buying-updated');
-
       try {
         const resp = await fetch('data/buying.json');
-        if (!resp.ok) throw new Error('Fetch failed');
+        if (!resp.ok) throw 0;
         const data = await resp.json();
-
         if (updatedSpan && data.updated) updatedSpan.textContent = data.updated;
+        if (wantList && data.wanting && data.wanting.length)
+          wantList.innerHTML = data.wanting.map(i => `<li>✅ ${i}</li>`).join('');
+        if (fullList && data.full && data.full.length)
+          fullList.innerHTML = data.full.map(i => `<li>❌ ${i}</li>`).join('');
+      } catch(_) { /* keep defaults */ }
+    })();
 
-        if (wantList && data.wanting && data.wanting.length) {
-          wantList.innerHTML = data.wanting.map(item => `<li>✅ ${item}</li>`).join('');
+    // ── Inventory Carousel ─────────────────────────────────────────────
+    (async function initCarousel() {
+      const track   = document.getElementById('inv-track');
+      const dotsEl  = document.getElementById('carousel-dots');
+      const prevBtn = document.getElementById('inv-prev');
+      const nextBtn = document.getElementById('inv-next');
+
+      const FALLBACK = [
+        { emoji:'🎀', badge:'New In', title:'Girls Size 4T Bundle',       desc:'Multiple pieces, great condition' },
+        { emoji:'🍳', badge:'New In', title:'Little Tikes Play Kitchen',  desc:'All accessories included' },
+        { emoji:'🤱', badge:'New In', title:'Ergo Baby Carrier',           desc:'Excellent condition, all straps' },
+        { emoji:'🌧️', badge:'New In', title:'Rain Jacket Size 6',          desc:'Perfect for PNW weather!' },
+        { emoji:'🧸', badge:'New In', title:'Wooden Block Set',            desc:'Complete 60-piece set' },
+        { emoji:'👟', badge:'New In', title:'Nike Sneakers Size 5',        desc:'Barely worn' },
+        { emoji:'🛺', badge:'New In', title:'UPPAbaby Cruz Stroller',      desc:'Excellent condition' },
+        { emoji:'🪑', badge:'New In', title:'Tripp Trapp High Chair',      desc:'All accessories included' },
+      ];
+
+      let allItems = FALLBACK, page = 0, autoTimer = null;
+
+      function pp() { return window.innerWidth < 640 ? 2 : 4; }
+      function pages() { return Math.max(1, Math.ceil(allItems.length / pp())); }
+
+      function cardHtml(item) {
+        const hasPhoto = !!item.image;
+        return `<div class="inv-card">
+          <div class="inv-img${hasPhoto ? ' has-photo' : ''}">
+            <span class="inv-badge">${item.badge || 'New In'}</span>
+            ${hasPhoto ? `<img src="${item.image}" alt="${item.title || ''}" loading="lazy">` : (item.emoji || '📦')}
+          </div>
+          <div class="inv-body">
+            <h4>${item.title || ''}</h4>
+            <p>${item.desc || ''}</p>
+          </div>
+        </div>`;
+      }
+
+      function render(items) {
+        allItems = items;
+        track.innerHTML = items.map(cardHtml).join('');
+        page = 0;
+        setup();
+      }
+
+      function setup() {
+        // Build dots
+        dotsEl.innerHTML = Array.from({length: pages()}, (_, i) =>
+          `<button class="carousel-dot${i===0?' active':''}" data-i="${i}" aria-label="Page ${i+1}"></button>`
+        ).join('');
+        dotsEl.querySelectorAll('.carousel-dot').forEach(d =>
+          d.addEventListener('click', () => goTo(+d.dataset.i))
+        );
+        layout();
+        if (autoTimer) clearInterval(autoTimer);
+        if (allItems.length > pp()) {
+          autoTimer = setInterval(() => goTo((page + 1) % pages()), 5000);
         }
-        if (fullList && data.full && data.full.length) {
-          fullList.innerHTML = data.full.map(item => `<li>❌ ${item}</li>`).join('');
-        }
-      } catch (_) {
-        if (updatedSpan) updatedSpan.textContent = 'see our Facebook for latest';
+      }
+
+      function layout() {
+        const cards = track.querySelectorAll('.inv-card');
+        if (!cards.length) return;
+        const gap = 20;
+        const vw = track.parentElement.offsetWidth;
+        const cardW = (vw - gap * (pp() - 1)) / pp();
+        cards.forEach(c => { c.style.width = cardW + 'px'; c.style.flexShrink = '0'; });
+        goTo(page, false); // reposition without animation
+      }
+
+      function goTo(p, animate = true) {
+        page = ((p % pages()) + pages()) % pages();
+        const cards = track.querySelectorAll('.inv-card');
+        if (!cards.length) return;
+        const gap = 20;
+        const cardW = parseFloat(cards[0].style.width || 0);
+        track.style.transition = animate ? 'transform 0.4s cubic-bezier(.4,0,.2,1)' : 'none';
+        track.style.transform = `translateX(-${page * pp() * (cardW + gap)}px)`;
+        dotsEl.querySelectorAll('.carousel-dot').forEach((d, i) =>
+          d.classList.toggle('active', i === page)
+        );
+      }
+
+      prevBtn.addEventListener('click', () => { goTo(page - 1); resetAuto(); });
+      nextBtn.addEventListener('click', () => { goTo(page + 1); resetAuto(); });
+      function resetAuto() {
+        if (autoTimer) clearInterval(autoTimer);
+        if (allItems.length > pp()) autoTimer = setInterval(() => goTo((page+1)%pages()), 5000);
+      }
+      window.addEventListener('resize', () => setup());
+
+      // Load data
+      try {
+        const r = await fetch('data/recent.json');
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        const today = new Date().toISOString().slice(0, 10);
+        const active = (d.items || []).filter(it => !it.expires || it.expires >= today);
+        render(active.length ? active : FALLBACK);
+      } catch(_) {
+        render(FALLBACK);
       }
     })();
   </script>

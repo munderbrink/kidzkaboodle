@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Inventory — Kidz Kaboodle | Tacoma, WA</title>
+  <meta name="description" content="Browse current inventory at Kidz Kaboodle — baby, kids &amp; maternity clothing, gear, toys and more. Updated regularly!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --accent: #FFE66D;
+      --dark: #2C3E50;
+      --bg: #FFFFFF;
+      --bg2: #F8F9FA;
+      --text: #2C3E50;
+      --text-light: #636E72;
+      --radius-btn: 50px;
+      --radius-card: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; }
+
+    .top-bar {
+      background: var(--dark); color: #fff; font-size: 0.8rem;
+      text-align: center; padding: 8px 20px; letter-spacing: 0.3px;
+    }
+    .top-bar a { color: var(--accent); text-decoration: none; }
+
+    header {
+      background: var(--bg); padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo-wrap { display: flex; flex-direction: column; }
+    .logo-name { font-family: 'Nunito', sans-serif; font-size: 1.75rem; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
+    .logo-name span:nth-child(1) { color: var(--primary); }
+    .logo-name span:nth-child(2) { color: var(--secondary); }
+    .logo-tagline { font-size: 0.7rem; color: var(--text-light); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+    nav { display: flex; align-items: center; gap: 6px; }
+    nav a {
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem;
+      color: var(--text); text-decoration: none; padding: 8px 12px;
+      border-radius: var(--radius-btn); transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--primary); color: #fff; }
+    nav a.nav-cta { background: var(--primary); color: #fff; padding: 9px 20px; }
+    nav a.nav-cta:hover { background: #e85555; }
+    .nav-fb-btn {
+      display: inline-flex; align-items: center; gap: 7px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 16px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .nav-fb-btn:hover { opacity: 0.88; }
+    .nav-fb-btn svg { width: 15px; height: 15px; }
+    .nav-social-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%; color: var(--text-light);
+      text-decoration: none; transition: background 0.2s, color 0.2s;
+    }
+    .nav-social-icon:hover { background: var(--primary); color: #fff; }
+    .nav-social-icon svg { width: 17px; height: 17px; display: block; }
+
+    /* Page header */
+    .page-hero {
+      background: linear-gradient(135deg, #fff5f5 0%, #e0fafa 50%, #fffde7 100%);
+      padding: 48px 40px 40px;
+      text-align: center;
+    }
+    .page-hero h1 { font-size: 2.4rem; font-weight: 900; color: var(--dark); margin-bottom: 10px; }
+    .page-hero h1 em { color: var(--primary); font-style: normal; }
+    .page-hero p { color: var(--text-light); font-size: 1rem; max-width: 560px; margin: 0 auto 20px; line-height: 1.7; }
+    .page-hero-meta { font-size: 0.82rem; color: var(--text-light); }
+
+    /* Filter bar */
+    .filter-bar {
+      display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;
+      padding: 20px 40px; background: var(--bg2); border-bottom: 1px solid #eee;
+      position: sticky; top: 80px; z-index: 50;
+    }
+    .filter-btn {
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.88rem;
+      padding: 7px 18px; border-radius: var(--radius-btn); border: 2px solid #ddd;
+      background: #fff; color: var(--text-light); cursor: pointer; transition: all 0.2s;
+    }
+    .filter-btn:hover, .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .filter-btn[data-src="discord"].active { background: #5865F2; border-color: #5865F2; }
+    .filter-btn[data-src="facebook-album"].active { background: #1877F2; border-color: #1877F2; }
+
+    /* Grid */
+    .inv-section { padding: 48px 40px; }
+    .inv-section .section-inner { max-width: 1200px; margin: 0 auto; }
+    .inv-full-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+    }
+    .inv-card {
+      background: var(--bg); border-radius: var(--radius-card);
+      box-shadow: var(--shadow); overflow: hidden; transition: transform 0.2s;
+    }
+    .inv-card:hover { transform: translateY(-4px); }
+    .inv-card[hidden] { display: none; }
+    .inv-img {
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, #fff5f5, #e0fafa);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 3.5rem; position: relative; overflow: hidden;
+    }
+    .inv-img.has-photo { font-size: 0; }
+    .inv-img.has-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .inv-badge {
+      position: absolute; top: 10px; left: 10px; background: var(--primary);
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.65rem;
+      letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px;
+    }
+    .src-badge {
+      position: absolute; top: 10px; right: 10px; font-family: 'Nunito', sans-serif;
+      font-weight: 700; font-size: 0.65rem; letter-spacing: 0.5px; text-transform: uppercase;
+      padding: 3px 8px; border-radius: 20px; color: #fff;
+    }
+    .src-discord  { background: #5865F2; }
+    .src-facebook { background: #1877F2; }
+    .inv-body { padding: 14px 16px; }
+    .inv-body h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 4px; }
+    .inv-body p { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
+    .inv-body .inv-date { font-size: 0.72rem; color: #b0b8c1; margin-top: 6px; }
+
+    /* Empty / loading states */
+    .inv-empty {
+      grid-column: 1/-1; text-align: center; padding: 80px 20px;
+      color: var(--text-light); font-size: 1rem;
+    }
+    .inv-empty .inv-empty-icon { font-size: 3rem; margin-bottom: 16px; }
+    .inv-empty p { max-width: 400px; margin: 0 auto 20px; line-height: 1.7; }
+    .fb-cta-btn {
+      display: inline-flex; align-items: center; gap: 8px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.95rem;
+      padding: 12px 26px; border-radius: var(--radius-btn); text-decoration: none;
+    }
+    .fb-cta-btn svg { width: 16px; height: 16px; }
+
+    /* Discord post tip */
+    .discord-tip {
+      background: linear-gradient(135deg, #eef0ff, #f0f4ff);
+      border-radius: 16px; padding: 24px 28px; margin-top: 40px;
+      border-left: 4px solid #5865F2; display: flex; gap: 16px; align-items: flex-start;
+    }
+    .discord-tip-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .discord-tip h4 { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 6px; }
+    .discord-tip p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; }
+
+    /* Footer */
+    footer { background: var(--dark); color: #fff; padding: 40px; text-align: center; }
+    footer p { font-size: 0.88rem; opacity: 0.6; }
+    footer a { color: var(--accent); text-decoration: none; margin: 0 8px; }
+
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      .inv-full-grid { grid-template-columns: repeat(2, 1fr); }
+      .filter-bar { top: 80px; }
+    }
+    @media (max-width: 600px) {
+      .page-hero { padding: 32px 20px; }
+      .inv-section { padding: 32px 20px; }
+      .filter-bar { padding: 14px 20px; top: 80px; }
+      .inv-full-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    📍 6409 6th Ave #10, Tacoma &nbsp;·&nbsp; Mon–Sat 10am–6pm · Sun 11am–5pm &nbsp;·&nbsp;
+    <a href="tel:2535760491">(253) 576-0491</a>
+  </div>
+
+  <header>
+    <a href="index.html" style="text-decoration:none;">
+      <div class="logo-wrap">
+        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
+        <div class="logo-tagline">Baby &bull; Kids &bull; Maternity Resale</div>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="trade.html">Sell / Trade</a>
+      <a href="value.html">Max Your Value</a>
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
+      <a href="index.html" class="nav-cta">← Back to Home</a>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <h1>Current <em>Inventory</em></h1>
+    <p>These items are on our shelves right now. Inventory changes daily — come in to see what's new!</p>
+    <div class="page-hero-meta" id="inv-meta">Loading inventory…</div>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-src="all">All Items</button>
+    <button class="filter-btn" data-src="discord">📸 Posted This Week</button>
+    <button class="filter-btn" data-src="facebook-album">📘 From Facebook</button>
+  </div>
+
+  <div class="inv-section">
+    <div class="section-inner">
+      <div class="inv-full-grid" id="inv-grid">
+        <div class="inv-empty">
+          <div class="inv-empty-icon">⏳</div>
+          <p>Loading inventory…</p>
+        </div>
+      </div>
+
+      <div class="discord-tip">
+        <div class="discord-tip-icon">💡</div>
+        <div>
+          <h4>Inventory updates in real time</h4>
+          <p>Items posted to our staff Discord channel appear here automatically within the hour and expire after 7 days. Items from our Facebook inventory album are synced continuously and stay until removed from the album. <strong>New items added daily!</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      <a href="index.html">Home</a>
+      <a href="trade.html">Sell / Trade</a>
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a>
+    </p>
+    <p style="margin-top:12px;">© 2026 Kidz Kaboodle · 6409 6th Ave #10, Tacoma WA · <a href="tel:2535760491">(253) 576-0491</a></p>
+  </footer>
+
+  <script>
+    (async function loadInventory() {
+      const grid   = document.getElementById('inv-grid');
+      const meta   = document.getElementById('inv-meta');
+      const filters = document.querySelectorAll('.filter-btn');
+      let allCards = [];
+
+      // Filter logic
+      filters.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filters.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const src = btn.dataset.src;
+          allCards.forEach(card => {
+            const cardSrc = card.dataset.src || 'all';
+            card.hidden = src !== 'all' && cardSrc !== src;
+          });
+        });
+      });
+
+      function srcLabel(src) {
+        if (src === 'discord') return '<span class="src-badge src-discord">This Week</span>';
+        if (src === 'facebook-album') return '<span class="src-badge src-facebook">Album</span>';
+        return '';
+      }
+
+      function cardHtml(item) {
+        const hasPhoto = !!item.image;
+        const added = item.added ? new Date(item.added).toLocaleDateString('en-US', {month:'short', day:'numeric'}) : '';
+        return `
+          <div class="inv-card" data-src="${item.source || 'all'}">
+            <div class="inv-img${hasPhoto ? ' has-photo' : ''}">
+              <span class="inv-badge">${item.badge || 'New In'}</span>
+              ${srcLabel(item.source)}
+              ${hasPhoto ? `<img src="${item.image}" alt="${item.title || ''}" loading="lazy">` : (item.emoji || '📦')}
+            </div>
+            <div class="inv-body">
+              <h4>${item.title || ''}</h4>
+              <p>${item.desc || ''}</p>
+              ${added ? `<div class="inv-date">Added ${added}</div>` : ''}
+            </div>
+          </div>`;
+      }
+
+      try {
+        const r = await fetch('data/recent.json');
+        if (!r.ok) throw 0;
+        const d = await r.json();
+        const today = new Date().toISOString().slice(0, 10);
+        const items = (d.items || []).filter(it => !it.expires || it.expires >= today);
+
+        if (!items.length) throw new Error('empty');
+
+        grid.innerHTML = items.map(cardHtml).join('');
+        allCards = Array.from(grid.querySelectorAll('.inv-card'));
+
+        const discordCount = items.filter(i => i.source === 'discord').length;
+        const fbCount      = items.filter(i => i.source === 'facebook-album').length;
+        if (meta) {
+          meta.textContent = `${items.length} items · ${discordCount} posted this week · ${fbCount} from Facebook album`;
+          if (d.updated) meta.textContent += ` · Last sync: ${d.updated}`;
+        }
+      } catch(_) {
+        grid.innerHTML = `
+          <div class="inv-empty">
+            <div class="inv-empty-icon">📘</div>
+            <p>We update our Facebook page daily with new arrivals, sales, and what we're currently accepting. Come check us out — inventory moves fast!</p>
+            <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="fb-cta-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              See us on Facebook
+            </a>
+          </div>`;
+        if (meta) meta.textContent = 'Check our Facebook for the latest inventory';
+      }
+    })();
+  </script>
+</body>
+</html>
