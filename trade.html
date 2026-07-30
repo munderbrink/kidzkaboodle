@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How to Trade With Us — Kidz Kaboodle | Tacoma, WA</title>
-  <meta name="description" content="Sell or trade your kids' gently-used clothing, gear, and toys at Kidz Kaboodle in Tacoma. Walk in, get paid on the spot — no appointment needed.">
+  <meta name="description" content="Sell or trade your kids' gently-used clothing, gear, and toys at Kidz Kaboodle in Tacoma. Walk in Mon/Tue/Thu, or drop off on Sundays — get paid on the spot.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -29,82 +29,44 @@
 
     /* ─── TOP BAR ─── */
     .top-bar {
-      background: var(--dark);
-      color: #fff;
-      font-size: 0.8rem;
-      font-family: 'Open Sans', sans-serif;
-      text-align: center;
-      padding: 8px 20px;
-      letter-spacing: 0.3px;
+      background: var(--dark); color: #fff; font-size: 0.8rem;
+      text-align: center; padding: 8px 20px; letter-spacing: 0.3px;
     }
     .top-bar a { color: var(--accent); text-decoration: none; }
 
     /* ─── HEADER / NAV ─── */
     header {
-      background: var(--bg);
-      padding: 0 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 80px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      background: var(--bg); padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 100;
     }
     .logo-wrap { display: flex; flex-direction: column; }
-    .logo-name {
-      font-family: 'Nunito', sans-serif;
-      font-size: 1.75rem;
-      font-weight: 900;
-      letter-spacing: -0.5px;
-      line-height: 1;
-    }
+    .logo-name { font-family: 'Nunito', sans-serif; font-size: 1.75rem; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
     .logo-name span:nth-child(1) { color: var(--primary); }
     .logo-name span:nth-child(2) { color: var(--secondary); }
-    .logo-name span:nth-child(3) { color: var(--dark); }
-    .logo-tagline {
-      font-size: 0.7rem;
-      color: var(--text-light);
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
+    .logo-tagline { font-size: 0.7rem; color: var(--text-light); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
     nav { display: flex; align-items: center; gap: 6px; }
     nav a {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: var(--text);
-      text-decoration: none;
-      padding: 8px 12px;
-      border-radius: var(--radius-btn);
-      transition: background 0.2s, color 0.2s;
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem;
+      color: var(--text); text-decoration: none; padding: 8px 12px;
+      border-radius: var(--radius-btn); transition: background 0.2s, color 0.2s;
     }
     nav a:hover { background: var(--primary); color: #fff; }
-    nav a.nav-cta {
-      background: var(--primary);
-      color: #fff;
-      padding: 9px 20px;
-    }
+    nav a.nav-cta { background: var(--primary); color: #fff; padding: 9px 20px; }
     nav a.nav-cta:hover { background: #e85555; }
-    nav a.nav-active {
-      background: rgba(255,107,107,0.12);
-      color: var(--primary);
+    nav a.nav-active { background: rgba(255,107,107,0.12); color: var(--primary); }
+    .nav-fb-btn {
+      display: inline-flex; align-items: center; gap: 7px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 16px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
     }
-
-    /* ─── NAV SOCIAL ICONS ─── */
-    .nav-social { display: flex; align-items: center; gap: 2px; margin: 0 4px; }
+    .nav-fb-btn:hover { opacity: 0.88; }
+    .nav-fb-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
     .nav-social-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      color: var(--text-light);
-      text-decoration: none;
-      transition: background 0.2s, color 0.2s;
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%; color: var(--text-light);
+      text-decoration: none; transition: background 0.2s, color 0.2s;
     }
     .nav-social-icon:hover { background: var(--primary); color: #fff; }
     .nav-social-icon svg { width: 17px; height: 17px; display: block; }
@@ -112,333 +74,257 @@
     /* ─── PAGE HERO ─── */
     .page-hero {
       background: linear-gradient(135deg, var(--secondary) 0%, #38b5ad 100%);
-      padding: 64px 40px;
-      text-align: center;
-      color: #fff;
+      padding: 64px 40px; text-align: center; color: #fff;
     }
     .page-hero-eyebrow {
-      display: inline-block;
-      background: rgba(255,255,255,0.2);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.75rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      padding: 5px 16px;
-      border-radius: var(--radius-btn);
-      margin-bottom: 18px;
+      display: inline-block; background: rgba(255,255,255,0.2); color: #fff;
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.75rem;
+      letter-spacing: 2px; text-transform: uppercase; padding: 5px 16px;
+      border-radius: var(--radius-btn); margin-bottom: 18px;
     }
-    .page-hero h1 {
-      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-      font-weight: 900;
-      margin-bottom: 14px;
-      line-height: 1.2;
-    }
-    .page-hero p {
-      font-size: 1.1rem;
-      opacity: 0.92;
-      max-width: 580px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
-    }
+    .page-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; margin-bottom: 14px; line-height: 1.2; }
+    .page-hero p { font-size: 1.05rem; opacity: 0.92; max-width: 600px; margin: 0 auto 28px; line-height: 1.65; }
     .page-hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn-white {
-      background: #fff;
-      color: var(--secondary);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 12px 28px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: transform 0.15s;
-      display: inline-block;
+      background: #fff; color: var(--secondary); font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem; padding: 12px 28px; border-radius: var(--radius-btn);
+      text-decoration: none; transition: transform 0.15s; display: inline-block;
     }
     .btn-white:hover { transform: translateY(-2px); }
     .btn-white-outline {
-      background: transparent;
-      color: #fff;
-      border: 2px solid rgba(255,255,255,0.6);
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 10px 28px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: background 0.15s;
-      display: inline-block;
+      background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6);
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; padding: 10px 28px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: background 0.15s; display: inline-block;
     }
     .btn-white-outline:hover { background: rgba(255,255,255,0.15); }
 
-    /* ─── SECTION ─── */
+    /* ─── FACEBOOK CALLOUT STRIP ─── */
+    .fb-callout-strip {
+      background: #1877F2; color: #fff;
+      padding: 16px 40px;
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      flex-wrap: wrap; text-align: center;
+    }
+    .fb-callout-strip p { font-size: 0.95rem; font-family: 'Nunito', sans-serif; font-weight: 700; }
+    .fb-callout-strip a {
+      background: #fff; color: #1877F2; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 0.85rem; padding: 7px 18px;
+      border-radius: var(--radius-btn); text-decoration: none; white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .fb-callout-strip a:hover { opacity: 0.88; }
+
+    /* ─── SECTIONS ─── */
     section { padding: 64px 40px; }
     .section-inner { max-width: 1000px; margin: 0 auto; }
     .section-title { font-size: 1.8rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
     .section-sub { color: var(--text-light); font-size: 1rem; margin-bottom: 36px; }
     .section-title-accent {
-      display: inline-block;
-      width: 50px;
-      height: 5px;
-      background: var(--primary);
-      border-radius: 10px;
-      margin-bottom: 14px;
+      display: inline-block; width: 50px; height: 5px;
+      background: var(--primary); border-radius: 10px; margin-bottom: 14px;
     }
 
-    /* ─── HOURS CALLOUT ─── */
-    .hours-callout {
-      background: linear-gradient(135deg, #fff5f5, #fff9f9);
-      border: 2px solid var(--primary);
-      border-radius: var(--radius-card);
-      padding: 28px 32px;
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      margin-bottom: 40px;
+    /* ─── HOURS CARDS ─── */
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    .hours-card {
+      background: var(--bg2); border-radius: var(--radius-card);
+      padding: 24px 26px; border-left: 5px solid var(--secondary);
     }
-    .hours-icon { font-size: 2.8rem; flex-shrink: 0; }
-    .hours-text h3 { font-size: 1.2rem; font-weight: 900; color: var(--dark); margin-bottom: 4px; }
-    .hours-text p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
-    .hours-text strong { color: var(--primary); }
+    .hours-card.sunday { border-left-color: var(--primary); }
+    .hours-card h3 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
+    .hours-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; }
+    .hours-card strong { color: var(--dark); }
+
+    /* ─── CUTOFF WARNING ─── */
+    .cutoff-warning {
+      background: var(--primary); color: #fff;
+      border-radius: var(--radius-card); padding: 18px 24px;
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 1rem;
+    }
+    .cutoff-warning .cutoff-icon { font-size: 1.6rem; flex-shrink: 0; }
+    .cutoff-warning p { font-size: 0.92rem; font-weight: 700; line-height: 1.5; }
+    .cutoff-warning p strong { font-size: 1.05rem; }
+
+    /* ─── TRADE CLOSURE NOTICE ─── */
+    .closure-notice {
+      background: #fffbec; border: 2px solid var(--accent);
+      border-radius: var(--radius-card); padding: 18px 24px;
+      display: flex; align-items: flex-start; gap: 14px;
+      margin-bottom: 8px;
+    }
+    .closure-notice .closure-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .closure-notice p { font-size: 0.88rem; color: var(--text); line-height: 1.65; }
+    .closure-notice a { color: #1877F2; font-weight: 700; text-decoration: none; }
+    .closure-notice a:hover { text-decoration: underline; }
+
+    /* ─── STEPS ─── */
+    .steps { display: flex; flex-direction: column; gap: 16px; }
+    .step { display: flex; gap: 18px; align-items: flex-start; }
+    .step-num {
+      width: 40px; height: 40px; background: var(--secondary); color: #fff;
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem; flex-shrink: 0;
+    }
+    .step-content h4 { font-weight: 800; font-size: 1rem; color: var(--dark); margin-bottom: 4px; }
+    .step-content p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
 
     /* ─── ACCEPT GRID ─── */
-    .accept-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-bottom: 32px;
-    }
-    .accept-card {
-      background: var(--bg2);
-      border-radius: var(--radius-card);
-      padding: 24px 20px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
+    .accept-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+    .accept-card { background: var(--bg2); border-radius: var(--radius-card); padding: 24px 20px; text-align: center; box-shadow: var(--shadow); }
     .accept-card .accept-emoji { font-size: 2.2rem; margin-bottom: 10px; display: block; }
     .accept-card h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 6px; }
     .accept-card p { font-size: 0.82rem; color: var(--text-light); line-height: 1.5; }
 
     /* ─── TWO-COL ─── */
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
-    .info-box {
-      background: var(--bg2);
-      border-radius: var(--radius-card);
-      padding: 28px;
-    }
+    .info-box { background: var(--bg2); border-radius: var(--radius-card); padding: 28px; }
     .info-box h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 14px; color: var(--dark); }
     .info-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .info-box ul li {
-      font-size: 0.9rem;
-      color: var(--text);
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      line-height: 1.5;
-    }
+    .info-box ul li { font-size: 0.9rem; color: var(--text); display: flex; align-items: flex-start; gap: 10px; line-height: 1.5; }
     .info-box ul li .bullet { flex-shrink: 0; margin-top: 2px; }
 
-    /* ─── STEPS ─── */
-    .steps { display: flex; flex-direction: column; gap: 16px; }
-    .step {
-      display: flex;
-      gap: 18px;
-      align-items: flex-start;
-    }
-    .step-num {
-      width: 40px;
-      height: 40px;
-      background: var(--secondary);
-      color: #fff;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 900;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-    }
-    .step-content h4 { font-weight: 800; font-size: 1rem; color: var(--dark); margin-bottom: 4px; }
-    .step-content p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
-
-    /* ─── CREDIT VS CASH ─── */
-    .credit-vs-cash { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    .credit-card {
-      border-radius: var(--radius-card);
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-    .credit-card.winner {
-      background: linear-gradient(135deg, #f0fffb, #e0fafa);
-      border: 2px solid var(--secondary);
-    }
-    .credit-card.other {
-      background: var(--bg2);
-      border: 2px solid #e0e0e0;
-    }
+    /* ─── CASH VS CREDIT ─── */
+    .credit-vs-cash { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px; }
+    .credit-card { border-radius: var(--radius-card); padding: 28px; box-shadow: var(--shadow); }
+    .credit-card.winner { background: linear-gradient(135deg, #f0fffb, #e0fafa); border: 2px solid var(--secondary); }
+    .credit-card.other { background: var(--bg2); border: 2px solid #e0e0e0; }
     .credit-card .badge {
-      display: inline-block;
-      background: var(--secondary);
-      color: #fff;
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.7rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 3px 10px;
-      border-radius: 20px;
-      margin-bottom: 12px;
+      display: inline-block; color: #fff; font-family: 'Nunito', sans-serif;
+      font-weight: 800; font-size: 0.7rem; letter-spacing: 1px; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 20px; margin-bottom: 12px;
     }
+    .credit-card.winner .badge { background: var(--secondary); }
     .credit-card.other .badge { background: #999; }
     .credit-card h3 { font-size: 1.1rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
     .credit-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
-    .credit-big {
-      font-family: 'Nunito', sans-serif;
-      font-size: 2rem;
-      font-weight: 900;
-      color: var(--secondary);
-      display: block;
-      margin-bottom: 4px;
+    .credit-big { font-family: 'Nunito', sans-serif; font-size: 2rem; font-weight: 900; color: var(--secondary); display: block; margin-bottom: 4px; }
+    .payout-detail {
+      background: var(--bg2); border-radius: var(--radius-card);
+      padding: 18px 24px; display: flex; gap: 40px; flex-wrap: wrap;
     }
+    .payout-detail-item { display: flex; flex-direction: column; gap: 3px; }
+    .payout-detail-label { font-size: 0.72rem; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+    .payout-detail-rate { font-size: 0.95rem; font-weight: 800; color: var(--dark); font-family: 'Nunito', sans-serif; }
+
+    /* ─── ACCEPTING THIS WEEK ─── */
+    .accepting-box {
+      background: linear-gradient(135deg, #fff9f9, #f0fafa);
+      border-radius: 20px; padding: 40px; border: 2px solid #f0f0f0; box-shadow: var(--shadow);
+    }
+    .accepting-box h2 { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .accepting-sub { color: var(--text-light); margin-bottom: 24px; font-size: 0.9rem; }
+    .accepting-hours-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    .accepting-hours-card {
+      background: #fff; border-radius: var(--radius-card);
+      padding: 16px 20px; border-left: 4px solid var(--secondary);
+      font-size: 0.88rem; color: var(--text); line-height: 1.65;
+    }
+    .accepting-hours-card strong { color: var(--secondary); font-family: 'Nunito', sans-serif; }
+    .buying-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; }
+    .buying-col h4 { font-size: 1rem; font-weight: 800; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .want-head { color: #27ae60; }
+    .full-head { color: #e74c3c; }
+    .buying-col ul { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+    .buying-col li { font-size: 0.9rem; color: var(--text); display: flex; align-items: center; gap: 8px; }
+    .buying-not-note {
+      font-size: 0.82rem; color: var(--text-light); padding: 10px 16px;
+      background: #fff8f8; border-left: 3px solid var(--primary);
+      border-radius: 6px; margin-bottom: 20px; line-height: 1.6;
+    }
+    .accepting-fb {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 0.85rem; color: var(--text-light); flex-wrap: wrap;
+    }
+    .fb-link {
+      display: inline-flex; align-items: center; gap: 6px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.82rem;
+      padding: 6px 14px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .fb-link:hover { opacity: 0.88; }
+    .fb-link svg { width: 14px; height: 14px; flex-shrink: 0; }
 
     /* ─── TIPS ─── */
-    .tips-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+    .tips-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .tip-card {
-      background: var(--bg);
-      border-radius: var(--radius-card);
-      padding: 24px 20px;
-      box-shadow: var(--shadow);
-      border-top: 4px solid var(--primary);
+      background: var(--bg); border-radius: var(--radius-card); padding: 24px 20px;
+      box-shadow: var(--shadow); border-top: 4px solid var(--primary);
     }
     .tip-card:nth-child(2) { border-top-color: var(--secondary); }
     .tip-card:nth-child(3) { border-top-color: var(--accent); }
     .tip-card:nth-child(4) { border-top-color: var(--secondary); }
     .tip-card:nth-child(5) { border-top-color: var(--primary); }
+    .tip-card:nth-child(6) { border-top-color: var(--accent); }
     .tip-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
     .tip-card h4 { font-weight: 800; font-size: 0.95rem; color: var(--dark); margin-bottom: 6px; }
     .tip-card p { font-size: 0.85rem; color: var(--text-light); line-height: 1.6; }
 
     /* ─── FAQ ─── */
     .faq-list { display: flex; flex-direction: column; gap: 20px; }
-    .faq-item {
-      background: var(--bg2);
-      border-radius: var(--radius-card);
-      padding: 24px 28px;
-    }
-    .faq-item h4 {
-      font-size: 1rem;
-      font-weight: 800;
-      color: var(--dark);
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
+    .faq-item { background: var(--bg2); border-radius: var(--radius-card); padding: 24px 28px; }
+    .faq-item h4 { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
     .faq-item p { font-size: 0.9rem; color: var(--text-light); line-height: 1.7; }
 
     /* ─── CTA STRIP ─── */
-    .cta-strip {
-      background: var(--primary);
-      padding: 56px 40px;
-      text-align: center;
-      color: #fff;
-    }
+    .cta-strip { background: var(--primary); padding: 56px 40px; text-align: center; color: #fff; }
     .cta-strip h2 { font-size: 2rem; font-weight: 900; margin-bottom: 10px; }
     .cta-strip p { font-size: 1rem; opacity: 0.9; margin-bottom: 28px; max-width: 520px; margin-left: auto; margin-right: auto; }
 
     /* ─── FOOTER ─── */
-    footer {
-      background: var(--dark);
-      color: #fff;
-      padding: 56px 40px 28px;
-    }
+    footer { background: var(--dark); color: #fff; padding: 56px 40px 28px; }
     .footer-grid {
-      max-width: 1100px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 40px;
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px;
     }
     .footer-brand .logo-name { font-size: 1.5rem; margin-bottom: 10px; }
     .footer-brand p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; margin-bottom: 16px; }
     .footer-social { display: flex; flex-wrap: wrap; gap: 8px; }
     .footer-fb {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #1877F2;
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 7px 16px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
+      display: inline-flex; align-items: center; gap: 6px; background: #1877F2;
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
     }
     .footer-fb:hover { opacity: 0.88; }
     .footer-ig {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+      display: inline-flex; align-items: center; gap: 6px;
       background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.82rem;
-      padding: 7px 16px;
-      border-radius: var(--radius-btn);
-      text-decoration: none;
-      transition: opacity 0.2s;
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
     }
     .footer-ig:hover { opacity: 0.88; }
     .footer-fb svg, .footer-ig svg { width: 14px; height: 14px; flex-shrink: 0; }
     footer h4 {
-      font-family: 'Nunito', sans-serif;
-      font-weight: 800;
-      font-size: 0.9rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 16px;
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
     }
     footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     footer ul li { font-size: 0.88rem; opacity: 0.8; line-height: 1.5; }
     footer ul li a { color: #fff; text-decoration: none; opacity: 0.8; }
     footer ul li a:hover { opacity: 1; }
     .footer-bottom {
-      max-width: 1100px;
-      margin: 0 auto;
-      border-top: 1px solid rgba(255,255,255,0.12);
-      padding-top: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      opacity: 0.55;
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem; opacity: 0.55;
     }
 
     /* ─── RESPONSIVE ─── */
     @media (max-width: 900px) {
       header { padding: 0 20px; }
       nav { display: none; }
-      .accept-grid { grid-template-columns: 1fr 1fr; }
-      .two-col { grid-template-columns: 1fr; }
-      .credit-vs-cash { grid-template-columns: 1fr; }
+      .accept-grid, .hours-grid { grid-template-columns: 1fr 1fr; }
+      .two-col, .credit-vs-cash, .buying-cols, .accepting-hours-bar { grid-template-columns: 1fr; }
       .tips-grid { grid-template-columns: 1fr 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-      .hours-callout { flex-direction: column; text-align: center; }
     }
     @media (max-width: 600px) {
       section { padding: 48px 20px; }
-      .page-hero { padding: 48px 20px; }
-      .cta-strip { padding: 48px 20px; }
-      .accept-grid, .tips-grid { grid-template-columns: 1fr; }
+      .page-hero, .cta-strip { padding: 48px 20px; }
+      .fb-callout-strip { padding: 14px 20px; }
+      .accept-grid, .tips-grid, .hours-grid { grid-template-columns: 1fr; }
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .payout-detail { flex-direction: column; gap: 14px; }
     }
   </style>
 </head>
@@ -447,16 +333,14 @@
   <!-- TOP BAR -->
   <div class="top-bar">
     📍 6409 6th Ave #10, Tacoma &nbsp;·&nbsp; Mon–Sat 10am–6pm · Sun 11am–5pm &nbsp;·&nbsp;
-    <a href="tel:2535655439">(253) 565-KIDZ</a>
+    <a href="tel:2535760491">(253) 576-0491</a>
   </div>
 
   <!-- HEADER / NAV -->
   <header>
     <a href="index.html" style="text-decoration:none;">
       <div class="logo-wrap">
-        <div class="logo-name">
-          <span>KIDZ&nbsp;</span><span>KABOODLE</span>
-        </div>
+        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
         <div class="logo-tagline">Baby &bull; Kids &bull; Maternity Resale</div>
       </div>
     </a>
@@ -466,74 +350,144 @@
       <a href="value.html">Max Your Value</a>
       <a href="index.html#promos">Sales &amp; Deals</a>
       <a href="#">About</a>
-      <div class="nav-social">
-        <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Facebook">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener" class="nav-social-icon" aria-label="Instagram">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-        </a>
-      </div>
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
       <a href="index.html#footer" class="nav-cta">Visit Us</a>
     </nav>
   </header>
 
   <!-- PAGE HERO -->
   <div class="page-hero">
-    <div class="page-hero-eyebrow">📦 Trade · Mon, Tue &amp; Thu · 10am–2pm</div>
+    <div class="page-hero-eyebrow">📦 Same-Day Trades: Mon · Tue · Thu &nbsp;|&nbsp; Drop-Off: Sunday</div>
     <h1>Sell or Trade Your Kids' Stuff</h1>
-    <p>Walk in during trade hours, and walk out with cash or store credit. No appointment, no consignment, no hassle.</p>
+    <p>Walk in Mon, Tue &amp; Thu for a same-day offer — or drop your items off on Sundays. Get paid in cash or store credit, on the spot. No appointment, no consignment, no hassle.</p>
     <div class="page-hero-btns">
       <a href="#trade-hours" class="btn-white">See Trade Hours</a>
-      <a href="#accept" class="btn-white-outline">What We Accept</a>
+      <a href="#accepting" class="btn-white-outline">What We're Buying</a>
     </div>
   </div>
 
+  <!-- FACEBOOK CALLOUT STRIP -->
+  <div class="fb-callout-strip">
+    <p>📋 We post what we're actively buying every week on Facebook</p>
+    <a href="#accepting">See This Week's List ↓</a>
+    <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" style="background:rgba(255,255,255,0.2);color:#fff;border:2px solid rgba(255,255,255,0.5);">Follow on Facebook</a>
+  </div>
+
   <!-- TRADE HOURS -->
-  <section id="trade-hours" style="background: var(--bg); padding: 52px 40px;">
+  <section id="trade-hours" style="background: var(--bg); padding: 56px 40px;">
     <div class="section-inner">
-      <div class="hours-callout">
-        <div class="hours-icon">🕙</div>
-        <div class="hours-text">
-          <h3>Trade Hours: Mon, Tue &amp; Thu · 10am–2pm</h3>
-          <p>Walk right in — <strong>no appointment needed</strong>. We stop accepting new trade drop-offs at 2pm sharp on trade days. Arrive early for the smoothest experience — especially if you have a lot of items.</p>
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Trade Hours</h2>
+      <p class="section-sub">No appointment needed — just walk in during trade hours.</p>
+
+      <div class="hours-grid">
+        <div class="hours-card">
+          <h3>⏰ Mon · Tue · Thu — 11am–2pm</h3>
+          <p><strong>Same-day trades &amp; equipment trades.</strong> Our team evaluates your items and makes an offer the same day. You must be checked in by 1:30pm — no exceptions. You must remain in the store to receive your offer.</p>
+        </div>
+        <div class="hours-card sunday">
+          <h3>📦 Sunday — 11am–1pm</h3>
+          <p><strong>Drop-off only.</strong> Leave your items and we'll process them during the week. No same-day offers on Sundays. Equipment not accepted on Sundays.</p>
         </div>
       </div>
+
+      <div class="cutoff-warning">
+        <div class="cutoff-icon">⚠️</div>
+        <p><strong>Hard cutoff: 1:30pm on Mon, Tue &amp; Thu</strong> — Check in by 1:30pm for a same-day offer or equipment trade. No exceptions. Arrive early if you have a large bin or equipment.</p>
+      </div>
+
+      <div class="closure-notice">
+        <div class="closure-icon">📅</div>
+        <p>Trade hours are occasionally suspended for holidays, staffing, or periodic store rotation and refresh weeks. We post all closures and schedule changes promptly to our <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook page</a> — follow us there to stay up to date before making a trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section style="background: var(--bg2); padding: 56px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-sub">Same-day, straightforward, no strings attached.</p>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-content">
             <h4>📦 Bring It In</h4>
-            <p>Gather your clean, gently-used kids' items and bring them to the store during trade hours. No appointment needed — just walk in!</p>
+            <p>Bring one store-provided 18-gallon bin of clean, gently-used kids items during trade hours. For equipment trades, have items fully assembled outside the store before we can review them. Same-day offers and equipment trades are only available Mon, Tue &amp; Thu — check in by 1:30pm.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <h4>🔍 We Evaluate</h4>
-            <p>Our team reviews your items for quality, condition, and current demand. This usually takes 15–30 minutes depending on how many items you bring.</p>
+            <h4>🔍 We Review</h4>
+            <p>Wait in store (typically 15–45 min) or we can call you within a week with an offer. Any customer can request approval before accepting — this lets you review exactly what we took and what we passed on before anything is finalized.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <h4>💰 Choose Your Payout</h4>
-            <p>We'll make you an offer — choose between <strong>cash on the spot</strong> or <strong>store credit</strong> (store credit gives you extra bonus value). Done! Same-day, every time.</p>
+            <h4>💸 Get Paid</h4>
+            <p>Earn a percentage of our resale price — paid on the spot. Choose cash for a quick payout, or store credit for even more value. Either way, same day, no waiting.</p>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-content">
-            <h4>🛍️ Shop or Head Home</h4>
-            <p>Grab your payout and use your store credit right away, or pocket the cash and go. Items we don't take are returned to you — bring a bag just in case.</p>
+            <h4>🎁 Donate or Take It Home</h4>
+            <p>Items we pass on can go home with you or be donated to the store. Most donations end up on our 25¢ table or our monthly free giveaways — a great way to pay it forward!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- CASH VS STORE CREDIT -->
+  <section style="background: var(--bg); padding: 56px 40px;">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Cash or Store Credit — Your Choice</h2>
+      <p class="section-sub">Both options are paid out the same day. Store credit stretches further.</p>
+      <div class="credit-vs-cash">
+        <div class="credit-card winner">
+          <span class="badge">⭐ Best Value</span>
+          <span class="credit-big">Store Credit</span>
+          <h3>More value, spend it anytime</h3>
+          <p>Opt for store credit and you'll receive a <strong>bonus on top of your trade offer</strong>. Use it on anything in the store — which is already priced to save you money. The easiest way to cycle out what they've outgrown and refresh what they need next.</p>
+        </div>
+        <div class="credit-card other">
+          <span class="badge">Quick Payout</span>
+          <span class="credit-big" style="color:var(--text-light);">Cash</span>
+          <h3>On the spot, no strings</h3>
+          <p>Prefer cash? No problem — we pay you on the spot, same day. Great if you don't have anything to buy today or just want to pocket the money and go. No waiting, no consignment, ever.</p>
+        </div>
+      </div>
+      <div class="payout-detail">
+        <div class="payout-detail-item">
+          <span class="payout-detail-label">💰 Equipment — cash payout</span>
+          <span class="payout-detail-rate">30% of our resale price</span>
+        </div>
+        <div class="payout-detail-item">
+          <span class="payout-detail-label">⭐ Equipment — store credit</span>
+          <span class="payout-detail-rate">50% of our resale price</span>
+        </div>
+        <div class="payout-detail-item">
+          <span class="payout-detail-label">💰 Clothing, toys &amp; gear — cash</span>
+          <span class="payout-detail-rate">20% of our resale price</span>
+        </div>
+        <div class="payout-detail-item">
+          <span class="payout-detail-label">⭐ Clothing, toys &amp; gear — store credit</span>
+          <span class="payout-detail-rate">40% of our resale price</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- WHAT WE ACCEPT -->
-  <section id="accept" style="background: var(--bg2); padding: 64px 40px;">
+  <section id="accept" style="background: var(--bg2); padding: 56px 40px;">
     <div class="section-inner">
       <div class="section-title-accent"></div>
       <h2 class="section-title">What We Accept</h2>
@@ -547,7 +501,7 @@
         <div class="accept-card">
           <span class="accept-emoji">👕</span>
           <h4>Kids Clothing</h4>
-          <p>Sizes 4 through 16. Current styles, great brands preferred.</p>
+          <p>Sizes 4 through 14. Current styles, great brands preferred.</p>
         </div>
         <div class="accept-card">
           <span class="accept-emoji">🤰</span>
@@ -567,18 +521,17 @@
         <div class="accept-card">
           <span class="accept-emoji">🛒</span>
           <h4>Gear &amp; Equipment</h4>
-          <p>Strollers, car seats (within expiration), carriers, high chairs, and more — all parts included.</p>
+          <p>Strollers, car seats (within expiration), carriers, high chairs and more — all parts included, assembled outside.</p>
         </div>
       </div>
-
-      <div class="two-col" style="margin-top: 32px;">
+      <div class="two-col">
         <div class="info-box">
           <h3>✅ Condition We Look For</h3>
           <ul>
             <li><span class="bullet">✔</span> Clean and freshly laundered clothing</li>
             <li><span class="bullet">✔</span> No stains, rips, holes, or heavy pilling</li>
-            <li><span class="bullet">✔</span> All parts and accessories included (for gear)</li>
-            <li><span class="bullet">✔</span> Working electronics and battery-operated items</li>
+            <li><span class="bullet">✔</span> All parts, straps, and accessories included</li>
+            <li><span class="bullet">✔</span> Working electronics with batteries if needed</li>
             <li><span class="bullet">✔</span> Car seats within their expiration date</li>
             <li><span class="bullet">✔</span> Items free of pet hair and smoke odors</li>
           </ul>
@@ -586,11 +539,11 @@
         <div class="info-box">
           <h3>❌ What We Pass On</h3>
           <ul>
-            <li><span class="bullet">✗</span> Stained, torn, or heavily worn items</li>
-            <li><span class="bullet">✗</span> Items missing parts or accessories</li>
-            <li><span class="bullet">✗</span> Recalled products (we check the CPSC list)</li>
+            <li><span class="bullet">✗</span> Recalled equipment (non-negotiable)</li>
+            <li><span class="bullet">✗</span> Cribs, baths, and baby loungers (Dock-A-Tot style)</li>
+            <li><span class="bullet">✗</span> Breast pumps or baby food</li>
+            <li><span class="bullet">✗</span> Battery-operated ride-on toys</li>
             <li><span class="bullet">✗</span> Expired car seats or safety restraints</li>
-            <li><span class="bullet">✗</span> Mattresses and sleep surfaces</li>
             <li><span class="bullet">✗</span> Items with strong odors (smoke, mildew)</li>
           </ul>
         </div>
@@ -598,85 +551,103 @@
     </div>
   </section>
 
-  <!-- CASH VS STORE CREDIT -->
-  <section style="background: var(--bg); padding: 64px 40px;">
+  <!-- ACCEPTING THIS WEEK -->
+  <section id="accepting" style="background: var(--bg); padding: 56px 40px;">
     <div class="section-inner">
       <div class="section-title-accent"></div>
-      <h2 class="section-title">Cash or Store Credit — Your Choice</h2>
-      <p class="section-sub">Both options are paid out the same day. Store credit goes a little further.</p>
-      <div class="credit-vs-cash">
-        <div class="credit-card winner">
-          <span class="badge">⭐ Best Value</span>
-          <span class="credit-big">Store Credit</span>
-          <h3>More value, spend it anytime</h3>
-          <p>Opt for store credit and you'll receive a <strong>bonus on top of your trade offer</strong>. Use it on anything in the store — which is already priced to save you money. It's the easiest way to cycle out items your kids have outgrown and refresh what they need next.</p>
+      <h2 class="section-title" style="margin-bottom:28px;">📋 Accepting This Week</h2>
+      <div class="accepting-box">
+        <p class="accepting-sub">Updated weekly based on current stock levels. Follow our Facebook for the latest.</p>
+
+        <div class="accepting-hours-bar">
+          <div class="accepting-hours-card">
+            ⏰ <strong>Mon · Tue · Thu — 11am–2pm</strong><br>
+            Check in by <strong>1:30pm</strong> for a same-day offer — no exceptions. You must remain in store while items are reviewed (15–45 min).
+          </div>
+          <div class="accepting-hours-card" style="border-left-color:var(--primary);">
+            📦 <strong>Sunday — 11am–1pm (Drop-off Only)</strong><br>
+            No same-day offers on Sundays. No equipment on Sundays. One store-provided 18-gallon bin per trade day.
+          </div>
         </div>
-        <div class="credit-card other">
-          <span class="badge">Quick Payout</span>
-          <span class="credit-big" style="color: var(--text-light);">Cash</span>
-          <h3>On the spot, no strings</h3>
-          <p>Prefer cash? No problem — we pay you on the spot, same day. Cash is great if you don't have anything to buy today or just want to pocket the money and go. No waiting, no consignment, ever.</p>
+
+        <div class="buying-cols">
+          <div class="buying-col">
+            <h4 class="want-head">✅ We WANT</h4>
+            <ul id="buying-want-list">
+              <li>✅ Car seats &amp; boosters</li>
+              <li>✅ Strollers &amp; travel systems</li>
+              <li>✅ High chairs</li>
+              <li>✅ Wooden toys &amp; puzzles</li>
+              <li>✅ Swimsuits &amp; summer gear</li>
+            </ul>
+          </div>
+          <div class="buying-col">
+            <h4 class="full-head">❌ Currently FULL</h4>
+            <ul id="buying-full-list">
+              <li>❌ Pack n' plays</li>
+              <li>❌ Bouncers &amp; swings</li>
+              <li>❌ Bottle warmers</li>
+              <li>❌ Jumpers &amp; activity centers</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="buying-not-note">⚠️ <strong>We do not purchase:</strong> recalled equipment, cribs, baths, baby food, baby loungers (Dock-A-Tot style), breast pumps, or battery-operated ride-on toys. Some may be accepted as donations — recalled equipment cannot be accepted under any circumstances.</p>
+
+        <div class="accepting-fb">
+          <span>Check back weekly — or follow us on Facebook for daily updates on what we're buying</span>
+          <a href="https://www.facebook.com/kidzkaboodle" class="fb-link" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TIPS FOR GETTING ACCEPTED -->
-  <section style="background: var(--bg2); padding: 64px 40px;">
+  <!-- TIPS -->
+  <section style="background: var(--bg2); padding: 56px 40px;">
     <div class="section-inner">
       <div class="section-title-accent"></div>
       <h2 class="section-title">Tips for Getting Items Accepted</h2>
-      <p class="section-sub">A little prep goes a long way — here's how to set yourself up for success.</p>
+      <p class="section-sub">A little prep goes a long way.</p>
       <div class="tips-grid">
         <div class="tip-card">
           <span class="tip-icon">🧺</span>
           <h4>Come In Clean</h4>
-          <p>Wash everything before you bring it in. Freshly laundered items make a much better impression and are more likely to be accepted.</p>
+          <p>Wash everything before you bring it in. Freshly laundered items are far more likely to be accepted.</p>
         </div>
         <div class="tip-card">
           <span class="tip-icon">📂</span>
-          <h4>Group by Size</h4>
-          <p>Sort your clothing by size before you arrive — all 3T together, all 4T together, etc. It speeds up our review and shows you care about your items.</p>
+          <h4>Lay Flat &amp; Unfolded</h4>
+          <p>Lay clothing items flat and unfolded — it helps us process more efficiently and speeds up your offer.</p>
         </div>
         <div class="tip-card">
           <span class="tip-icon">🌞</span>
-          <h4>Bring Seasonal Items</h4>
-          <p>We accept more of what's seasonally relevant. Summer items in summer, winter coats in fall. Off-season items are harder to place.</p>
+          <h4>Stay Seasonal</h4>
+          <p>We buy what's in season. We don't purchase out-of-season clothing — check our Facebook for what's currently in demand.</p>
         </div>
         <div class="tip-card">
           <span class="tip-icon">🏅</span>
           <h4>Better Brands, Better Offers</h4>
-          <p>Gap, Carter's, Nike, Patagonia, North Face, Columbia — recognizable brands command better offers than unbranded generics.</p>
+          <p>Gap, Carter's, Nike, Patagonia, North Face — recognizable brands get better offers than unbranded generics.</p>
         </div>
         <div class="tip-card">
           <span class="tip-icon">🔩</span>
           <h4>Bring All the Parts</h4>
-          <p>Gear and toys with all parts, straps, accessories, and batteries included are far more likely to be accepted at a better price.</p>
+          <p>Gear and toys with all parts, straps, and batteries included are far more likely to be accepted.</p>
         </div>
         <div class="tip-card">
           <span class="tip-icon">🐾</span>
           <h4>Watch for Odors</h4>
-          <p>Items that smell like smoke or pet odors are automatically passed on. Give things a fresh wash and a sniff test before you pack them up.</p>
+          <p>Items that smell like smoke or pets are automatically passed on. Give things a fresh wash and a sniff test before packing up.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT HAPPENS TO PASSED ITEMS -->
-  <section style="background: var(--bg); padding: 64px 40px;">
-    <div class="section-inner">
-      <div style="max-width: 680px;">
-        <div class="section-title-accent"></div>
-        <h2 class="section-title">What Happens If We Pass on an Item?</h2>
-        <p style="color: var(--text-light); line-height: 1.8; font-size: 0.95rem; margin-bottom: 16px;">Everything we don't take gets handed right back to you — no questions asked. We won't keep your items or donate them without your permission.</p>
-        <p style="color: var(--text-light); line-height: 1.8; font-size: 0.95rem; margin-bottom: 16px;">We recommend bringing a bag or tote to carry home anything we pass on. If you'd rather donate the items instead of taking them back, just let us know and we can point you to a local resource.</p>
-        <p style="color: var(--text-light); line-height: 1.8; font-size: 0.95rem;">Not every item is a match every time — stock needs change weekly. Something we pass on today might be something we want in a few weeks. Follow our Facebook or Instagram to stay current on what we're actively looking for.</p>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section style="background: var(--bg2); padding: 64px 40px;">
+  <section style="background: var(--bg); padding: 56px 40px;">
     <div class="section-inner">
       <div class="section-title-accent"></div>
       <h2 class="section-title">Frequently Asked Questions</h2>
@@ -684,19 +655,27 @@
       <div class="faq-list">
         <div class="faq-item">
           <h4>❓ Do I need an appointment?</h4>
-          <p>Nope! Just walk in during trade hours — Monday, Tuesday, and Thursday from 10am–2pm. No appointment, no scheduling, no waiting list. First come, first served.</p>
+          <p>Nope! Walk in during trade hours — Mon, Tue &amp; Thu from 11am–2pm for same-day offers, or drop off on Sundays 11am–1pm. No scheduling, no waiting list.</p>
+        </div>
+        <div class="faq-item">
+          <h4>❓ What is the 1:30pm cutoff?</h4>
+          <p>To receive a same-day offer — including all equipment trades — you must be checked in by 1:30pm on Mon, Tue, and Thu. No exceptions. If you arrive after 1:30pm, we won't be able to process your items that day.</p>
+        </div>
+        <div class="faq-item">
+          <h4>❓ Are trade hours always the same?</h4>
+          <p>We do our best to maintain consistent trade hours, but we do occasionally close for holidays, staffing, or scheduled store rotation and refresh weeks. We post all closures promptly on our <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" style="color:#1877F2;font-weight:700;">Facebook page</a> — check there before making a trip if you're unsure.</p>
         </div>
         <div class="faq-item">
           <h4>❓ How long does the process take?</h4>
-          <p>Usually 15–30 minutes, depending on how many items you bring. If you arrive with a large load, it may take a bit longer. We recommend arriving by 1:30pm to leave enough time before we close trade drop-offs at 2pm.</p>
+          <p>Usually 15–45 minutes depending on how many items you bring. If you'd rather not wait, you can request approval and we'll contact you within the week with an offer.</p>
         </div>
         <div class="faq-item">
           <h4>❓ Do you take expired car seats?</h4>
-          <p>No — safety is our top priority. We only accept car seats and booster seats that are within their manufacturer expiration date. The expiration date is stamped directly on the seat. We check every one.</p>
+          <p>No — safety is our top priority. We only accept car seats within their manufacturer expiration date. The expiration is stamped directly on the seat. We check every one. Car seats must have at least 2 years remaining before expiration.</p>
         </div>
         <div class="faq-item">
-          <h4>❓ Can I trade online or ship items to you?</h4>
-          <p>We're an in-store trade only — bring your items in person during trade hours. This lets our team evaluate each item hands-on, which is how we keep quality high and offer you fair prices.</p>
+          <h4>❓ Can I trade online or ship items?</h4>
+          <p>In-store only — bring your items in person during trade hours. This lets our team evaluate each item hands-on, which is how we keep quality high and offer fair prices.</p>
         </div>
       </div>
     </div>
@@ -705,9 +684,9 @@
   <!-- CTA STRIP -->
   <div class="cta-strip">
     <h2>Ready to bring your items in?</h2>
-    <p>Trade hours are Monday, Tuesday &amp; Thursday · 10am–2pm. No appointment needed — just show up!</p>
+    <p>Same-day trades: Mon, Tue &amp; Thu · 11am–2pm (check in by 1:30pm). Drop-off: Sundays 11am–1pm. No appointment needed!</p>
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a href="value.html" style="background:#fff; color:var(--primary); font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; padding:13px 28px; border-radius:50px; text-decoration:none; transition:transform 0.15s; display:inline-block;">💡 Max Your Value First</a>
+      <a href="value.html" style="background:#fff; color:var(--primary); font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; padding:13px 28px; border-radius:50px; text-decoration:none; display:inline-block;">💡 Max Your Value First</a>
       <a href="index.html#footer" style="background:rgba(255,255,255,0.18); color:#fff; border:2px solid rgba(255,255,255,0.5); font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; padding:11px 28px; border-radius:50px; text-decoration:none; display:inline-block;">📍 Get Directions</a>
     </div>
   </div>
@@ -716,10 +695,8 @@
   <footer id="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo-name">
-          <span>KIDZ&nbsp;</span><span>KABOODLE</span>
-        </div>
-        <p style="margin-top:8px;">Tacoma's largest selection of secondhand baby, kids &amp; maternity clothing. Nearly 20 years serving the Pacific Northwest.</p>
+        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
+        <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for over 20 years.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
@@ -738,7 +715,10 @@
           <li>Sunday: 11am–5pm</li>
           <li>&nbsp;</li>
           <li><strong style="color:var(--accent)">Trade Hours:</strong></li>
-          <li>Mon, Tue, Thu · 10am–2pm</li>
+          <li>Mon, Tue, Thu · 11am–2pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Check in by 1:30pm for same-day offer</li>
+          <li style="margin-top:4px;">Sunday · 11am–1pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Drop-off only · No equipment</li>
         </ul>
       </div>
       <div>
@@ -746,7 +726,7 @@
         <ul>
           <li>6409 6th Ave #10</li>
           <li>Tacoma, WA 98406</li>
-          <li style="margin-top:8px;"><a href="tel:2535655439">(253) 565-KIDZ</a></li>
+          <li style="margin-top:8px;"><a href="tel:2535760491">(253) 576-0491</a></li>
           <li><a href="mailto:info@kidzkaboodle.com">info@kidzkaboodle.com</a></li>
           <li style="margin-top:8px;"><a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a></li>
           <li><a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a></li>
@@ -759,5 +739,20 @@
     </div>
   </footer>
 
+  <script>
+    (async function loadBuyingList() {
+      const wantList = document.getElementById('buying-want-list');
+      const fullList = document.getElementById('buying-full-list');
+      try {
+        const resp = await fetch('data/buying.json');
+        if (!resp.ok) throw 0;
+        const data = await resp.json();
+        if (wantList && data.wanting && data.wanting.length)
+          wantList.innerHTML = data.wanting.map(i => `<li>✅ ${i}</li>`).join('');
+        if (fullList && data.full && data.full.length)
+          fullList.innerHTML = data.full.map(i => `<li>❌ ${i}</li>`).join('');
+      } catch(_) { /* keep defaults */ }
+    })();
+  </script>
 </body>
 </html>
