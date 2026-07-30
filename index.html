@@ -349,19 +349,24 @@
       text-decoration: none; transition: transform 0.15s; display: inline-block;
     }
     .btn-white:hover { transform: translateY(-2px); }
-    .sell-steps { display: flex; flex-direction: column; gap: 16px; }
+    .sell-steps { display: flex; flex-direction: column; gap: 14px; }
     .sell-step {
       display: flex; align-items: flex-start; gap: 16px;
       background: rgba(255,255,255,0.15); border-radius: var(--radius-card);
-      padding: 16px 20px; color: #fff;
+      padding: 18px 20px; color: #fff;
     }
     .sell-step-num {
-      width: 40px; height: 40px; background: #fff; color: var(--secondary);
+      width: 34px; height: 34px; background: #fff; color: var(--secondary);
       border-radius: 50%; display: flex; align-items: center; justify-content: center;
-      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1.1rem;
-      flex-shrink: 0; margin-top: 3px;
+      font-family: 'Nunito', sans-serif; font-weight: 900; font-size: 1rem;
+      flex-shrink: 0; margin-top: 4px;
     }
-    .sell-step p { font-size: 0.9rem; font-weight: 600; margin: 0; line-height: 1.65; }
+    .sell-step-body { display: flex; flex-direction: column; gap: 5px; }
+    .sell-step-label {
+      font-family: 'Nunito', sans-serif; font-size: 1.15rem; font-weight: 900;
+      color: #fff; line-height: 1.2;
+    }
+    .sell-step-desc { font-size: 0.83rem; opacity: 0.88; line-height: 1.6; margin: 0; font-weight: 400; }
 
     /* ─── FOOTER ─── */
     footer { background: var(--dark); color: #fff; padding: 56px 40px 28px; }
@@ -662,21 +667,30 @@
     <div class="sell-inner">
       <div class="sell-text">
         <h2>Have kids' stuff to sell?</h2>
-        <p>Bring it in during trade hours — we offer <strong>cash or store credit on the spot</strong>. No consignment, no waiting. Clean out your closet and walk out with money in your pocket.</p>
+        <p>We buy gently-used kids' items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong> (check in by 1:30pm for a same-day offer). Cash or store credit, paid on the spot — no consignment, no waiting.</p>
         <a href="trade.html" class="btn-white">LEARN HOW IT WORKS &rarr;</a>
       </div>
       <div class="sell-steps">
         <div class="sell-step">
           <div class="sell-step-num">1</div>
-          <p>📦 <strong>Bring It In</strong> — One store-provided 18-gallon bin of clean, gently-used kids items. Trade hours: Mon, Tue &amp; Thu · 11am–2pm. <strong>Check in by 1:30pm</strong> for a same-day offer.</p>
+          <div class="sell-step-body">
+            <div class="sell-step-label">📦 Bring It In</div>
+            <p class="sell-step-desc">One store-provided 18-gallon bin of clean, gently-used kids items. Check in by 1:30pm for a same-day offer.</p>
+          </div>
         </div>
         <div class="sell-step">
           <div class="sell-step-num">2</div>
-          <p>🔍 <strong>We Review</strong> — Wait in store while we process (typically 15–45 min). First-timers: we recommend selecting "approval required" so you can review the offer before it's finalized.</p>
+          <div class="sell-step-body">
+            <div class="sell-step-label">🔍 We Review</div>
+            <p class="sell-step-desc">Wait in store while we evaluate your items (typically 15–45 min). New customers can request approval before anything is finalized.</p>
+          </div>
         </div>
         <div class="sell-step">
           <div class="sell-step-num">3</div>
-          <p>💸 <strong>Get Paid</strong> — Equipment: 30% cash or 50% store credit. Clothing, toys &amp; gear: 20% cash or 40% store credit. Paid on the spot!</p>
+          <div class="sell-step-body">
+            <div class="sell-step-label">💸 Get Paid</div>
+            <p class="sell-step-desc">Earn a percentage of our resale price — paid on the spot. Choose store credit and get even more value for your items.</p>
+          </div>
         </div>
       </div>
     </div>
