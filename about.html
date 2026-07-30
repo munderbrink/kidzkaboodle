@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Kidz Kaboodle | Tacoma, WA</title>
+  <meta name="description" content="Kidz Kaboodle is a family-run kids' resale shop in Tacoma, WA. Under new ownership since June 2025, we're carrying on 20+ years of great value and community reuse.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #FF6B6B;
+      --secondary: #4ECDC4;
+      --accent: #FFE66D;
+      --dark: #2C3E50;
+      --bg: #FFFFFF;
+      --bg2: #F8F9FA;
+      --text: #2C3E50;
+      --text-light: #636E72;
+      --radius-btn: 50px;
+      --radius-card: 16px;
+      --shadow: 0 4px 20px rgba(0,0,0,0.10);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3, h4 { font-family: 'Nunito', sans-serif; }
+
+    .top-bar {
+      background: var(--dark); color: #fff; font-size: 0.8rem;
+      text-align: center; padding: 8px 20px; letter-spacing: 0.3px;
+    }
+    .top-bar a { color: var(--accent); text-decoration: none; }
+
+    header {
+      background: var(--bg); padding: 0 40px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 80px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .logo-wrap { display: flex; flex-direction: column; }
+    .logo-name { font-family: 'Nunito', sans-serif; font-size: 1.75rem; font-weight: 900; letter-spacing: -0.5px; line-height: 1; }
+    .logo-name span:nth-child(1) { color: var(--primary); }
+    .logo-name span:nth-child(2) { color: var(--secondary); }
+    .logo-tagline { font-size: 0.7rem; color: var(--text-light); letter-spacing: 1.5px; text-transform: uppercase; margin-top: 2px; }
+    nav { display: flex; align-items: center; gap: 6px; }
+    nav a {
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 0.9rem;
+      color: var(--text); text-decoration: none; padding: 8px 12px;
+      border-radius: var(--radius-btn); transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover { background: var(--primary); color: #fff; }
+    nav a.nav-cta { background: var(--primary); color: #fff; padding: 9px 20px; }
+    nav a.nav-cta:hover { background: #e85555; }
+    nav a.nav-active { background: rgba(255,107,107,0.12); color: var(--primary); }
+    .nav-fb-btn {
+      display: inline-flex; align-items: center; gap: 7px; background: #1877F2;
+      color: #fff; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.85rem;
+      padding: 9px 16px; border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .nav-fb-btn:hover { opacity: 0.88; }
+    .nav-fb-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+    .nav-social-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 50%; color: var(--text-light);
+      text-decoration: none; transition: background 0.2s, color 0.2s;
+    }
+    .nav-social-icon:hover { background: var(--primary); color: #fff; }
+    .nav-social-icon svg { width: 17px; height: 17px; display: block; }
+
+    /* ─── HERO ─── */
+    .page-hero {
+      background: linear-gradient(135deg, #fff5f5 0%, #e0fafa 50%, #fffde7 100%);
+      padding: 72px 40px 60px; text-align: center;
+    }
+    .hero-eyebrow {
+      display: inline-block; background: var(--accent); color: var(--dark);
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.78rem;
+      letter-spacing: 2px; text-transform: uppercase; padding: 6px 18px;
+      border-radius: var(--radius-btn); margin-bottom: 20px;
+    }
+    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; color: var(--dark); margin-bottom: 16px; line-height: 1.15; }
+    .page-hero h1 em { color: var(--primary); font-style: normal; }
+    .page-hero p { font-size: 1.1rem; color: var(--text-light); max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    /* ─── SECTIONS ─── */
+    section { padding: 70px 40px; }
+    .section-inner { max-width: 1000px; margin: 0 auto; }
+    .section-title-accent { display: inline-block; width: 50px; height: 5px; background: var(--primary); border-radius: 10px; margin-bottom: 16px; }
+    .section-title { font-size: 1.8rem; font-weight: 900; color: var(--dark); margin-bottom: 10px; }
+    .section-sub { color: var(--text-light); font-size: 1rem; margin-bottom: 36px; }
+
+    /* ─── TEAM PHOTO PLACEHOLDER ─── */
+    .team-section {
+      background: var(--bg2); padding: 70px 40px;
+    }
+    .team-inner {
+      max-width: 1000px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+    }
+    .team-photo {
+      background: linear-gradient(135deg, #e0fafa, #fffde7);
+      border-radius: 20px; aspect-ratio: 4/3;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 12px; color: var(--text-light); font-size: 0.88rem; border: 3px dashed #c8e6e4;
+    }
+    .team-photo.has-image { background: none; border: none; overflow: hidden; }
+    .team-photo.has-image img { width: 100%; height: 100%; object-fit: cover; display: block; border-radius: 20px; }
+    .team-photo-icon { font-size: 3rem; }
+    .team-text h2 { font-size: 2rem; font-weight: 900; color: var(--dark); margin-bottom: 14px; line-height: 1.2; }
+    .team-text h2 em { color: var(--primary); font-style: normal; }
+    .team-text p { font-size: 0.97rem; color: var(--text-light); line-height: 1.8; margin-bottom: 16px; }
+    .new-ownership-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--accent), #ffd93d);
+      color: var(--dark); font-family: 'Nunito', sans-serif; font-weight: 800;
+      font-size: 0.82rem; padding: 7px 16px; border-radius: var(--radius-btn);
+      margin-bottom: 20px; letter-spacing: 0.3px;
+    }
+
+    /* ─── VALUES GRID ─── */
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .value-card {
+      background: var(--bg); border-radius: var(--radius-card); padding: 28px 24px;
+      box-shadow: var(--shadow); text-align: center;
+      border-top: 4px solid var(--primary);
+    }
+    .value-card:nth-child(2) { border-top-color: var(--secondary); }
+    .value-card:nth-child(3) { border-top-color: var(--accent); }
+    .value-icon { font-size: 2.4rem; margin-bottom: 14px; display: block; }
+    .value-card h3 { font-size: 1.05rem; font-weight: 900; color: var(--dark); margin-bottom: 8px; }
+    .value-card p { font-size: 0.88rem; color: var(--text-light); line-height: 1.65; }
+
+    /* ─── HOURS + CONTACT ─── */
+    .facts-section { background: var(--bg); }
+    .facts-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; }
+    .fact-card {
+      background: var(--bg2); border-radius: var(--radius-card); padding: 28px 24px;
+    }
+    .fact-card h3 { font-size: 1rem; font-weight: 900; color: var(--dark); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .fact-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .fact-card ul li { font-size: 0.9rem; color: var(--text); line-height: 1.5; }
+    .fact-card ul li small { color: var(--text-light); font-size: 0.78rem; display: block; margin-top: 2px; }
+    .fact-card a { color: var(--primary); text-decoration: none; font-weight: 700; }
+    .fact-card a:hover { text-decoration: underline; }
+    .trade-highlight { color: var(--secondary); font-weight: 700; font-family: 'Nunito', sans-serif; }
+
+    /* ─── SOCIAL STRIP ─── */
+    .social-strip {
+      background: var(--primary); padding: 56px 40px; text-align: center; color: #fff;
+    }
+    .social-strip h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 10px; }
+    .social-strip p { font-size: 1rem; opacity: 0.9; margin-bottom: 28px; max-width: 500px; margin-left: auto; margin-right: auto; line-height: 1.6; }
+    .social-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .social-btn-fb {
+      display: inline-flex; align-items: center; gap: 8px; background: #fff;
+      color: #1877F2; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+      padding: 13px 28px; border-radius: var(--radius-btn); text-decoration: none; transition: transform 0.15s;
+    }
+    .social-btn-fb:hover { transform: translateY(-2px); }
+    .social-btn-ig {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.18); color: #fff; border: 2px solid rgba(255,255,255,0.5);
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+      padding: 11px 28px; border-radius: var(--radius-btn); text-decoration: none; transition: background 0.15s;
+    }
+    .social-btn-ig:hover { background: rgba(255,255,255,0.28); }
+    .social-btn-fb svg, .social-btn-ig svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--dark); color: #fff; padding: 56px 40px 28px; }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px; margin-bottom: 40px;
+    }
+    .footer-brand .logo-name { font-size: 1.5rem; margin-bottom: 10px; }
+    .footer-brand p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; margin-bottom: 16px; }
+    .footer-social { display: flex; flex-wrap: wrap; gap: 8px; }
+    .footer-fb {
+      display: inline-flex; align-items: center; gap: 6px; background: #1877F2;
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .footer-fb:hover { opacity: 0.88; }
+    .footer-ig {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #fff; font-weight: 700; font-size: 0.82rem; padding: 7px 16px;
+      border-radius: var(--radius-btn); text-decoration: none; transition: opacity 0.2s;
+    }
+    .footer-ig:hover { opacity: 0.88; }
+    .footer-fb svg, .footer-ig svg { width: 14px; height: 14px; flex-shrink: 0; }
+    footer h4 {
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.9rem;
+      letter-spacing: 1px; text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+    }
+    footer ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    footer ul li { font-size: 0.88rem; opacity: 0.8; line-height: 1.5; }
+    footer ul li a { color: #fff; text-decoration: none; opacity: 0.8; }
+    footer ul li a:hover { opacity: 1; }
+    .footer-bottom {
+      max-width: 1100px; margin: 0 auto;
+      border-top: 1px solid rgba(255,255,255,0.12); padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 0.8rem; opacity: 0.55;
+    }
+
+    @media (max-width: 900px) {
+      header { padding: 0 20px; }
+      nav { display: none; }
+      .team-inner { grid-template-columns: 1fr; gap: 36px; }
+      .values-grid, .facts-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 48px 20px; }
+      .page-hero, .team-section, .social-strip { padding: 48px 20px; }
+      .facts-section { padding: 48px 20px; }
+      .values-grid, .facts-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    📍 6409 6th Ave #10, Tacoma &nbsp;·&nbsp; Mon–Sat 10am–6pm · Sun 11am–5pm &nbsp;·&nbsp;
+    <a href="tel:2535760491">(253) 576-0491</a>
+  </div>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <a href="index.html" style="text-decoration:none;">
+      <div class="logo-wrap">
+        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
+        <div class="logo-tagline">Baby &bull; Kids &bull; Maternity Resale</div>
+      </div>
+    </a>
+    <nav>
+      <a href="index.html#categories">Shop</a>
+      <a href="trade.html">Sell / Trade</a>
+      <a href="value.html">Max Your Value</a>
+      <a href="index.html#promos">Sales &amp; Deals</a>
+      <a href="about.html" class="nav-active">About</a>
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="nav-fb-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
+      <a href="#contact" class="nav-cta">Visit Us</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="page-hero">
+    <div class="hero-eyebrow">📍 Tacoma's Kids Resale Shop</div>
+    <h1>Over 20 Years of <em>Great Finds</em><br>for Tacoma Families</h1>
+    <p>Kidz Kaboodle has been a fixture in the Tacoma community for over two decades — a place where families save money, pass things along, and find something great for every stage of growing up.</p>
+  </div>
+
+  <!-- TEAM / STORY -->
+  <div class="team-section">
+    <div class="team-inner">
+      <!-- Photo placeholder — swap src when photo is ready -->
+      <div class="team-photo" id="team-photo-wrap">
+        <div class="team-photo-icon">📸</div>
+        <p style="text-align:center;padding:0 20px;">Team photo coming soon!</p>
+      </div>
+      <div class="team-text">
+        <div class="new-ownership-badge">🌟 New Ownership · June 2025</div>
+        <h2>A Community Tradition,<br><em>Renewed</em></h2>
+        <p>Kidz Kaboodle has been serving Tacoma families since the early 2000s. In June 2025, the store passed into new hands — a local family committed to carrying on everything that has made Kidz Kaboodle a Tacoma staple for over 20 years.</p>
+        <p>We're a small, family-run business. We're here every day, we know our regulars, and we genuinely care about providing great value — for the families who shop with us and the ones who trade with us.</p>
+        <p>Our mission is simple: give kids' gear a second life, help families stretch their budgets, and keep great stuff out of the landfill. We're proud to be part of that cycle in our community.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <section style="background: var(--bg);">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">What We're About</h2>
+      <p class="section-sub">Three things we care about, every day.</p>
+      <div class="values-grid">
+        <div class="value-card">
+          <span class="value-icon">💰</span>
+          <h3>Real Value</h3>
+          <p>Kids grow fast and gear adds up. We keep prices honest so families can afford what they need — and earn something back when their kids move on to the next size.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">♻️</span>
+          <h3>Reuse &amp; Sustainability</h3>
+          <p>Every item that gets a second home is one less thing in a landfill. We think that's worth celebrating. Resale isn't just practical — it's good for the planet.</p>
+        </div>
+        <div class="value-card">
+          <span class="value-icon">🏘️</span>
+          <h3>Community Roots</h3>
+          <p>We're a Tacoma shop, through and through. Our customers are our neighbors. We've been trusted by this community for over 20 years, and we take that seriously.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS + CONTACT -->
+  <section class="facts-section" id="contact">
+    <div class="section-inner">
+      <div class="section-title-accent"></div>
+      <h2 class="section-title">Hours &amp; Location</h2>
+      <p class="section-sub">Come find us — we'd love to see you.</p>
+      <div class="facts-grid">
+        <div class="fact-card">
+          <h3>🕙 Store Hours</h3>
+          <ul>
+            <li>Monday – Saturday<br><strong>10am – 6pm</strong></li>
+            <li>Sunday<br><strong>11am – 5pm</strong></li>
+          </ul>
+        </div>
+        <div class="fact-card">
+          <h3>📦 <span class="trade-highlight">Trade Hours</span></h3>
+          <ul>
+            <li>
+              Mon · Tue · Thu<br>
+              <strong>11am – 2pm</strong>
+              <small>Same-day offers &amp; drop-offs. Check in by 1:30pm for a same-day offer.</small>
+            </li>
+            <li>
+              Sunday<br>
+              <strong>11am – 1pm</strong>
+              <small>Drop-off only. No same-day offers. No equipment.</small>
+            </li>
+            <li style="margin-top:6px;font-size:0.82rem;color:var(--text-light);">Trade hours may vary for holidays &amp; special events. Check Facebook for updates.</li>
+          </ul>
+        </div>
+        <div class="fact-card">
+          <h3>📍 Find Us</h3>
+          <ul>
+            <li><strong>6409 6th Ave #10</strong><br>Tacoma, WA 98406</li>
+            <li><a href="tel:2535760491">(253) 576-0491</a></li>
+            <li><a href="mailto:info@kidzkaboodle.com">info@kidzkaboodle.com</a></li>
+            <li>
+              <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a>
+              &nbsp;·&nbsp;
+              <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL STRIP -->
+  <div class="social-strip">
+    <h2>Stay in the loop</h2>
+    <p>We post weekly updates on what we're buying, upcoming sales, and special events. Facebook is the best way to stay current.</p>
+    <div class="social-btns">
+      <a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener" class="social-btn-fb">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Follow on Facebook
+      </a>
+      <a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener" class="social-btn-ig">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        Follow on Instagram
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
+        <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for over 20 years.</p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/kidz.kaboodle/" class="footer-ig" target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Sat: 10am–6pm</li>
+          <li>Sunday: 11am–5pm</li>
+          <li>&nbsp;</li>
+          <li><strong style="color:var(--accent)">Trade Hours:</strong></li>
+          <li>Mon, Tue, Thu · 11am–2pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Check in by 1:30pm for same-day offer</li>
+          <li style="margin-top:4px;">Sunday · 11am–1pm</li>
+          <li style="font-size:0.8rem;opacity:0.65;">Drop-off only · No equipment</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit Us</h4>
+        <ul>
+          <li>6409 6th Ave #10</li>
+          <li>Tacoma, WA 98406</li>
+          <li style="margin-top:8px;"><a href="tel:2535760491">(253) 576-0491</a></li>
+          <li><a href="mailto:info@kidzkaboodle.com">info@kidzkaboodle.com</a></li>
+          <li style="margin-top:8px;"><a href="https://www.facebook.com/kidzkaboodle" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/kidz.kaboodle/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kidz Kaboodle · Tacoma, WA</span>
+      <span>Baby &bull; Kids &bull; Maternity Resale</span>
+    </div>
+  </footer>
+
+</body>
+</html>
