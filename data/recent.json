@@ -1,6 +1,6 @@
 {
   "_comment": "Managed by sync-inventory pipeline. Discord items expire 7 days after post. Facebook album items have no expiry.",
-  "updated": "2026-07-30",
+  "updated": "2026-07-31",
   "items": [
     {
       "source": "discord",
@@ -11,6 +11,16 @@
       "image": "images/inventory/mini-crib-white-001.jpg",
       "added": "2026-07-29",
       "expires": "2026-08-05"
+    },
+    {
+      "source": "discord",
+      "discordMessageId": "1532599177131855966",
+      "title": "Nuna Travel System — Stroller & Car Seat",
+      "desc": "Nuna stroller and matching infant car seat travel system. Heathered gray fabric with tan faux-leather accents and black frame. Includes stroller with adjustable canopy, cupholder, undercarriage storage, and bumper bar — plus infant car seat with padded insert and base. Come in to check it out!",
+      "badge": "New In",
+      "image": "images/inventory/discord-1532599177131855966.jpg",
+      "added": "2026-07-31",
+      "expires": "2026-08-07"
     }
   ]
 }
