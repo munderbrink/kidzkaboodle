@@ -688,12 +688,7 @@
           <h3>Wednesday Infant Sale</h3>
           <p><strong>Buy 2 Get 1 FREE</strong> on all infant items, Sizes Newborn–24 months. Stock up while you can!</p>
         </div>
-        <div class="promo-card">
-          <div class="promo-tag">Mon · Tue · Thu</div>
-          <div class="promo-icon">📦</div>
-          <h3>Accepting Trades</h3>
-          <p>Bring your kids' gently-used items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong>. Check in by <strong>1:30pm</strong> for a same-day offer.</p>
-        </div>
+        <!-- Dynamic sale cards injected here by loadSales() -->
       </div>
     </div>
   </section>
@@ -850,6 +845,30 @@
 
   <!-- ─── SCRIPTS ─── -->
   <script>
+    // ── Sales / Dynamic Promos ──────────────────────────────────────────
+    (async function loadSales() {
+      const grid = document.querySelector('.promo-grid');
+      if (!grid) return;
+      try {
+        const resp = await fetch('data/sales.json');
+        if (!resp.ok) throw 0;
+        const data = await resp.json();
+        const today = new Date().toISOString().slice(0, 10);
+        const active = (data.items || []).filter(it => !it.endsAt || it.endsAt >= today);
+        active.forEach(item => {
+          const card = document.createElement('div');
+          card.className = 'promo-card';
+          card.innerHTML = `
+            <div class="promo-tag">${item.badge || 'Limited Time'}</div>
+            <div class="promo-icon">${item.icon || '\uD83C\uDFF7\uFE0F'}</div>
+            <h3>${item.title || ''}</h3>
+            <p>${item.details || ''}</p>
+          `;
+          grid.appendChild(card);
+        });
+      } catch(_) { /* no dynamic sales — show nothing */ }
+    })();
+
     // ── Buying List ────────────────────────────────────────────────────
     (async function loadBuyingList() {
       const wantList    = document.getElementById('buying-want-list');

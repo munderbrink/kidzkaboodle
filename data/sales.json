@@ -1,0 +1,23 @@
+{
+  "updated": "2026-07-31",
+  "items": [
+    {
+      "id": "back-to-school-2026",
+      "title": "Back to School Sale",
+      "details": "<strong>25% off all kids clothing sizes 4T–14</strong> — stock up before school starts! In-store only.",
+      "badge": "This Week",
+      "icon": "🎒",
+      "endsAt": "2026-08-10",
+      "source": "manual"
+    },
+    {
+      "id": "summer-clearance-2026",
+      "title": "Summer Clearance",
+      "details": "<strong>Buy 3 Get 1 FREE</strong> on all summer gear — swimsuits, sandals &amp; outdoor toys. While supplies last.",
+      "badge": "Ends Soon",
+      "icon": "☀️",
+      "endsAt": "2026-08-03",
+      "source": "manual"
+    }
+  ]
+}
