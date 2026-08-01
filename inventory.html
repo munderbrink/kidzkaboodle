@@ -37,7 +37,7 @@
     header {
       background: var(--bg); padding: 0 40px;
       display: flex; align-items: center; justify-content: space-between;
-      height: 80px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      height: 100px; box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       position: sticky; top: 0; z-index: 100;
     }
     .logo-wrap { display: flex; flex-direction: column; }
@@ -189,11 +189,25 @@
 
     /* ─── LOGO MARK (Concept D — Nicole Approved 2026-07-31) ─── */
     .logo-mark { display:flex; flex-direction:column; align-items:center; }
-    .logo-mark-kidz { display:flex; align-items:baseline; font-family:'Nunito',sans-serif; font-weight:900; font-size:13px; gap:5px; color:#FF6B6B; line-height:1.1; }
-    .logo-mark-stars { display:flex; align-items:center; justify-content:center; gap:6px; margin:3px 0 1px; }
+    .logo-mark-kidz { display:flex; align-items:baseline; font-family:'Nunito',sans-serif; font-weight:900; font-size:17px; gap:7px; color:#FF6B6B; line-height:1.1; }
+    .logo-mark-stars { display:flex; align-items:center; justify-content:center; gap:8px; margin:4px 0 2px; }
     .logo-mark-stars svg { display:block; flex-shrink:0; }
-    .logo-mark-kab { font-family:'Nunito',sans-serif; font-weight:900; font-size:23px; color:#4ECDC4; line-height:1.05; text-align:center; }
-    .logo-mark-tag { font-family:'Open Sans',sans-serif; font-weight:600; font-size:5.5px; text-align:center; letter-spacing:2px; text-transform:uppercase; color:#636E72; margin-top:3px; }
+    .logo-mark-kab { font-family:'Nunito',sans-serif; font-weight:900; font-size:30px; color:#4ECDC4; line-height:1.05; text-align:center; }
+    .logo-mark-tag { font-family:'Open Sans',sans-serif; font-weight:600; font-size:6.5px; text-align:center; letter-spacing:2px; text-transform:uppercase; color:#636E72; margin-top:3px; }
+
+    /* ── Compact sticky header on scroll ── */
+    header { transition: height 0.3s ease; }
+    .logo-mark-kidz { transition: font-size 0.25s ease, gap 0.25s ease; }
+    .logo-mark-stars { transition: gap 0.25s ease, margin 0.25s ease; }
+    .logo-mark-stars svg { width:8px; height:8px; transition: width 0.25s ease, height 0.25s ease; }
+    .logo-mark-kab { transition: font-size 0.25s ease; }
+    .logo-mark-tag { transition: font-size 0.25s ease; }
+    header.compact { height: 80px; }
+    header.compact .logo-mark-kidz { font-size: 13px; gap: 5px; }
+    header.compact .logo-mark-stars { gap: 6px; margin: 3px 0 1px; }
+    header.compact .logo-mark-stars svg { width: 6px; height: 6px; }
+    header.compact .logo-mark-kab { font-size: 23px; }
+    header.compact .logo-mark-tag { font-size: 5.5px; }
   </style>
 </head>
 <body>
@@ -208,9 +222,9 @@
       <div class="logo-mark">
         <div class="logo-mark-kidz"><span>K</span><span>I</span><span>D</span><span>Z</span></div>
         <div class="logo-mark-stars">
-          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
-          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
-          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          <svg width="8" height="8" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          <svg width="8" height="8" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          <svg width="8" height="8" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
         </div>
         <div class="logo-mark-kab">KABOODLE</div>
         <div class="logo-mark-tag">BABY · KIDS · MATERNITY</div>
@@ -343,6 +357,15 @@
           </div>`;
         if (meta) meta.textContent = 'Check our Facebook for the latest inventory';
       }
+    })();
+  </script>
+  <script>
+    // Compact sticky header on scroll
+    (function() {
+      var hdr = document.querySelector('header');
+      window.addEventListener('scroll', function() {
+        hdr.classList.toggle('compact', window.scrollY > 60);
+      }, { passive: true });
     })();
   </script>
 </body>

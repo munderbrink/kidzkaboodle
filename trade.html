@@ -340,6 +340,20 @@
     .logo-mark-kab { font-family:'Nunito',sans-serif; font-weight:900; font-size:30px; color:#4ECDC4; line-height:1.05; text-align:center; }
     .logo-mark-tag { font-family:'Open Sans',sans-serif; font-weight:600; font-size:6.5px; text-align:center; letter-spacing:2px; text-transform:uppercase; color:#636E72; margin-top:3px; }
     .logo-mark-dark .logo-mark-tag { color:rgba(255,255,255,0.4); }
+
+    /* ── Compact sticky header on scroll ── */
+    header { transition: height 0.3s ease; }
+    .logo-mark-kidz { transition: font-size 0.25s ease, gap 0.25s ease; }
+    .logo-mark-stars { transition: gap 0.25s ease, margin 0.25s ease; }
+    .logo-mark-stars svg { width:8px; height:8px; transition: width 0.25s ease, height 0.25s ease; }
+    .logo-mark-kab { transition: font-size 0.25s ease; }
+    .logo-mark-tag { transition: font-size 0.25s ease; }
+    header.compact { height: 80px; }
+    header.compact .logo-mark-kidz { font-size: 13px; gap: 5px; }
+    header.compact .logo-mark-stars { gap: 6px; margin: 3px 0 1px; }
+    header.compact .logo-mark-stars svg { width: 6px; height: 6px; }
+    header.compact .logo-mark-kab { font-size: 23px; }
+    header.compact .logo-mark-tag { font-size: 5.5px; }
   </style>
 </head>
 <body>
@@ -771,6 +785,15 @@
         if (fullList && data.full && data.full.length)
           fullList.innerHTML = data.full.map(i => `<li>❌ ${i}</li>`).join('');
       } catch(_) { /* keep defaults */ }
+    })();
+  </script>
+  <script>
+    // Compact sticky header on scroll
+    (function() {
+      var hdr = document.querySelector('header');
+      window.addEventListener('scroll', function() {
+        hdr.classList.toggle('compact', window.scrollY > 60);
+      }, { passive: true });
     })();
   </script>
 </body>
