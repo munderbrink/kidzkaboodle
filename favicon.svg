@@ -1,10 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Rounded square background: coral -->
-  <rect width="32" height="32" rx="7" fill="#FF6B6B"/>
-  <!-- Teal accent triangle bottom-right -->
-  <path d="M32 14 L32 32 L14 32 Z" fill="#4ECDC4"/>
-  <!-- K left (white) -->
-  <text x="3" y="23" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="17" fill="white" letter-spacing="-1">K</text>
-  <!-- K right (yellow accent, slightly offset) -->
-  <text x="15" y="23" font-family="'Arial Black','Helvetica Neue',Arial,sans-serif" font-weight="900" font-size="17" fill="#FFE66D" letter-spacing="-1">K</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- Coral rounded square — standalone submark (Concept D, approved 2026-07-31) -->
+  <rect width="60" height="60" rx="13" fill="#FF6B6B"/>
+  <!-- 4-pointed yellow star -->
+  <polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/>
 </svg>

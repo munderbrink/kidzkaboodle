@@ -331,6 +331,15 @@
       .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
       .payout-detail { flex-direction: column; gap: 14px; }
     }
+
+    /* ─── LOGO MARK (Concept D — Nicole Approved 2026-07-31) ─── */
+    .logo-mark { display:flex; flex-direction:column; align-items:center; }
+    .logo-mark-kidz { display:flex; align-items:baseline; font-family:'Nunito',sans-serif; font-weight:900; font-size:13px; gap:5px; color:#FF6B6B; line-height:1.1; }
+    .logo-mark-stars { display:flex; align-items:center; justify-content:center; gap:6px; margin:3px 0 1px; }
+    .logo-mark-stars svg { display:block; flex-shrink:0; }
+    .logo-mark-kab { font-family:'Nunito',sans-serif; font-weight:900; font-size:23px; color:#4ECDC4; line-height:1.05; text-align:center; }
+    .logo-mark-tag { font-family:'Open Sans',sans-serif; font-weight:600; font-size:5.5px; text-align:center; letter-spacing:2px; text-transform:uppercase; color:#636E72; margin-top:3px; }
+    .logo-mark-dark .logo-mark-tag { color:rgba(255,255,255,0.4); }
   </style>
 </head>
 <body>
@@ -344,9 +353,15 @@
   <!-- HEADER / NAV -->
   <header>
     <a href="index.html" style="text-decoration:none;">
-      <div class="logo-wrap">
-        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
-        <div class="logo-tagline">Baby &bull; Kids &bull; Maternity Resale</div>
+      <div class="logo-mark">
+        <div class="logo-mark-kidz"><span>K</span><span>I</span><span>D</span><span>Z</span></div>
+        <div class="logo-mark-stars">
+          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+        </div>
+        <div class="logo-mark-kab">KABOODLE</div>
+        <div class="logo-mark-tag">BABY · KIDS · MATERNITY</div>
       </div>
     </a>
     <nav>
@@ -690,7 +705,16 @@
   <footer id="footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo-name"><span>KIDZ&nbsp;</span><span>KABOODLE</span></div>
+        <div class="logo-mark logo-mark-dark" style="margin-bottom:10px;">
+          <div class="logo-mark-kidz"><span>K</span><span>I</span><span>D</span><span>Z</span></div>
+          <div class="logo-mark-stars">
+            <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+            <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+            <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          </div>
+          <div class="logo-mark-kab">KABOODLE</div>
+          <div class="logo-mark-tag">BABY · KIDS · MATERNITY</div>
+        </div>
         <p style="margin-top:8px;">Baby, kids &amp; maternity clothing, gear, toys and more. Serving Tacoma families for over 20 years.</p>
         <div class="footer-social">
           <a href="https://www.facebook.com/kidzkaboodle" class="footer-fb" target="_blank" rel="noopener">
