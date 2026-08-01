@@ -825,7 +825,7 @@
 
       let allItems = FALLBACK, page = 0, autoTimer = null;
 
-      function pp() { return window.innerWidth < 640 ? 2 : 4; }
+      function pp() { return window.innerWidth < 480 ? 1 : window.innerWidth < 900 ? 2 : 4; }
       function pages() { return Math.max(1, Math.ceil(allItems.length / pp())); }
 
       function cardHtml(item) {
