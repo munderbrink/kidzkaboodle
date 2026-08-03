@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kidz Kaboodle — Brand Guidelines</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --coral:   #FF6B6B;
+      --teal:    #4ECDC4;
+      --yellow:  #FFE66D;
+      --dark:    #2C3E50;
+      --gray:    #636E72;
+      --offwhite:#F8F9FA;
+      --white:   #FFFFFF;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Open Sans', sans-serif; background: #f2f3f5; color: var(--dark); }
+    h1,h2,h3,h4,h5 { font-family: 'Nunito', sans-serif; }
+
+    /* ── LAYOUT ── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 48px 32px 80px; }
+
+    /* ── HEADER ── */
+    .brand-header {
+      background: var(--dark); color: #fff;
+      padding: 40px 32px 36px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+    }
+    .wordmark { font-family: 'Nunito', sans-serif; font-size: 2.2rem; font-weight: 900; line-height: 1; letter-spacing: -1px; }
+    .wordmark .k1 { color: var(--coral); }
+    .wordmark .k2 { color: var(--teal); }
+    .wordmark-sub { font-size: 0.7rem; color: rgba(255,255,255,0.5); letter-spacing: 2.5px; text-transform: uppercase; margin-top: 4px; }
+    .brand-header-right { text-align: right; }
+    .brand-header-right h1 { font-size: 1.1rem; font-weight: 800; color: var(--yellow); margin-bottom: 4px; }
+    .brand-header-right p { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    /* ── SECTION BLOCKS ── */
+    .block { background: #fff; border-radius: 16px; padding: 36px; margin-bottom: 28px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); }
+    .block-title {
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase;
+      color: var(--gray); margin-bottom: 24px; display: flex; align-items: center; gap: 10px;
+    }
+    .block-title::after { content: ''; flex: 1; height: 1px; background: #eee; }
+    .block h2 { font-size: 1.6rem; font-weight: 900; color: var(--dark); margin-bottom: 6px; }
+    .block p { color: var(--gray); font-size: 0.92rem; line-height: 1.7; }
+
+    /* ── COLORS ── */
+    .color-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 16px; }
+    .color-chip { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+    .color-swatch { height: 90px; }
+    .color-info { padding: 12px 14px; background: #fff; border-top: 1px solid #f0f0f0; }
+    .color-name { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem; color: var(--dark); }
+    .color-hex { font-size: 0.78rem; color: var(--gray); font-family: monospace; margin-top: 2px; }
+    .color-role { font-size: 0.72rem; color: var(--gray); margin-top: 4px; line-height: 1.4; }
+
+    /* ── TYPOGRAPHY ── */
+    .type-row { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid #f0f0f0; }
+    .type-row:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .type-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); margin-bottom: 10px; }
+    .type-meta { font-size: 0.78rem; color: var(--gray); font-family: monospace; margin-top: 8px; }
+
+    /* ── BUTTONS ── */
+    .btn-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+    .btn {
+      font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem;
+      padding: 13px 30px; border-radius: 50px; border: none; cursor: pointer;
+      text-decoration: none; display: inline-block; letter-spacing: 0.3px; transition: transform 0.15s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--coral); color: #fff; box-shadow: 0 4px 16px rgba(255,107,107,0.35); }
+    .btn-secondary { background: var(--teal); color: #fff; box-shadow: 0 4px 16px rgba(78,205,196,0.35); }
+    .btn-dark { background: var(--dark); color: #fff; }
+    .btn-outline { background: transparent; color: var(--coral); border: 2px solid var(--coral); }
+    .btn-fb { background: #1877F2; color: #fff; font-size: 0.9rem; padding: 10px 22px; display: inline-flex; align-items: center; gap: 8px; }
+    .btn-sm { font-size: 0.82rem; padding: 8px 18px; }
+    .btn-label { font-size: 0.7rem; color: var(--gray); font-family: monospace; letter-spacing: 0; }
+
+    /* ── CARDS ── */
+    .card-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 24px; }
+    .sample-card { background: var(--offwhite); border-radius: 16px; padding: 24px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .sample-card.coral-top { border-top: 5px solid var(--coral); }
+    .sample-card.teal-top  { border-top: 5px solid var(--teal); }
+    .sample-card.yellow-top{ border-top: 5px solid var(--yellow); }
+    .sample-card .card-emoji { font-size: 2rem; margin-bottom: 10px; }
+    .sample-card h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 1rem; color: var(--dark); margin-bottom: 6px; }
+    .sample-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
+    .badge {
+      display: inline-block; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.68rem;
+      letter-spacing: 1px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px;
+    }
+    .badge-accent { background: var(--yellow); color: var(--dark); }
+    .badge-coral  { background: var(--coral); color: #fff; }
+    .badge-teal   { background: var(--teal); color: #fff; }
+
+    /* ── GRADIENT BLOCKS ── */
+    .gradient-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 8px; }
+    .gradient-chip { height: 70px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.82rem; color: var(--dark); }
+    .g1 { background: linear-gradient(135deg, #fff5f5 0%, #e0fafa 50%, #fffde7 100%); }
+    .g2 { background: linear-gradient(135deg, var(--teal) 0%, #38b5ad 100%); color: #fff; }
+    .g3 { background: var(--coral); color: #fff; }
+    .gradient-label { font-size: 0.72rem; color: var(--gray); text-align: center; margin-top: 4px; }
+
+    /* ── FAVICON PREVIEW ── */
+    .favicon-row { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+    .favicon-preview {
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+    }
+    .favicon-box {
+      background: #f0f0f0; border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-size: 0.72rem; color: var(--gray);
+    }
+    .fav-16 { width: 40px; height: 40px; }
+    .fav-32 { width: 56px; height: 56px; }
+    .fav-64 { width: 80px; height: 80px; }
+    .favicon-box img { display: block; }
+    .fav-size { font-size: 0.72rem; color: var(--gray); font-family: monospace; }
+
+    /* ── VOICE BOX ── */
+    .voice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .voice-card { border-radius: 12px; padding: 20px 22px; }
+    .voice-card.do { background: #f0fff9; border-left: 4px solid #27ae60; }
+    .voice-card.dont { background: #fff5f5; border-left: 4px solid var(--coral); }
+    .voice-card h4 { font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.88rem; margin-bottom: 12px; color: var(--dark); }
+    .voice-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .voice-card ul li { font-size: 0.85rem; color: var(--gray); line-height: 1.5; display: flex; gap: 8px; }
+    .voice-example { background: var(--offwhite); border-radius: 12px; padding: 20px 22px; margin-top: 16px; }
+    .voice-example p { font-size: 0.88rem; line-height: 1.7; color: var(--gray); }
+    .voice-example strong { color: var(--dark); }
+
+    /* ── SPACING GUIDE ── */
+    .spacing-row { display: flex; gap: 16px; align-items: flex-end; flex-wrap: wrap; }
+    .spacing-chip { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+    .spacing-box { background: var(--teal); opacity: 0.6; width: 100%; border-radius: 4px; }
+    .spacing-val { font-size: 0.72rem; font-family: monospace; color: var(--gray); }
+
+    /* ── NOTES BOX ── */
+    .note { background: #fffbec; border: 1.5px solid var(--yellow); border-radius: 10px; padding: 14px 18px; margin-top: 16px; font-size: 0.85rem; color: var(--dark); line-height: 1.65; }
+    .note strong { color: var(--dark); }
+
+    /* ── STATUS BADGE ── */
+    .status-bar {
+      background: var(--dark); color: #fff; text-align: center;
+      padding: 12px; font-size: 0.82rem; font-family: 'Nunito', sans-serif; font-weight: 700;
+    }
+    .status-bar .pending { color: var(--yellow); }
+    .status-bar .approved { color: var(--teal); }
+
+    @media (max-width: 700px) {
+      .card-row, .gradient-row, .voice-grid { grid-template-columns: 1fr 1fr; }
+      .color-grid { grid-template-columns: repeat(3, 1fr); }
+      .page { padding: 24px 16px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- STATUS BAR -->
+  <div class="status-bar">
+    Kidz Kaboodle Brand Guidelines &nbsp;·&nbsp; <span class="approved">✅ Logo Locked 2026-07-31</span> &nbsp;·&nbsp; Colors/Type/Voice approved 2026-07-29
+  </div>
+
+  <!-- BRAND HEADER -->
+  <div class="brand-header">
+    <div style="display:flex;flex-direction:column;align-items:center;">
+      <div style="display:flex;align-items:baseline;font-family:'Nunito',sans-serif;font-weight:900;font-size:30px;gap:11px;color:#FF6B6B;line-height:1.1;">
+        <span>K</span><span>I</span><span>D</span><span>Z</span>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:11px;margin:5px 0 3px;">
+        <svg width="12" height="12" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+        <svg width="12" height="12" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+      </div>
+      <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:54px;color:#4ECDC4;line-height:1.05;text-align:center;">KABOODLE</div>
+      <div style="font-family:'Open Sans',sans-serif;font-weight:600;font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:5px;">BABY · KIDS · MATERNITY RESALE</div>
+    </div>
+    <div class="brand-header-right">
+      <h1>Brand Guidelines</h1>
+      <p>Internal reference — Dave / Kidz Kaboodle</p>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- ── LOGO MARK ── -->
+    <div class="block">
+      <div class="block-title">00 — Logo Mark (Approved 2026-07-31)</div>
+
+      <!-- Primary lockup -->
+      <div style="background:linear-gradient(135deg,#fff5f5,#e0fafa,#fffde7);border-radius:12px;padding:40px 24px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+        <div style="display:flex;flex-direction:column;align-items:center;">
+          <div style="display:flex;align-items:baseline;font-family:'Nunito',sans-serif;font-weight:900;font-size:54px;gap:20px;color:#FF6B6B;line-height:1.1;">
+            <span>K</span><span>I</span><span>D</span><span>Z</span>
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin:10px 0 6px;">
+            <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+          </div>
+          <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:96px;color:#4ECDC4;line-height:1.05;text-align:center;">KABOODLE</div>
+          <div style="font-family:'Open Sans',sans-serif;font-weight:600;font-size:13px;text-align:center;letter-spacing:2.5px;text-transform:uppercase;color:#636E72;margin-top:10px;">BABY · KIDS · MATERNITY RESALE · TACOMA</div>
+        </div>
+      </div>
+
+      <div class="note"><strong>Concept D — Stacked Playful Lockup</strong> &nbsp;·&nbsp; Approved: Nicole &amp; Matthew — 2026-07-31 &nbsp;·&nbsp; Rendering: HTML/CSS (flexbox letters, SVG polygon stars)</div>
+
+      <div style="margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="note"><strong>Type ratio:</strong> KIDZ 54px / KABOODLE 96px = 1:1.78 (near golden ratio). Lock this ratio at every size — never adjust proportions independently.</div>
+        <div class="note"><strong>KIDZ letter spacing:</strong> Each letter is an individual flex-item <code>&lt;span&gt;</code> with a fixed gap. Never use CSS <code>letter-spacing</code> — it adds trailing space that shifts the visual center left of KABOODLE.</div>
+        <div class="note"><strong>Stars:</strong> 3× 4-pointed SVG <code>&lt;polygon&gt;</code> in Yellow #FFE66D. Never use Unicode ✦ — renders inconsistently across browsers and print environments.</div>
+        <div class="note"><strong>Standalone submark:</strong> Coral circle or rounded square + yellow 4-pointed star. Use for favicon, social profile, app icon, punch card corners, window stickers. Scales cleanly 16px → 200px+.</div>
+      </div>
+
+      <!-- Submark sizes -->
+      <div style="margin-top:24px;">
+        <div class="block-title" style="font-size:0.68rem;margin-bottom:14px;">Standalone Mark &mdash; All Sizes</div>
+        <div style="display:flex;gap:16px;align-items:center;flex-wrap:wrap;">
+          <div style="width:80px;height:80px;border-radius:50%;background:#FF6B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 60 60" width="50"><polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/></svg>
+          </div>
+          <div style="width:56px;height:56px;border-radius:50%;background:#FF6B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 60 60" width="35"><polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/></svg>
+          </div>
+          <div style="width:40px;height:40px;border-radius:50%;background:#FF6B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 60 60" width="26"><polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/></svg>
+          </div>
+          <div style="width:26px;height:26px;border-radius:50%;background:#FF6B6B;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg viewBox="0 0 60 60" width="16"><polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/></svg>
+          </div>
+          <div style="background:#f0f0f0;border-radius:8px;padding:12px;display:flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+              <div style="width:32px;height:32px;border-radius:7px;background:#FF6B6B;display:flex;align-items:center;justify-content:center;">
+                <svg viewBox="0 0 60 60" width="20"><polygon points="30,13 33.5,26.5 47,30 33.5,33.5 30,47 26.5,33.5 13,30 26.5,26.5" fill="#FFE66D"/></svg>
+              </div>
+              <span style="font-size:0.65rem;color:var(--gray);font-family:monospace;">favicon 32px</span>
+            </div>
+          </div>
+          <div style="font-size:0.82rem;color:var(--gray);max-width:240px;line-height:1.65;">
+            <strong style="color:var(--dark);">Submark:</strong> Coral circle (or rounded square for square contexts) with yellow 4-pointed star centered. Use wherever the full stacked lockup doesn't fit.
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav size demo -->
+      <div style="margin-top:24px;">
+        <div class="block-title" style="font-size:0.68rem;margin-bottom:14px;">Website Nav Size (fits 80px sticky header)</div>
+        <div style="background:#fff;border:1px solid #eee;border-radius:10px;padding:16px 28px;display:inline-flex;align-items:center;box-shadow:0 2px 10px rgba(0,0,0,0.06);">
+          <div style="display:flex;flex-direction:column;align-items:center;">
+            <div style="display:flex;align-items:baseline;font-family:'Nunito',sans-serif;font-weight:900;font-size:13px;gap:5px;color:#FF6B6B;line-height:1.1;">
+              <span>K</span><span>I</span><span>D</span><span>Z</span>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:6px;margin:3px 0 1px;">
+              <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+              <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+              <svg width="6" height="6" viewBox="0 0 24 24"><polygon points="12,2 14.47,9.53 22,12 14.47,14.47 12,22 9.53,14.47 2,12 9.53,9.53" fill="#FFE66D"/></svg>
+            </div>
+            <div style="font-family:'Nunito',sans-serif;font-weight:900;font-size:23px;color:#4ECDC4;line-height:1.05;">KABOODLE</div>
+            <div style="font-family:'Open Sans',sans-serif;font-weight:600;font-size:5.5px;letter-spacing:2px;text-transform:uppercase;color:#636E72;margin-top:3px;">BABY · KIDS · MATERNITY</div>
+          </div>
+        </div>
+        <div class="note" style="margin-top:14px;">Nav size: KIDZ 13px / Stars 6px / KABOODLE 23px / Tag 5.5px. Maintains 1:1.77 ratio. Fits within 80px header height with comfortable margin.</div>
+      </div>
+
+    </div>
+
+    <!-- ── COLORS ── -->
+    <div class="block">
+      <div class="block-title">01 — Color Palette</div>
+      <div class="color-grid">
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#FF6B6B;"></div>
+          <div class="color-info">
+            <div class="color-name">Coral</div>
+            <div class="color-hex">#FF6B6B</div>
+            <div class="color-role">Primary — CTAs, highlights, "KIDZ" wordmark</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#4ECDC4;"></div>
+          <div class="color-info">
+            <div class="color-name">Teal</div>
+            <div class="color-hex">#4ECDC4</div>
+            <div class="color-role">Secondary — Trade/sell, "KABOODLE" wordmark, step numbers</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#FFE66D;"></div>
+          <div class="color-info">
+            <div class="color-name">Yellow</div>
+            <div class="color-hex">#FFE66D</div>
+            <div class="color-role">Accent — Badges, "Best Value" callouts, footer headings</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#2C3E50;"></div>
+          <div class="color-info">
+            <div class="color-name">Dark Navy</div>
+            <div class="color-hex">#2C3E50</div>
+            <div class="color-role">Body text, dark backgrounds, header</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#636E72;"></div>
+          <div class="color-info">
+            <div class="color-name">Gray</div>
+            <div class="color-hex">#636E72</div>
+            <div class="color-role">Supporting / secondary text</div>
+          </div>
+        </div>
+        <div class="color-chip">
+          <div class="color-swatch" style="background:#F8F9FA; border: 1px solid #eee;"></div>
+          <div class="color-info">
+            <div class="color-name">Off-White</div>
+            <div class="color-hex">#F8F9FA</div>
+            <div class="color-role">Alternate section backgrounds, card fills</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:28px;">
+        <div class="block-title" style="font-size:0.68rem;margin-bottom:16px;">Section Gradients in use</div>
+        <div class="gradient-row">
+          <div>
+            <div class="gradient-chip g1">Hero / light sections</div>
+            <div class="gradient-label">135° · #fff5f5 → #e0fafa → #fffde7</div>
+          </div>
+          <div>
+            <div class="gradient-chip g2">Sell/Trade callout</div>
+            <div class="gradient-label">135° · Teal → #38b5ad</div>
+          </div>
+          <div>
+            <div class="gradient-chip g3">USP strip / CTA</div>
+            <div class="gradient-label">Solid Coral #FF6B6B</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── TYPOGRAPHY ── -->
+    <div class="block">
+      <div class="block-title">02 — Typography</div>
+
+      <div class="type-row">
+        <div class="type-label">Display / H1 — Hero headlines</div>
+        <div style="font-family:'Nunito',sans-serif; font-weight:900; font-size:2.8rem; line-height:1.15; color:var(--dark);">
+          Great Finds for <span style="color:var(--coral);">Growing Families</span>
+        </div>
+        <div class="type-meta">Nunito · weight 900 · clamp(2rem, 4vw, 3.2rem) · line-height 1.15</div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-label">H2 — Section titles</div>
+        <div style="font-family:'Nunito',sans-serif; font-weight:900; font-size:1.8rem; color:var(--dark);">
+          What We Carry
+        </div>
+        <div class="type-meta">Nunito · weight 900 · 1.8rem</div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-label">H3 / Card headers</div>
+        <div style="font-family:'Nunito',sans-serif; font-weight:800; font-size:1.15rem; color:var(--dark);">
+          Accepting Trades This Week
+        </div>
+        <div class="type-meta">Nunito · weight 800 · 1.1–1.2rem</div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-label">Body text — paragraphs</div>
+        <div style="font-family:'Open Sans',sans-serif; font-size:1rem; color:#636E72; line-height:1.7; max-width:560px;">
+          Walk in during trade hours, and walk out with cash or store credit. No appointment, no consignment, no hassle. We've been doing this for over 20 years in Tacoma.
+        </div>
+        <div class="type-meta">Open Sans · weight 400 · 1rem · line-height 1.7</div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-label">Small / supporting text</div>
+        <div style="font-family:'Open Sans',sans-serif; font-size:0.85rem; color:#636E72; line-height:1.6;">
+          Check in by 1:30pm for a same-day offer — no exceptions. Inventory moves fast; call to verify availability before making a trip.
+        </div>
+        <div class="type-meta">Open Sans · weight 400 · 0.82–0.9rem</div>
+      </div>
+
+      <div class="type-row">
+        <div class="type-label">Eyebrow / label badges</div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center;">
+          <span style="display:inline-block; background:var(--yellow); color:var(--dark); font-family:'Nunito',sans-serif; font-weight:800; font-size:0.78rem; letter-spacing:2px; text-transform:uppercase; padding:6px 18px; border-radius:50px;">⭐ Serving Tacoma for Over 20 Years</span>
+          <span style="display:inline-block; background:var(--coral); color:#fff; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; padding:4px 12px; border-radius:20px;">New In</span>
+          <span style="display:inline-block; background:var(--teal); color:#fff; font-family:'Nunito',sans-serif; font-weight:800; font-size:0.72rem; letter-spacing:1px; text-transform:uppercase; padding:4px 12px; border-radius:20px;">Every Week</span>
+        </div>
+        <div class="type-meta">Nunito · weight 800 · 0.72–0.78rem · uppercase · letter-spacing 1–2px</div>
+      </div>
+
+    </div>
+
+    <!-- ── BUTTONS ── -->
+    <div class="block">
+      <div class="block-title">03 — Buttons &amp; CTAs</div>
+
+      <div class="btn-row">
+        <div>
+          <a class="btn btn-primary">🛍️ Shop With Us</a>
+          <div class="btn-label" style="margin-top:6px;">btn-primary · Coral · box-shadow</div>
+        </div>
+        <div>
+          <a class="btn btn-secondary">💰 Sell Your Stuff</a>
+          <div class="btn-label" style="margin-top:6px;">btn-secondary · Teal</div>
+        </div>
+        <div>
+          <a class="btn btn-fb">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Follow on Facebook
+          </a>
+          <div class="btn-label" style="margin-top:6px;">Facebook Blue · #1877F2</div>
+        </div>
+      </div>
+      <div class="btn-row">
+        <div>
+          <a class="btn btn-outline">LEARN HOW IT WORKS →</a>
+          <div class="btn-label" style="margin-top:6px;">Outline · Coral border</div>
+        </div>
+        <div>
+          <a class="btn btn-dark">📍 Visit Us</a>
+          <div class="btn-label" style="margin-top:6px;">Dark Navy fill</div>
+        </div>
+      </div>
+      <div class="note"><strong>Border radius:</strong> All buttons use <code>border-radius: 50px</code> (full pill). Never use rectangular or lightly-rounded buttons. Small variant: same radius, padding <code>8px 18px</code>, font-size <code>0.82rem</code>.</div>
+    </div>
+
+    <!-- ── CARDS ── -->
+    <div class="block">
+      <div class="block-title">04 — Cards &amp; Components</div>
+
+      <div class="card-row">
+        <div class="sample-card coral-top">
+          <div class="badge badge-accent">Every Week</div>
+          <div class="card-emoji">🛍️</div>
+          <h4>Quarter Sales</h4>
+          <p>Every Friday &amp; Sunday — grab incredible deals at just 25¢ per item.</p>
+        </div>
+        <div class="sample-card teal-top">
+          <div class="badge badge-coral">New In</div>
+          <div class="card-emoji">🛺</div>
+          <h4>UPPAbaby Cruz Stroller</h4>
+          <p>Excellent condition, all accessories included.</p>
+        </div>
+        <div class="sample-card yellow-top">
+          <div class="badge badge-teal">Mon · Tue · Thu</div>
+          <div class="card-emoji">📦</div>
+          <h4>Accepting Trades</h4>
+          <p>11am–2pm. Check in by 1:30pm for a same-day offer.</p>
+        </div>
+      </div>
+
+      <div class="note">
+        <strong>Card radius:</strong> <code>border-radius: 16px</code> &nbsp;·&nbsp;
+        <strong>Shadow:</strong> <code>0 4px 20px rgba(0,0,0,0.10)</code> &nbsp;·&nbsp;
+        <strong>Top accent:</strong> 5px solid, one of the three brand colors &nbsp;·&nbsp;
+        <strong>Hover:</strong> <code>translateY(-4px)</code>
+      </div>
+    </div>
+
+    <!-- ── FAVICON ── -->
+    <div class="block">
+      <div class="block-title">05 — Favicon / Browser Icon</div>
+      <div class="favicon-row">
+        <div class="favicon-preview">
+          <div class="favicon-box fav-16"><img src="favicon.svg" width="16" height="16" alt="16px"></div>
+          <div class="fav-size">16×16</div>
+        </div>
+        <div class="favicon-preview">
+          <div class="favicon-box fav-32"><img src="favicon.svg" width="32" height="32" alt="32px"></div>
+          <div class="fav-size">32×32</div>
+        </div>
+        <div class="favicon-preview">
+          <div class="favicon-box fav-64"><img src="favicon.svg" width="64" height="64" alt="64px"></div>
+          <div class="fav-size">64×64</div>
+        </div>
+        <div style="flex:1; min-width:220px;">
+          <p style="font-size:0.88rem; color:var(--gray); line-height:1.7; margin-bottom:10px;">
+            <strong style="color:var(--dark);">Design rationale:</strong> Coral rounded square base matches the primary brand color. Dual "KK" monogram in white + yellow represents both halves of the wordmark. Teal accent triangle in the bottom-right corner brings in the secondary brand color at a glance.
+          </p>
+          <p style="font-size:0.82rem; color:var(--gray);">Format: SVG (scales perfectly to any size). Format: <code>favicon.svg</code> · all pages linked.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── SPACING ── -->
+    <div class="block">
+      <div class="block-title">06 — Spacing &amp; Shape</div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px;">
+        <div>
+          <p style="font-size:0.88rem; color:var(--gray); margin-bottom:16px; line-height:1.7;"><strong style="color:var(--dark);">Section padding</strong></p>
+          <div class="spacing-row">
+            <div class="spacing-chip" style="width:60px;">
+              <div class="spacing-box" style="height:70px;"></div>
+              <div class="spacing-val">70px top/btm</div>
+            </div>
+            <div class="spacing-chip" style="width:40px;">
+              <div class="spacing-box" style="height:40px;"></div>
+              <div class="spacing-val">40px sides</div>
+            </div>
+            <div class="spacing-chip" style="width:48px;">
+              <div class="spacing-box" style="height:48px; opacity:0.35;"></div>
+              <div class="spacing-val">48px mobile</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p style="font-size:0.88rem; color:var(--gray); margin-bottom:16px; line-height:1.7;"><strong style="color:var(--dark);">Border radius</strong></p>
+          <div style="display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap;">
+            <div style="text-align:center;">
+              <div style="width:60px; height:36px; background:var(--coral); border-radius:50px; margin-bottom:6px;"></div>
+              <div style="font-size:0.72rem; color:var(--gray); font-family:monospace;">50px buttons</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:60px; height:60px; background:var(--teal); border-radius:16px; margin-bottom:6px;"></div>
+              <div style="font-size:0.72rem; color:var(--gray); font-family:monospace;">16px cards</div>
+            </div>
+            <div style="text-align:center;">
+              <div style="width:36px; height:36px; background:var(--dark); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-family:'Nunito',sans-serif; font-weight:900; font-size:1rem; margin-bottom:6px;">1</div>
+              <div style="font-size:0.72rem; color:var(--gray); font-family:monospace;">50% circles</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── VOICE & TONE ── -->
+    <div class="block">
+      <div class="block-title">07 — Voice &amp; Tone</div>
+      <div class="voice-grid">
+        <div class="voice-card do">
+          <h4>✅ Do</h4>
+          <ul>
+            <li><span>✔</span> Be specific — give the actual hours, actual cutoffs</li>
+            <li><span>✔</span> Be direct — skip "We'd be happy to…"</li>
+            <li><span>✔</span> Warm and community-first</li>
+            <li><span>✔</span> Honest about what we pass on (not apologetic)</li>
+            <li><span>✔</span> Use Facebook as the live source of truth for current info</li>
+            <li><span>✔</span> Acknowledge neighbors, families, sustainability</li>
+          </ul>
+        </div>
+        <div class="voice-card dont">
+          <h4>❌ Don't</h4>
+          <ul>
+            <li><span>✗</span> "Tacoma's favorite" — other good shops exist</li>
+            <li><span>✗</span> Corporate or stiff phrasing</li>
+            <li><span>✗</span> Overly promotional / hard sell</li>
+            <li><span>✗</span> Internal process details on public pages</li>
+            <li><span>✗</span> Payout % anywhere except the Sell/Trade page</li>
+            <li><span>✗</span> Sign off with a person's name ("Thanks, Kristi")</li>
+          </ul>
+        </div>
+      </div>
+      <div class="voice-example">
+        <p><strong>Example — trade hours:</strong> "We buy gently-used kids' items <strong>Mon, Tue &amp; Thu · 11am–2pm</strong> (check in by 1:30pm for a same-day offer). Cash or store credit, paid on the spot — no consignment, no waiting."</p>
+      </div>
+    </div>
+
+    <!-- ── DESIGN RULES ── -->
+    <div class="block">
+      <div class="block-title">08 — Standing Design Rules</div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div class="note">📘 <strong>Facebook is live source of truth</strong> — always direct customers there for current inventory, what we're buying, and trade closures. Every page should have a visible Facebook CTA above the fold.</div>
+        <div class="note">💰 <strong>Payout percentages on Sell/Trade page only</strong> — homepage and other pages use "earn a percentage of our resale price." Specific rates (30%/50% equipment, 20%/40% clothing) live only on trade.html.</div>
+        <div class="note">♻️ <strong>Community + sustainability angle</strong> — the About page establishes new ownership (June 2025), family-run business, 20+ year tradition. Don't overclaim or oversell heritage.</div>
+        <div class="note">⏰ <strong>Always include the 1:30pm hard cutoff</strong> in any trade hours reference, not just the "11am–2pm" window. Drop-offs are available Mon/Tue/Thu and Sunday — clarify same-day vs. drop-off whenever trade hours are mentioned.</div>
+        <div class="note">📸 <strong>Team photo placeholder</strong> is live on about.html — swap when the photo is ready. Reference the existing img tag format used there.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- APPROVAL FOOTER -->
+  <div style="background:var(--dark); color:#fff; padding:28px 32px; text-align:center;">
+    <p style="font-family:'Nunito',sans-serif; font-weight:800; font-size:1rem; color:var(--teal); margin-bottom:8px;">✅ Brand Guidelines Locked</p>
+    <p style="font-size:0.85rem; color:rgba(255,255,255,0.55); line-height:1.6;">Colors &amp; type approved 2026-07-29 · Logo (Concept D) approved 2026-07-31<br>This document is the authoritative design reference for all Kidz Kaboodle visual content.</p>
+  </div>
+
+</body>
+</html>
