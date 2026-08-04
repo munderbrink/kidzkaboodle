@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-04",
   "items": [
     {
       "id": "back-to-school-2026",
@@ -8,15 +8,6 @@
       "badge": "This Week",
       "icon": "🎒",
       "endsAt": "2026-08-10",
-      "source": "manual"
-    },
-    {
-      "id": "summer-clearance-2026",
-      "title": "Summer Clearance",
-      "details": "<strong>Buy 3 Get 1 FREE</strong> on all summer gear — swimsuits, sandals &amp; outdoor toys. While supplies last.",
-      "badge": "Ends Soon",
-      "icon": "☀️",
-      "endsAt": "2026-08-03",
       "source": "manual"
     }
   ]
