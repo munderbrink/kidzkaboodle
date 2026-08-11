@@ -1,14 +1,4 @@
 {
-  "updated": "2026-08-04",
-  "items": [
-    {
-      "id": "back-to-school-2026",
-      "title": "Back to School Sale",
-      "details": "<strong>25% off all kids clothing sizes 4T–14</strong> — stock up before school starts! In-store only.",
-      "badge": "This Week",
-      "icon": "🎒",
-      "endsAt": "2026-08-10",
-      "source": "manual"
-    }
-  ]
+  "updated": "2026-08-11",
+  "items": []
 }
